@@ -19,6 +19,7 @@
         <module>sandbox</module>
         <module>ds</module>
         <module>netty</module>
+        <module>rmi</module>
     </modules>
 
     <properties>
