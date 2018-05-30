@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/java/antlr4/antlr4.iml" filepath="$PROJECT_DIR$/java/antlr4/antlr4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/database/database.iml" filepath="$PROJECT_DIR$/java/database/database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/ds/ds.iml" filepath="$PROJECT_DIR$/java/ds/ds.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/jetty/jetty.iml" filepath="$PROJECT_DIR$/java/jetty/jetty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/jmx/jmx.iml" filepath="$PROJECT_DIR$/java/jmx/jmx.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/lab.iml" filepath="$PROJECT_DIR$/.idea/lab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/netty/netty.iml" filepath="$PROJECT_DIR$/java/netty/netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/parent.iml" filepath="$PROJECT_DIR$/java/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/rmi/rmi.iml" filepath="$PROJECT_DIR$/java/rmi/rmi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/sandbox/sandbox.iml" filepath="$PROJECT_DIR$/java/sandbox/sandbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/syntax/syntax.iml" filepath="$PROJECT_DIR$/java/syntax/syntax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/thread/thread.iml" filepath="$PROJECT_DIR$/java/thread/thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/webapp/webapp.iml" filepath="$PROJECT_DIR$/java/webapp/webapp.iml" />
     </modules>
   </component>
 </project>

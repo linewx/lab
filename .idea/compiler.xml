@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="antlr4" />
+        <module name="database" />
+        <module name="ds" />
+        <module name="jetty" />
+        <module name="jmx" />
+        <module name="netty" />
+        <module name="rmi" />
+        <module name="sandbox" />
+        <module name="thread" />
+        <module name="webapp" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="antlr4" target="1.8" />
+      <module name="database" target="1.8" />
+      <module name="ds" target="1.8" />
+      <module name="jetty" target="1.8" />
+      <module name="jmx" target="1.8" />
+      <module name="netty" target="1.8" />
+      <module name="parent" target="1.8" />
+      <module name="rmi" target="1.8" />
+      <module name="sandbox" target="1.8" />
+      <module name="syntax" target="1.8" />
+      <module name="thread" target="1.8" />
+      <module name="webapp" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
