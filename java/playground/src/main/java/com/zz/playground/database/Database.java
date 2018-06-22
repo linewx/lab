@@ -20,15 +20,15 @@ public class Database {
     public static void main(String... argv) throws Exception {
         Connection conn = null;
         try {
-            conn = Database.getConnection("postgresql", "localhost", "ht", "ht", "sandbox");
+            conn = Database.getConnection("postgresql", "localhost", "5432","ht", "ht", "sandbox");
             Database.execStatement(conn, "select * from table1 join table2 on table1.shared = table2.shared join table3 on table2.shared=table3.shared");
         }finally {
             DbUtils.closeQuietly(conn);
         }
     }
 
-    private static String getConnectionString(String type, String host, String database) {
-        return String.format("jdbc:%s://%s/%s", type, host, database);
+    private static String getConnectionString(String type, String host, String database, String port) {
+        return String.format("jdbc:%s://%s:%s/%s", type, host, port, database);
     }
 
     public static boolean testConnection(String type, String host, String userName, String password, String database) {
@@ -44,14 +44,14 @@ public class Database {
         }
     }
 
-    public static List<String> getTables(String type, String host, String userName, String password, String database) throws SQLException {
+    public static List<String> getTables(String type, String host, String userName, String password, String database, String port) throws SQLException {
         List<String> tables = new ArrayList<>();
         Connection conn = null;
         ResultSet rs = null;
 
 
         try {
-            conn = DriverManager.getConnection(Database.getConnectionString(type, host, database), userName, password);
+            conn = DriverManager.getConnection(Database.getConnectionString(type, host, database, port), userName, password);
             DatabaseMetaData md = conn.getMetaData();
             //todo: refine to use the function params
             rs = md.getTables(null, null, "%", null);
@@ -72,14 +72,14 @@ public class Database {
         }
     }
 
-    public static List<String> getColumns(String type, String host, String userName, String password, String database, String tableName) throws SQLException {
+    public static List<String> getColumns(String type, String host, String port, String userName, String password, String database, String tableName) throws SQLException {
         List<String> columns = new ArrayList<>();
         Connection conn = null;
         ResultSet rs = null;
 
 
         try {
-            conn = DriverManager.getConnection(Database.getConnectionString(type, host, database), userName, password);
+            conn = DriverManager.getConnection(Database.getConnectionString(type, host, database, port), userName, password);
             DatabaseMetaData md = conn.getMetaData();
             rs = md.getColumns(null, null, tableName, null);
             ResultSetMetaData rsma = rs.getMetaData();
@@ -98,10 +98,10 @@ public class Database {
         }
     }
 
-    public static Connection getConnection(String type, String host, String userName, String password, String database) {
+    public static Connection getConnection(String type, String host, String port, String userName, String password, String database) {
         Connection conn = null;
         try {
-            conn = DriverManager.getConnection(Database.getConnectionString(type, host, database), userName, password);
+            conn = DriverManager.getConnection(Database.getConnectionString(type, host, database, port), userName, password);
             return conn;
         } catch (Exception e) {
             DbUtils.closeQuietly(conn);
