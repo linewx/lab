@@ -16,13 +16,15 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 //@RunWith(ParallelSuite.class)
 //run in serial
-public class DatabaseTest {
+public class DatabaseTransactionIsolationTest {
     private static Connection mngConnection;
 
     @BeforeClass
     public static void beforeClass() {
-        mngConnection = Database.getConnection("postgresql", "localhost", "5432","ht", "ht", "sandbox");
+        //mngConnection = Database.getConnection("postgresql", "localhost", "5432","ht", "ht", "sandbox");
+        //mngConnection = Database.getConnection("mysql", "localhost", "3306","ht", "ht", "sandbox");
         //run once before any test method
+        mngConnection = getNewConnection();
 
     }
 
@@ -46,7 +48,7 @@ public class DatabaseTest {
 
 
     public static Connection getNewConnection() {
-        return Database.getConnection("postgresql", "localhost", "5432","ht", "ht", "sandbox");
+        return Database.getConnection("mysql", "localhost", "3306","ht", "ht", "sandbox");
     }
 
     //if dirty read or not
@@ -210,7 +212,7 @@ public class DatabaseTest {
 
             ResultSet rs = stmt.executeQuery(queryCountSql);
             while(rs.next()) {
-                firstQueryCount = rs.getInt("count");
+                firstQueryCount = rs.getInt(1);
                 break;
             }
 
@@ -222,7 +224,7 @@ public class DatabaseTest {
             //step 3, query the total count again
             rs = stmt.executeQuery("select count(*) from test");
             while(rs.next()) {
-                secondQueryCount = rs.getInt("count");
+                secondQueryCount = rs.getInt(1);
                 break;
             }
 
