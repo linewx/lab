@@ -18,7 +18,7 @@ public class Database {
 //        System.out.println(getColumns("postgresql", "localhost", "ht", "ht", "shengwu_report", "datasource_connection"));
         Connection conn = null;
         try {
-            conn = Database.getConnection("postgresql", "localhost", "ht", "ht", "sandbox");
+            conn = Database.getConnection("mysql", "localhost", "root", "1Qaz2wsx", "acm");
             Database.execStatement(conn, "select * from table1 join table2 on table1.shared = table2.shared join table3 on table2.shared=table3.shared");
         }finally {
             DbUtils.closeQuietly(conn);
@@ -99,7 +99,9 @@ public class Database {
     public static Connection getConnection(String type, String host, String userName, String password, String database) {
         Connection conn = null;
         try {
-            conn = DriverManager.getConnection(Database.getConnectionString(type, host, database), userName, password);
+            Class.forName("com.mysql.jdbc.Driver");
+            //conn = DriverManager.getConnection(Database.getConnectionString(type, host, database), userName, password);
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/passport?useUnicode=true&characterEncoding=utf-8&mysqlEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useServerPrepStmts=true&cachePrepStmts=true&prepStmtCacheSize=250&prepStmtCacheSqlLimit=2048", "root", "sds");
             return conn;
         } catch (Exception e) {
             DbUtils.closeQuietly(conn);

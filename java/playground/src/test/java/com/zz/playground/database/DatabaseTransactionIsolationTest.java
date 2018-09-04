@@ -1,10 +1,7 @@
 package com.zz.playground.database;
 
-import ch.qos.logback.core.db.dialect.DBUtil;
-import com.googlecode.junittoolbox.ParallelSuite;
 import org.apache.commons.dbutils.DbUtils;
 import org.junit.*;
-import org.junit.runner.RunWith;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -21,9 +18,6 @@ public class DatabaseTransactionIsolationTest {
 
     @BeforeClass
     public static void beforeClass() {
-        //mngConnection = Database.getConnection("postgresql", "localhost", "5432","ht", "ht", "sandbox");
-        //mngConnection = Database.getConnection("mysql", "localhost", "3306","ht", "ht", "sandbox");
-        //run once before any test method
         mngConnection = getNewConnection();
 
     }
@@ -67,8 +61,6 @@ public class DatabaseTransactionIsolationTest {
             mngStmt = mngConnection.createStatement();
             Integer testId = ThreadLocalRandom.current().nextInt(100, 10000);
             mngStmt.execute(String.format("insert into test values(%d, '%s')", testId, ORIGIN_NAME));
-
-
 
 
             //help session
