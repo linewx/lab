@@ -53,6 +53,13 @@
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.bfd</groupId>
+            <artifactId>bsApi</artifactId>
+            <version>3.5.1-shaded</version>
+            <scope>system</scope>
+            <systemPath>/Users/luganlin/git/lab/java/lib/bsApi-3.5.1-shaded.jar</systemPath>
+        </dependency>
 
         <!--<dependency>-->
             <!--<groupId>smartxls</groupId>-->
