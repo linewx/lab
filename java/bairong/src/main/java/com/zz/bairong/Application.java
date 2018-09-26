@@ -1,20 +1,25 @@
-package com.zz.sandbox.shujuyuan.bairong;
+package com.zz.bairong;
 
-import net.sf.json.JSONObject;
-
-import org.apache.commons.lang.StringUtils;
+import java.util.Arrays;
 
 import com.bfd.facade.MerchantServer;
-import com.bfd.util.ParamUtils;
+import net.sf.json.JSONObject;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 
-public class StrategyApiTest{
+@SpringBootApplication
+public class Application {
 
     private static volatile String tokenid;
     private static MerchantServer ms=new MerchantServer();;
 
     public static String getTokenid(){
         if(StringUtils.isBlank(tokenid)){
-            synchronized (StrategyApiTest.class) {
+            synchronized (Application.class) {
                 if(StringUtils.isBlank(tokenid)){
                     tokenid = generateTokenid();
                 }
@@ -66,27 +71,39 @@ public class StrategyApiTest{
     }
 
     public static void main(String[] args) {
-        JSONObject jso = new JSONObject();
-        JSONObject reqData = new JSONObject();
-        jso.put("apiName", "strategyApi");//策略调用
-        //jso.put("apiName", "verificationApi");//验证管理调用
-        //jso.put("tokenid", StrategyApiTest.getTokenid());
-        jso.put("tokenid", "mashangxw_D15517724B7D1D3ADB2FFFB2EE9CB98B");
-        reqData.put("id","320683198110071016");//身份证号码
-        reqData.put("cell","18101947163");//手机号码
-        reqData.put("name","陆甘霖");//姓名
-        reqData.put("strategy_id", "STR0000001");//策略编号
-        reqData.put("conf_id", "MCP00000001");//验证管理编号
-        jso.put("reqData", reqData);
-        String result = getBrData(jso.toString(),"3002859");
-        if(StringUtils.isNotBlank(result)){
-//				System.out.println(tokenid);
-            JSONObject json = JSONObject.fromObject(result);
-            if(json.containsKey("code")&&json.getString("code").equals("100007")){
-                jso.put("tokenid", StrategyApiTest.getTokenid());
-                result = getBrData(jso.toString(),"");
-            }
-        }
-        System.out.println(result);
+        SpringApplication.run(Application.class, args);
     }
+
+    @Bean
+    public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+        return args -> {
+
+            JSONObject jso = new JSONObject();
+            JSONObject reqData = new JSONObject();
+            jso.put("apiName", "strategyApi");//策略调用
+            //jso.put("apiName", "verificationApi");//验证管理调用
+            jso.put("tokenid", Application.getTokenid());
+            //jso.put("tokenid", "mashangxw_D15517724B7D1D3ADB2FFFB2EE9CB98B");
+            reqData.put("id","320683198110071016");//身份证号码
+            reqData.put("cell","18101947163");//手机号码
+            reqData.put("name","陆甘霖");//姓名
+            //reqData.put("strategy_id", "STR0000001");//策略编号
+            reqData.put("strategy_id", "STR0002233");//策略编号
+            reqData.put("conf_id", "MCP00000001");//验证管理编号
+            jso.put("reqData", reqData);
+            String result = getBrData(jso.toString(),"3002859");
+            if(StringUtils.isNotBlank(result)){
+//				System.out.println(tokenid);
+                JSONObject json = JSONObject.fromObject(result);
+                if(json.containsKey("code")&&json.getString("code").equals("100007")){
+                    jso.put("tokenid", Application.getTokenid());
+                    result = getBrData(jso.toString(),"3002859");
+                }
+            }
+            System.out.println(result);
+
+        };
+    }
+
 }
+

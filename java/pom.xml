@@ -30,6 +30,7 @@
         <module>rmi</module>
         <module>playground</module>
         <module>demo</module>
+        <module>bairong</module>
     </modules>
 
     <properties>
