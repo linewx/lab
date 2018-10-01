@@ -136,11 +136,12 @@ public class Application {
     CommandLineRunner commandLineRunner() {
         return args -> {
             Application client = new Application();
-            String path = client.server + "/civp/getview/api/u/queryUnify";
+            String path = client.server + "/civp/getview/api/u/baffLeInterFace/queryUnify";
             Map<String, String> params = new HashMap<String, String>();
-            params.put("innerIfType", "B8,A2");
-            params.put("cid", "17702166519");
-            params.put("idNumber", "460006198912180030");
+            //params.put("innerIfType", "B8,A2");
+            params.put("innerIfType", "A4");
+            params.put("cid", "13300000003");
+            params.put("idNumber", "210104198305021424");
             params.put("realName", "张三");
             params.put("authCode", "1515553525" + "200085" + "1fc09960eb8848d59f91543df2be3944");
             String data = client.getData(path, params, "civp");

@@ -16,6 +16,9 @@ public class Database {
     public static void main(String... argv) throws Exception {
 //        System.out.println(getTables("postgresql", "localhost", "ht", "ht", "shengwu_report"));
 //        System.out.println(getColumns("postgresql", "localhost", "ht", "ht", "shengwu_report", "datasource_connection"));
+
+        boolean result = Database.testConnection("jdbc:mysql://localhost:3306/datalogic_new?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true", "root", "root");
+        System.out.println("connection succssfully");
         Connection conn = null;
         try {
             conn = Database.getConnection("mysql", "localhost", "root", "1Qaz2wsx", "acm");
@@ -29,10 +32,25 @@ public class Database {
         return String.format("jdbc:%s://%s/%s", type, host, database);
     }
 
+    public static boolean testConnection(String jdbcConnectionString, String userName, String password) {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(jdbcConnectionString, userName, password);
+            return true;
+        } catch (SQLException e) {
+            return false;
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+    }
+
+
+
     public static boolean testConnection(String type, String host, String userName, String password, String database) {
         Connection conn = null;
         try {
             String jdbcConnectionString = String.format("jdbc:%s://%s/%s", type, host, database);
+
             conn = DriverManager.getConnection(jdbcConnectionString, userName, password);
             return true;
         } catch (SQLException e) {

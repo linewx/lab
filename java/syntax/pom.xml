@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.cloudrain.derecho.syntax</groupId>
+    <groupId>com.zz</groupId>
     <artifactId>syntax</artifactId>
     <name>syntax</name>
     <description>java syntax</description>
@@ -10,8 +10,8 @@
     <version>1.0.0-9999-SNAPSHOT</version>
 
     <parent>
-        <artifactId>parent</artifactId>
-        <groupId>com.cloudrain.derecho</groupId>
+        <artifactId>java</artifactId>
+        <groupId>com.zz</groupId>
         <version>1.0.0-9999-SNAPSHOT</version>
     </parent>
 
@@ -24,7 +24,6 @@
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-            <version>2.2.4</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

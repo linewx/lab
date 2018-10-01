@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by luganlin on 20/07/2018.
  */
-@ConfigurationProperties(locations = "classpath:programs/program1.yml", ignoreUnknownFields = false)
+@ConfigurationProperties(ignoreUnknownFields = false)
 public class JPAConfig {
     private String server;
 
