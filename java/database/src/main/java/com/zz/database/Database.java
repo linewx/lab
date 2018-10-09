@@ -1,10 +1,8 @@
 
-package com.cloudrain.lab.database;
+package com.zz.database;
 
-import com.sun.corba.se.impl.orb.DataCollectorBase;
 import org.apache.commons.dbutils.DbUtils;
 
-import javax.activation.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,8 +41,6 @@ public class Database {
             DbUtils.closeQuietly(conn);
         }
     }
-
-
 
     public static boolean testConnection(String type, String host, String userName, String password, String database) {
         Connection conn = null;
@@ -93,7 +89,6 @@ public class Database {
         Connection conn = null;
         ResultSet rs = null;
 
-
         try {
             conn = DriverManager.getConnection(Database.getConnectionString(type, host, database), userName, password);
             DatabaseMetaData md = conn.getMetaData();
@@ -129,8 +124,6 @@ public class Database {
     }
 
     public static void testQueryString() {
-
-
     }
 
     public static void execStatement(Connection conn, String query) {

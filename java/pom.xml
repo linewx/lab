@@ -42,6 +42,7 @@
         <junit_version>4.12</junit_version>
         <org.apache.maven.plugins.maven_compiler_plugin_version>3.5.1
         </org.apache.maven.plugins.maven_compiler_plugin_version>
+        <org.apatch.hbase_hbase-client_version>1.3.0</org.apatch.hbase_hbase-client_version>
     </properties>
 
     <dependencyManagement>
@@ -52,6 +53,11 @@
                 <version>Finchley.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hbase</groupId>
+                <artifactId>hbase-client</artifactId>
+                <version>${org.apatch.hbase_hbase-client_version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
