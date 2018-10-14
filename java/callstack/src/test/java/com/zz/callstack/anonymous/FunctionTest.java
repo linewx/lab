@@ -17,4 +17,40 @@ public class FunctionTest {
     public void testFunction() {
         new TargetClass().invokeFunction();
     }
+
+    @Test
+    public void testStaticInnerClassFunction() {
+        new TargetClass().invokeInnerStaticClassFunction();
+    }
+
+    @Test
+    public void testInnerClassFunction() {
+        new TargetClass().invokeInnerClassFunction();
+    }
+
+    @Test
+    public void testReflectClass() {
+        new TargetClass().invokeRefectionConstructorClass();
+    }
+
+    @Test
+    public void testReflectFunction() {
+        new TargetClass().invokeFunctionByReflection();
+    }
+
+    @Test
+    public void testProxyFunction() {
+        new TargetClass().invokeProxyClassFunction();
+    }
+
+    @Test
+    public void testCglibFunction() {
+        new TargetClass().invokeCglibClassFunction();
+    }
+
+    @Test
+    public void testParentFunction() {
+        new TargetClass().invokeParentFunction();
+    }
+
 }
