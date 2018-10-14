@@ -49,8 +49,8 @@ public class FunctionTest {
     }
 
     @Test
-    public void testParentFunction() {
-        new TargetClass().invokeParentFunction();
+    public void testOuterPrivateFunction() {
+        new TargetClass().invokeOuterPrivateFunction();
     }
 
 }

@@ -152,7 +152,7 @@ public class TargetClass implements Runnable{
         System.out.println("run in parent class");
     }
 
-    public void invokeParentFunction() {
+    public void invokeOuterPrivateFunction() {
         new TargetClass().call(new Runnable() {
             @Override
             public void run() {
