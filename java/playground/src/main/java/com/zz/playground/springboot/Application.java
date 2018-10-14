@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.Banner;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
@@ -29,7 +30,8 @@ public class Application {
 
     public static void main(String ...params) {
 
-        new SpringApplicationBuilder(Application.class).bannerMode(Banner.Mode.OFF).web(false).run(params);
+        //new SpringApplicationBuilder(Application.class).bannerMode(Banner.Mode.OFF).web(false).run(params);
+        SpringApplication.run(Application.class, params);
 
     }
 

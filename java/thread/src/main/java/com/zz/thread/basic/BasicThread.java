@@ -1,6 +1,5 @@
-package com.cloudrain.dercho.thread;
+package com.zz.thread.basic;
 
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**

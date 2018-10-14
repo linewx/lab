@@ -85,7 +85,7 @@ public class Application {
             jso.put("tokenid", Application.getTokenid());
             //jso.put("tokenid", "mashangxw_D15517724B7D1D3ADB2FFFB2EE9CB98B");
             reqData.put("id","320683198110071016");//身份证号码
-            reqData.put("cell","18101947163");//手机号码
+            reqData.put("cell","13600000000");//手机号码
             reqData.put("name","陆甘霖");//姓名
             //reqData.put("strategy_id", "STR0000001");//策略编号
             reqData.put("strategy_id", "STR0002233");//策略编号
