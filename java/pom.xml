@@ -32,6 +32,9 @@
         <module>tianyi</module>
         <module>mq</module>
         <module>callstack</module>
+        <module>huifa</module>
+        <module>basic</module>
+        <module>bigdata</module>
     </modules>
 
     <properties>
@@ -79,6 +82,17 @@
                 <artifactId>cglib</artifactId>
                 <version>3.2.6</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.hadoop</groupId>
+                <artifactId>hadoop-core</artifactId>
+                <version>1.2.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.hive</groupId>
+                <artifactId>hive-jdbc</artifactId>
+                <version>3.1.0</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

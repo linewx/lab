@@ -10,18 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zz</groupId>
-    <artifactId>callstack</artifactId>
+    <artifactId>huifa</artifactId>
     <version>1.0.0-9999-SNAPSHOT</version>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib</artifactId>
-        </dependency>
-    </dependencies>
 
 </project>

@@ -3,25 +3,26 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>java</artifactId>
+        <artifactId>bigdata</artifactId>
         <groupId>com.zz</groupId>
         <version>1.0.0-9999-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.zz</groupId>
-    <artifactId>callstack</artifactId>
+    <groupId>com.zz.bigdata</groupId>
+    <artifactId>hadoop</artifactId>
     <version>1.0.0-9999-SNAPSHOT</version>
-
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
         <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib</artifactId>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-core</artifactId>
         </dependency>
+
     </dependencies>
+
 
 </project>

@@ -39,7 +39,16 @@ public class Application {
                     bodyMap,
                     "645482c62f912c85"
             );
-            System.out.println(privateKey);
+
+
+
+            Map bodyMap2 = new HashMap();
+            bodyMap2.put("mobileNo", "18101947163");
+            String result = CreditApplication.invoke("https://apitest.tycredit.com/credit-front-http/unified/wholeNetWorkStastus.json",
+                    1,
+                    "mashangxiaowei001",uuid, "10151112140001000001542155961601", bodyMap2, privateKey
+                    );
+            System.out.println(result);
 
         };
     }

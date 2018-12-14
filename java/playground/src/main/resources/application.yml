@@ -1,8 +1,6 @@
 server:
-  port: 9001
+  port: 9010
 
-
-my:
-  servers:
-    - dev.example.com
-    - another.example.com
+spring.boot.admin.client.enabled: true
+spring.boot.admin.client.url: "http://localhost:9010"
+management.endpoints.web.exposure.include: "*"

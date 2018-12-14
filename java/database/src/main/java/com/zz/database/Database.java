@@ -42,6 +42,19 @@ public class Database {
         }
     }
 
+    public static Connection getConnection(String jdbcConnectionString, String userName, String password) {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(jdbcConnectionString, userName, password);
+            return conn;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            DbUtils.closeQuietly(conn);
+        }
+    }
+
     public static boolean testConnection(String type, String host, String userName, String password, String database) {
         Connection conn = null;
         try {
