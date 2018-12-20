@@ -19,7 +19,7 @@ import org.springframework.context.ApplicationContext;
 import java.util.Arrays;
 
 /**
- * Created by luganlin on 31/05/2018.
+ * Created bcy luganlin on 31/05/2018.
  */
 @SpringBootApplication
 //@EnableAutoConfiguration
