@@ -1,10 +1,13 @@
 package com.zz.playground.algo.leetcode;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
+        List<List<Integer>> results = new ArrayList<>();
         Map<Integer, Integer> targets = new HashMap<>();
         for(int i=0; i<nums.length; i++) {
             if (targets.containsKey(nums[i])) {

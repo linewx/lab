@@ -27,14 +27,10 @@
         <module>rmi</module>
         <module>playground</module>
         <module>demo</module>
-        <module>bairong</module>
-        <module>jiao</module>
-        <module>tianyi</module>
         <module>mq</module>
         <module>callstack</module>
-        <module>huifa</module>
-        <module>basic</module>
         <module>bigdata</module>
+        <module>spring-ioc</module>
     </modules>
 
     <properties>
@@ -48,8 +44,10 @@
         <org.apache.maven.plugins.maven_compiler_plugin_version>3.5.1
         </org.apache.maven.plugins.maven_compiler_plugin_version>
         <org.apatch.hbase_hbase-client_version>1.3.0</org.apatch.hbase_hbase-client_version>
-        <org.springframework.integration_spring-integration-amqp_version>4.2.8.RELEASE</org.springframework.integration_spring-integration-amqp_version>
-        <org.springframework.integration_spring-integration-core_version>4.2.8.RELEASE</org.springframework.integration_spring-integration-core_version>
+        <org.springframework.integration_spring-integration-amqp_version>4.2.8.RELEASE
+        </org.springframework.integration_spring-integration-amqp_version>
+        <org.springframework.integration_spring-integration-core_version>4.2.8.RELEASE
+        </org.springframework.integration_spring-integration-core_version>
     </properties>
 
     <dependencyManagement>
@@ -92,7 +90,6 @@
                 <artifactId>hive-jdbc</artifactId>
                 <version>3.1.0</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 

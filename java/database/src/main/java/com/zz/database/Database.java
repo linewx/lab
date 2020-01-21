@@ -24,6 +24,9 @@ public class Database {
         }finally {
             DbUtils.closeQuietly(conn);
         }
+
+
+
     }
 
     private static String getConnectionString(String type, String host, String database) {
