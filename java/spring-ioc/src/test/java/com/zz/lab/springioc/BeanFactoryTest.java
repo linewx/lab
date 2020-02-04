@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class BeanFactoryTest {
     @Test
-    public void testBeanFactory() {
+    public void InjectionByCode() {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 
         MutablePropertyValues listenerProperties = new MutablePropertyValues();
@@ -40,4 +40,5 @@ public class BeanFactoryTest {
 
         Assert.assertEquals(beanFactory.getBean(ServiceProvider.class).getServiceListener().getName(), "email");
     }
+
 }
