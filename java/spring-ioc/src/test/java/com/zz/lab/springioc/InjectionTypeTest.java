@@ -10,9 +10,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
+//测试IOC的注入
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = MyRestTemplateConfiguration.class)
-public class ApplicationTest {
+public class InjectionTypeTest {
     @Autowired
     @MyLoadBalanced
     private MyRestTemplate template1; // qualifier > name > type
