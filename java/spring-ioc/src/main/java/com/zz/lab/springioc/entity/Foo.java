@@ -12,4 +12,8 @@ import lombok.NoArgsConstructor;
 public class Foo {
     private String name;
     private String type;
+
+    public String getMessage() {
+        return "hi " + this.getName();
+    }
 }

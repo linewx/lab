@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import java.lang.reflect.Proxy;
 
+//invocationhandler
 public class DynamicProxyTest {
     @Test
     public void testDynamicProxy() {
