@@ -13,7 +13,12 @@ public class Foo {
     private String name;
     private String type;
 
+
     public String getMessage() {
         return "hi " + this.getName();
+    }
+
+    public String getFullName() {
+        return type + name;
     }
 }
