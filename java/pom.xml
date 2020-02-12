@@ -32,6 +32,7 @@
         <module>bigdata</module>
         <module>spring-ioc</module>
         <module>algo</module>
+        <module>jvm</module>
     </modules>
 
     <properties>
