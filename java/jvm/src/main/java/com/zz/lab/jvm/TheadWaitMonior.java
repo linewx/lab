@@ -8,7 +8,8 @@ import java.util.List;
 
 /**
  *
- * run with JProfiler
+ * run with JProfiler, and see thread tab
+ * busy thread is runnable, and lock thread is in waiting state
  */
 public class TheadWaitMonior {
     /**

@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 /**
  *
  * run with JProfiler, see thread tab: thread monitor, thread dump, thread history
+ * thread is in blocked state
+ * and main thread is in waiting thread
  */
 public class TheadLockMonior {
     /**
