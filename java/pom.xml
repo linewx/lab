@@ -26,13 +26,14 @@
         <module>sandbox</module>
         <module>rmi</module>
         <module>playground</module>
-        <module>demo</module>
         <module>mq</module>
         <module>callstack</module>
         <module>bigdata</module>
         <module>spring-ioc</module>
         <module>algo</module>
         <module>jvm</module>
+        <module>jdk</module>
+        <module>cache</module>
     </modules>
 
     <properties>

@@ -3,18 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>demo</artifactId>
-        <groupId>com.zz.java</groupId>
+        <artifactId>java</artifactId>
+        <groupId>com.zz</groupId>
         <version>1.0.0-9999-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.zz.java.demo</groupId>
-    <artifactId>fortune-teller</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0.0-9999-SNAPSHOT</version>
-    <modules>
-        <module>fortune-teller-config-server</module>
-        <module>fortune-teller-euraka</module>
-    </modules>
+    <groupId>com.zz.lab</groupId>
+    <artifactId>cache</artifactId>
+
+
 </project>

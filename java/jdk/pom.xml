@@ -9,13 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.zz.java</groupId>
-    <artifactId>demo</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0.0-9999-SNAPSHOT</version>
-    <modules>
-        <module>fortune-teller</module>
-    </modules>
+    <groupId>com.zz.lab</groupId>
+    <artifactId>jdk</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>
