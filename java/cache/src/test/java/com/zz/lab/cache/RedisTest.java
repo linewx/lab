@@ -7,9 +7,12 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.redis.DataRedisTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.connection.RedisZSetCommands;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.Set;
 
 
 
@@ -27,12 +30,7 @@ public class RedisTest {
     private RedisTemplate<Object, Object> redisTemplate;
 
     @Test
-    public void contextLoad() {
-
-    }
-
-    @Test
-    public void testRedisValue()  {
+    public void testRedisValue() {
         redisTemplate.delete("name");
         redisTemplate.delete("age");
 
@@ -102,7 +100,9 @@ public class RedisTest {
 
         Assert.assertEquals(redisTemplate.boundZSetOps("skill").count(80, 90), Long.valueOf(2));
         Assert.assertEquals(redisTemplate.boundZSetOps("skill").count(80, 85), Long.valueOf(1));
-
+        Set<Object> skills = redisTemplate.boundZSetOps("skill").rangeByScore(60, 70);
+        Assert.assertTrue(skills.contains("redis"));
+        Assert.assertTrue(skills.contains("kafka"));
 
     }
 }
