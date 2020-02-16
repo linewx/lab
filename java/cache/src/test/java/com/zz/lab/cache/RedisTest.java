@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.redis.DataRedisTest;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.connection.RedisZSetCommands;
+import org.springframework.data.geo.Point;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -15,14 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.Set;
 
 
-
-/*@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(initializers= ConfigFileApplicationContextInitializer.class, locations = {DummyConfiguration.class})
-@TestPropertySource(properties = { "spring.config.location=classpath:application-test.yml" })
-@DataRedisTest*/
-
 @RunWith(SpringRunner.class)
-@DataRedisTest
 @SpringBootTest
 @ActiveProfiles("test")
 public class RedisTest {
@@ -83,8 +76,9 @@ public class RedisTest {
         Assert.assertEquals(redisTemplate.boundSetOps("companies").size(), Long.valueOf(3));
         redisTemplate.boundSetOps("companies").remove("msxw");
         Assert.assertEquals(redisTemplate.boundSetOps("companies").size(), Long.valueOf(2));
+        Assert.assertTrue(redisTemplate.boundSetOps("companies").isMember("hpe"));
+        Assert.assertFalse(redisTemplate.boundSetOps("companies").isMember("ebay"));
 
-        //todo: scan ?
     }
 
     @Test
@@ -103,6 +97,35 @@ public class RedisTest {
         Set<Object> skills = redisTemplate.boundZSetOps("skill").rangeByScore(60, 70);
         Assert.assertTrue(skills.contains("redis"));
         Assert.assertTrue(skills.contains("kafka"));
-
     }
+
+    @Test
+    public void testRedisGeo() {
+        //地理信息
+        redisTemplate.boundGeoOps("cities").add(new Point(116.28,39.55), "beijing");
+        redisTemplate.boundGeoOps("cities").add(new Point(121.48,31.22), "shanghai");
+        redisTemplate.boundGeoOps("cities").distance("shanghai", "beijing").getMetric().getAbbreviation();
+        //单位是m
+        Assert.assertEquals("m", redisTemplate.boundGeoOps("cities").distance("shanghai", "beijing").getUnit());
+
+        double distance = redisTemplate.boundGeoOps("cities").distance("shanghai", "beijing").getValue();
+        //distance between shanghai & beijing, should be between 1000 ~ 1200
+        Assert.assertTrue(distance > 1000 * 1000);
+        Assert.assertTrue(distance < 1200 * 1000);
+    }
+
+    @Test
+    public void testRedisHyperLogLog() {
+        redisTemplate.opsForHyperLogLog().add("job1", "hp", "hpe");
+        redisTemplate.opsForHyperLogLog().add("job2", "microfocus", "msxw");
+        System.out.println(redisTemplate.opsForHyperLogLog().size("obj1"));
+    }
+
+    @Test
+    public void testRedisPubSub() {
+        //pub sub model test
+        redisTemplate.convertAndSend("topic", "hello guys");
+    }
+
+
 }

@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-//测试IOC的注入
+//测试系统消息
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {FooApplicationEventListener.class, BarApplicationEventListener.class})
 public class ApplicationEventTest {
@@ -22,6 +22,5 @@ public class ApplicationEventTest {
         //the message foo and bar should appear in the log
         BarApplicationEvent barApplicationEvent = new BarApplicationEvent("start up");
         applicationEventPublisher.publishEvent(barApplicationEvent);
-
     }
 }
