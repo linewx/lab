@@ -13,6 +13,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 
 @RunWith(SpringRunner.class)
@@ -23,7 +24,7 @@ public class RedisTest {
     private RedisTemplate<Object, Object> redisTemplate;
 
     @Test
-    public void testRedisValue() {
+    public void testRedisValue() throws Exception {
         redisTemplate.delete("name");
         redisTemplate.delete("age");
 
@@ -38,6 +39,13 @@ public class RedisTest {
 
         redisTemplate.delete("age");
         Assert.assertEquals(redisTemplate.boundValueOps("age").get(), null);
+
+        redisTemplate.boundValueOps("valid").set(true, 1, TimeUnit.SECONDS);
+        Assert.assertEquals(redisTemplate.boundValueOps("valid").get(), true);
+
+        Thread.sleep(2000);
+        Assert.assertNull(redisTemplate.boundValueOps("valid").get());
+
     }
 
     @Test
