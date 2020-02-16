@@ -5,10 +5,10 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.data.redis.DataRedisTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.geo.Point;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -21,12 +21,18 @@ import java.util.concurrent.TimeUnit;
 @ActiveProfiles("test")
 public class RedisTest {
     @Autowired
-    private RedisTemplate<Object, Object> redisTemplate;
+    private RedisTemplate redisTemplate;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     @Test
     public void testRedisValue() throws Exception {
         redisTemplate.delete("name");
+        redisTemplate.delete("name2");
+        redisTemplate.delete("nam3");
         redisTemplate.delete("age");
+
 
         redisTemplate.boundValueOps("name").set("tony");
         redisTemplate.boundValueOps("age").set(20);
@@ -45,6 +51,13 @@ public class RedisTest {
 
         Thread.sleep(2000);
         Assert.assertNull(redisTemplate.boundValueOps("valid").get());
+
+        //test scan keys
+        redisTemplate.boundValueOps("name2").set("Allen");
+        redisTemplate.boundValueOps("name3").set("Jack");
+        Set<String> keys = redisTemplate.keys("name*");
+        System.out.println(keys);
+
 
     }
 
