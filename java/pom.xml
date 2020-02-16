@@ -24,7 +24,6 @@
         <module>database</module>
         <module>webapp</module>
         <module>sandbox</module>
-        <module>rmi</module>
         <module>playground</module>
         <module>mq</module>
         <module>callstack</module>
