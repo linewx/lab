@@ -6,12 +6,17 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.dao.DataAccessException;
 import org.springframework.data.geo.Point;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.connection.RedisConnection;
+import org.springframework.data.redis.core.*;
+import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
+import org.springframework.data.redis.serializer.RedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -21,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 @ActiveProfiles("test")
 public class RedisTest {
     @Autowired
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<Object, Object> redisTemplate;
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
@@ -52,13 +57,11 @@ public class RedisTest {
         Thread.sleep(2000);
         Assert.assertNull(redisTemplate.boundValueOps("valid").get());
 
-        //test scan keys
+        //test keys function
         redisTemplate.boundValueOps("name2").set("Allen");
         redisTemplate.boundValueOps("name3").set("Jack");
-        Set<String> keys = redisTemplate.keys("name*");
+        Set<Object> keys = redisTemplate.keys("name*");
         System.out.println(keys);
-
-
     }
 
     @Test
@@ -85,6 +88,9 @@ public class RedisTest {
         Assert.assertEquals(redisTemplate.boundListOps("company").size(), Long.valueOf(4));
         Assert.assertEquals(redisTemplate.boundListOps("company").rightPop(), "hp");
         Assert.assertEquals(redisTemplate.boundListOps("company").leftPop(), "msxw");
+        Assert.assertEquals(redisTemplate.boundListOps("company").size(), Long.valueOf(2));
+
+        redisTemplate.boundListOps("company").rightPop(2, TimeUnit.SECONDS);
     }
 
     @Test
@@ -146,6 +152,73 @@ public class RedisTest {
     public void testRedisPubSub() {
         //pub sub model test
         redisTemplate.convertAndSend("topic", "hello guys");
+    }
+
+    @Test
+    public void testScan() {
+        redisTemplate.delete("name1");
+        redisTemplate.delete("name2");
+        redisTemplate.delete("name3");
+        redisTemplate.boundValueOps("name1").set("tony");
+        redisTemplate.boundValueOps("name2").set("tom");
+        redisTemplate.boundValueOps("name3").set("allen");
+
+        RedisSerializer<String> redisSerializer = new StringRedisSerializer();
+        redisTemplate.execute((RedisConnection connection) -> {
+            Cursor<byte[]> cursor = connection.scan(ScanOptions.scanOptions().count(1).match("*name*").build());
+            cursor.forEachRemaining(x -> {
+                System.out.println(redisSerializer.deserialize(x));
+            });
+            return null;
+        });
+    }
+
+    @Test
+    public void testRedisPipeline() {
+        JdkSerializationRedisSerializer serializer = new JdkSerializationRedisSerializer();
+
+        List<Object> results = redisTemplate.executePipelined((RedisConnection redisConnection) -> {
+            redisConnection.del("name".getBytes(), "age".getBytes());
+            redisConnection.set("name".getBytes(), serializer.serialize("tom"));
+            redisConnection.set("age".getBytes(), serializer.serialize(21));
+            redisConnection.get("name".getBytes());
+            redisConnection.get("age".getBytes());
+            return null;
+        });
+
+        Assert.assertEquals(results.get(results.size() - 2), "tom");
+        Assert.assertEquals(results.get(results.size() - 1), 21);
+        System.out.println(results);
+    }
+
+    @Test
+    public void testRedisTransaction() {
+        redisTemplate.delete("name");
+        redisTemplate.boundValueOps("name").set("tom");
+        redisTemplate.delete("age");
+        redisTemplate.boundValueOps("age").set(21);
+
+        List<Object> results = redisTemplate.execute(new SessionCallback<List<Object>>() {
+            @Override
+            public List<Object> execute(RedisOperations operations) throws DataAccessException {
+                operations.watch("name");
+                operations.multi();
+                operations.boundValueOps("name").set("tony");
+                operations.boundValueOps("age").set(23);
+
+                operations.boundValueOps("name").get();
+                operations.boundValueOps("age").get();
+                return operations.exec();
+            }
+        });
+
+        Assert.assertEquals(results.get(0), true);
+        Assert.assertEquals(results.get(1), true);
+        Assert.assertEquals(results.get(2), "tony");
+        Assert.assertEquals(results.get(3), 23);
+
+
+        System.out.println(results);
     }
 
 
