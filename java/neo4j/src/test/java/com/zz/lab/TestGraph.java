@@ -2,6 +2,7 @@ package com.zz.lab;
 
 import com.zz.lab.entity.Artifact;
 import com.zz.lab.entity.Person;
+import com.zz.lab.repo.ArtifactRepository;
 import com.zz.lab.repo.PersonRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -20,8 +21,23 @@ public class TestGraph {
     @Autowired
     private PersonRepository personRepository;
 
-    private void addRelation() {
+    @Autowired
+    private ArtifactRepository artifactRepository;
 
+
+    private void addRelation(Artifact foo, Artifact bar) {
+        Artifact theFoo = artifactRepository.findByArtifactIdAndGroupId(foo.getArtifactId(), foo.getGroupId());
+        if (theFoo == null) {
+            theFoo = artifactRepository.save(foo);
+        }
+
+        Artifact theBar = artifactRepository.findByArtifactIdAndGroupId(bar.getArtifactId(), bar.getGroupId());
+        if (theBar == null) {
+            theBar = artifactRepository.save(bar);
+        }
+
+        theFoo.depends(theBar);
+        artifactRepository.save(theFoo);
     }
 
     @Test
@@ -41,10 +57,11 @@ public class TestGraph {
                 .artifactId("baz")
                 .build();
 
-
-
-
+        addRelation(foo, bar);
+        addRelation(foo, baz);
     }
+
+
 
     @Test
     public void testGraph() {

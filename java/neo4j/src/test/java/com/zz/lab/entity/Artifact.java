@@ -1,8 +1,6 @@
 package com.zz.lab.entity;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.ToString;
+import lombok.*;
 import org.neo4j.ogm.annotation.GeneratedValue;
 import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.NodeEntity;
@@ -15,6 +13,8 @@ import java.util.Set;
 @ToString
 @NodeEntity
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Artifact {
     @Id
     @GeneratedValue
