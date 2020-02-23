@@ -5,9 +5,10 @@ import lombok.ToString;
 
 @Data
 @ToString
-public class Dependency {
+public class Artifact {
     String groupId;
     String artifactId;
     String version;
     String scope;
+    String packing;
 }

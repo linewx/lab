@@ -1,8 +1,8 @@
 package com.zz.lab;
 
 import com.zz.lab.entity.Person;
-import com.zz.lab.pom.Dependency;
-import com.zz.lab.pom.PomDepParser;
+import com.zz.lab.pom.Artifact;
+import com.zz.lab.pom.PomParser;
 import com.zz.lab.repo.PersonRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,11 +23,12 @@ public class TestPomParser {
         String parentPom = "/Users/luganlin/git/itsma-x/pom.xml";
         String tenantPom = "/Users/luganlin/git/itsma-x/paas/platform/services/tenant-settings/tenant-settings-api/pom.xml";
 
-        List<Dependency> parentDeps = PomDepParser.parse(parentPom);
+
+        List<Artifact> parentDeps = new PomParser(parentPom).parseDependencies();
         System.out.println(parentDeps.size());
 
 
-        List<Dependency> tenantDeps = PomDepParser.parse(tenantPom);
+        List<Artifact> tenantDeps = new PomParser(tenantPom).parseDependencies();
         System.out.println(tenantDeps.size());
 
     }
