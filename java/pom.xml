@@ -33,6 +33,8 @@
         <module>jvm</module>
         <module>jdk</module>
         <module>cache</module>
+        <module>mojo</module>
+        <module>neo4j</module>
     </modules>
 
     <properties>

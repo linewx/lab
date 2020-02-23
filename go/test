@@ -1,0 +1,1949 @@
+
+[INFO] parent                                                             [pom]
+[INFO] content-for-upgrade                                                [pom]
+[INFO] paas                                                               [pom]
+[INFO] MaaS Platform                                                      [pom]
+[INFO] Commons                                                            [pom]
+[INFO] Localization                                                       [jar]
+[INFO] Platform Lifecycle                                                 [jar]
+[INFO] Core                                                               [pom]
+[INFO] Offline server utilities                                           [jar]
+[INFO] Crypto Utils                                                       [jar]
+[INFO] Testing Utilities                                                  [jar]
+[INFO] Configuration reader                                               [jar]
+[INFO] Common Utils                                                       [jar]
+[INFO] Version                                                            [jar]
+[INFO] Platform SPIs                                                      [jar]
+[INFO] JMX Utils                                                          [jar]
+[INFO] application-context                                                [jar]
+[INFO] circuit-breaker                                                    [pom]
+[INFO] circuit-breaker-simple                                             [jar]
+[INFO] Context Management                                                 [pom]
+[INFO] Context Facade                                                     [jar]
+[INFO] Exception handling                                                 [jar]
+[INFO] Context Test                                                       [jar]
+[INFO] Logging Extensions                                                 [jar]
+[INFO] Logging Utils                                                      [jar]
+[INFO] JMX Platform Extensions                                            [jar]
+[INFO] Web Utils                                                          [jar]
+[INFO] Security Utils                                                     [jar]
+[INFO] Tenant Api                                                         [jar]
+[INFO] Backend Mocks                                                      [jar]
+[INFO] Common Query Parser                                                [jar]
+[INFO] Base Module for all Query Languages                                [pom]
+[INFO] Common grammar definitions for Query Languages                     [jar]
+[INFO] Query Language Implementation for RMS                              [jar]
+[INFO] Query Language Implementation for EMS                              [jar]
+[INFO] Spring Support Common Utils                                        [jar]
+[INFO] Logging Utils                                                      [jar]
+[INFO] apache-httpclient-jmx                                              [jar]
+[INFO] http-test-utils                                                    [jar]
+[INFO] Constants generation and consumption                               [pom]
+[INFO] Common content generator                                           [jar]
+[INFO] Content Rules Enforcer                                             [jar]
+[INFO] package-bundle-builder                                             [jar]
+[INFO] content                                                            [jar]
+[INFO] Content Loader                                                     [jar]
+[INFO] Services                                                           [pom]
+[INFO] Common APIs                                                        [jar]
+[INFO] System configuration                                               [jar]
+[INFO] Authentication                                                     [pom]
+[INFO] Authentication API                                                 [jar]
+[INFO] transaction-context                                                [jar]
+[INFO] Framework HTTP client                                              [pom]
+[INFO] Framework HTTP client core                                         [jar]
+[INFO] Services Locator                                                   [pom]
+[INFO] Lookup Java API                                                    [jar]
+[INFO] Lookup test utils                                                  [jar]
+[INFO] Tenant Management                                                  [pom]
+[INFO] Tenant Management Server API                                       [jar]
+[INFO] Messaging                                                          [pom]
+[INFO] Messaging Api                                                      [jar]
+[INFO] Messaging Common                                                   [jar]
+[INFO] Platform Thread Pool                                               [jar]
+[INFO] Messaging Java Client                                              [jar]
+[INFO] Authentication Test                                                [jar]
+[INFO] metering                                                           [pom]
+[INFO] metering-core                                                      [jar]
+[INFO] Metadata                                                           [pom]
+[INFO] Metadata Java API                                                  [jar]
+[INFO] Resource Management                                                [pom]
+[INFO] Resource Management Java API                                       [jar]
+[INFO] Resource Management Common Implementation                          [jar]
+[INFO] Tenant Settings                                                    [pom]
+[INFO] Tenant Settings Service API                                        [jar]
+[INFO] Dev2Prod                                                           [pom]
+[INFO] Dev2Prod Java API                                                  [jar]
+[INFO] REST Framework                                                     [jar]
+[INFO] Framework HTTP client test utils                                   [jar]
+[INFO] Resource Management Java Client                                    [jar]
+[INFO] Resource Management Templates                                      [jar]
+[INFO] dql-sql-parser                                                     [pom]
+[INFO] dql-sql-parser-api                                                 [jar]
+[INFO] Metadata Java Internal API                                         [jar]
+[INFO] spring-circuit-breaker                                             [jar]
+[INFO] Schema                                                             [pom]
+[INFO] Schema Java API                                                    [jar]
+[INFO] Metadata Mock Implementation                                       [jar]
+[INFO] Localization Service                                               [pom]
+[INFO] Localization Service API                                           [jar]
+[INFO] Data Access Layer                                                  [pom]
+[INFO] DAL API                                                            [jar]
+[INFO] System configuration test extensions                               [jar]
+[INFO] Audit                                                              [pom]
+[INFO] Audit Java API                                                     [jar]
+[INFO] XLS Utils                                                          [jar]
+[INFO] User Options                                                       [pom]
+[INFO] User Options Service API                                           [jar]
+[INFO] Entity Management                                                  [pom]
+[INFO] EMS Java API                                                       [jar]
+[INFO] File Repository Framework                                          [pom]
+[INFO] File Repository Service API                                        [jar]
+[INFO] Reference Identity                                                 [jar]
+[INFO] Package Manager                                                    [pom]
+[INFO] Package Manager API                                                [jar]
+[INFO] JPA Data Source                                                    [jar]
+[INFO] Dev2Prod dry-run support utilities                                 [jar]
+[INFO] Schema Mock                                                        [jar]
+[INFO] ID Gen API                                                         [jar]
+[INFO] Users                                                              [jar]
+[INFO] SaaS Integration                                                   [pom]
+[INFO] Saas Portal Java API                                               [jar]
+[INFO] User Management Service                                            [pom]
+[INFO] UMS Java API                                                       [jar]
+[INFO] content-upgrade                                                    [pom]
+[INFO] content-upgrade-api                                                [jar]
+[INFO] Resource Management Test Extensions                                [jar]
+[INFO] rms                                                                [jar]
+[INFO] Authorization Service                                              [pom]
+[INFO] Authorization Service Java API                                     [jar]
+[INFO] Analytics                                                          [pom]
+[INFO] Analytics API                                                      [jar]
+[INFO] Metadata Package Management Api                                    [jar]
+[INFO] Tenant Affinity                                                    [pom]
+[INFO] Tenant Affinity API                                                [jar]
+[INFO] Tenant Affinity Impl                                               [jar]
+[INFO] dql-sql-parser-impl                                                [jar]
+[INFO] DAL Implementation                                                 [jar]
+[INFO] Dev2Prod dry-run support mock implementation                       [jar]
+[INFO] Caching                                                            [pom]
+[INFO] Caching API                                                        [jar]
+[INFO] Metadata Implementation                                            [jar]
+[INFO] Metadata constants generator                                       [jar]
+[INFO] Metadata Constants                                                 [jar]
+[INFO] Binder                                                             [pom]
+[INFO] Binder Data Source API                                             [jar]
+[INFO] Debug Service                                                      [pom]
+[INFO] Debug Java API                                                     [jar]
+[INFO] Binder Java API                                                    [jar]
+[INFO] Feature Flags                                                      [pom]
+[INFO] Feature Flags Service API                                          [jar]
+[INFO] Collaboration                                                      [pom]
+[INFO] Collaboration Java API                                             [jar]
+[INFO] Notification                                                       [pom]
+[INFO] Notification Java API                                              [jar]
+[INFO] Time Periods                                                       [pom]
+[INFO] Time Periods API                                                   [jar]
+[INFO] UserWorkScheduleService                                            [pom]
+[INFO] UserWorkScheduleService Api                                        [jar]
+[INFO] Personalization                                                    [pom]
+[INFO] Personalization Java API                                           [jar]
+[INFO] query-filter                                                       [jar]
+[INFO] Report Framework                                                   [pom]
+[INFO] Report Framework API                                               [jar]
+[INFO] Report Framework Client                                            [jar]
+[INFO] Surveys Service                                                    [pom]
+[INFO] Surveys API                                                        [jar]
+[INFO] Search Service                                                     [pom]
+[INFO] Search Java API                                                    [jar]
+[INFO] Suggestions                                                        [pom]
+[INFO] suggestions Java API                                               [jar]
+[INFO] Workflow Engine                                                    [pom]
+[INFO] Workflow Engine API                                                [jar]
+[INFO] Workflow constants generator                                       [jar]
+[INFO] Workflow Constants                                                 [jar]
+[INFO] System configuration spring                                        [jar]
+[INFO] Platform Thread Pool Metering Integration                          [jar]
+[INFO] Common Filters                                                     [jar]
+[INFO] QOS Integration                                                    [jar]
+[INFO] Long executions                                                    [jar]
+[INFO] Tenant Management Common                                           [jar]
+[INFO] ops-console                                                        [jar]
+[INFO] System Health                                                      [pom]
+[INFO] System Health Framework                                            [jar]
+[INFO] System Health Rest                                                 [jar]
+[INFO] Authorization Utils                                                [jar]
+[INFO] Context Implementation                                             [jar]
+[INFO] Metadata Web Client API                                            [jar]
+[INFO] Metadata Package Management Client                                 [jar]
+[INFO] Metadata Web Service API                                           [jar]
+[INFO] License Management                                                 [pom]
+[INFO] lms-api                                                            [jar]
+[INFO] Platform Configuration Service                                     [pom]
+[INFO] Platform Configuration Service API                                 [jar]
+[INFO] Schema Implementation                                              [jar]
+[INFO] ems-data-model                                                     [pom]
+[INFO] ems-datamodel-api                                                  [jar]
+[INFO] ems-datamodel-impl                                                 [jar]
+[INFO] ID Gen Implementation                                              [jar]
+[INFO] fwhttpclient-metering-integration                                  [jar]
+[INFO] platform-management                                                [pom]
+[INFO] Platform Management Service API                                    [jar]
+[INFO] Maas Filter                                                        [jar]
+[INFO] Messaging Queues Files                                             [jar]
+[INFO] Scheduler                                                          [pom]
+[INFO] scheduler-api                                                      [jar]
+[INFO] Messaging Implementation                                           [jar]
+[INFO] Messaging Test                                                     [jar]
+[INFO] Saas Portal Implementation                                         [jar]
+[INFO] Saas Portal Java Client                                            [jar]
+[INFO] Saas Portal Web Service                                            [jar]
+[INFO] Authentication Impl                                                [jar]
+[INFO] Caching Test                                                       [jar]
+[INFO] Caching Implementation                                             [jar]
+[INFO] Caching benchmark                                                  [jar]
+[INFO] Caching Utilities                                                  [jar]
+[INFO] Ems Data Parsing Common Module                                     [jar]
+[INFO] Monitoring and Metering Framework                                  [pom]
+[INFO] Monitoring and Metering Framework Model                            [jar]
+[INFO] Monitoring and Metering Framework Core                             [jar]
+[INFO] Monitoring and Metering Framework Configuration                    [jar]
+[INFO] Monitoring and Metering Framework Client                           [jar]
+[INFO] Java Management Extensions MBeans for logging                      [jar]
+[INFO] Computation Unit                                                   [jar]
+[INFO] report-templates-api                                               [jar]
+[INFO] in-memory-cache                                                    [pom]
+[INFO] in-memory-cache-api                                                [jar]
+[INFO] in-memory-cache-impl                                               [jar]
+[INFO] Tenant Settings Service Common                                     [jar]
+[INFO] Tenant Management Cache                                            [jar]
+[INFO] Tenant Settings Service Client                                     [jar]
+[INFO] content-upgrade-model-api                                          [jar]
+[INFO] content-upgrade-model-impl                                         [jar]
+[INFO] scheduler-client                                                   [jar]
+[INFO] History                                                            [pom]
+[INFO] History Java API                                                   [jar]
+[INFO] Multi Service Provider                                             [pom]
+[INFO] MSP API                                                            [jar]
+[INFO] ems-mt                                                             [jar]
+[INFO] EMS Implementation                                                 [jar]
+[INFO] EMS Client                                                         [jar]
+[INFO] Analytics Client                                                   [jar]
+[INFO] Forms                                                              [pom]
+[INFO] Forms Java API                                                     [jar]
+[INFO] Binder Client                                                      [jar]
+[INFO] report-template-utils                                              [jar]
+[INFO] UI RMS Validation integration                                      [pom]
+[INFO] UI Validation API                                                  [jar]
+[INFO] Forms Client                                                       [jar]
+[INFO] Forms Implementation                                               [jar]
+[INFO] Theme settings                                                     [pom]
+[INFO] theme-settings-api                                                 [jar]
+[INFO] Upgrade Extensions                                                 [pom]
+[INFO] UpgradeResourcesCommonEngine                                       [jar]
+[INFO] Rms Resources Extensions                                           [pom]
+[INFO] Rms Resources Common                                               [jar]
+[INFO] UI Validation Implementation                                       [jar]
+[INFO] Rms Resources Upgrader                                             [jar]
+[INFO] Rms Resources Validator                                            [jar]
+[INFO] ThreadDumps                                                        [jar]
+[INFO] metering-management                                                [jar]
+[INFO] Worker Service                                                     [pom]
+[INFO] Worker Service API                                                 [jar]
+[INFO] Text Detection Service                                             [pom]
+[INFO] Text Detection Java API                                            [jar]
+[INFO] Service Level Management                                           [pom]
+[INFO] Service Level Management API                                       [jar]
+[INFO] Satellite Management                                               [pom]
+[INFO] Satellite Management API                                           [jar]
+[INFO] metering-integration                                               [jar]
+[INFO] resource-usage                                                     [jar]
+[INFO] Catalog                                                            [pom]
+[INFO] Catalog API                                                        [jar]
+[INFO] Workflow Engine Java Client                                        [jar]
+[INFO] Catalog Implementation                                             [jar]
+[INFO] Default Image Utils                                                [jar]
+[INFO] Tenant Management Server Clone API                                 [jar]
+[INFO] File Repository Service Implementation                             [jar]
+[INFO] Default Image Upgrader                                             [jar]
+[INFO] Debug Implementation                                               [jar]
+[INFO] Debug Web Services                                                 [jar]
+[INFO] System-Health-Commands-Platform                                    [jar]
+[INFO] IDM Integration                                                    [pom]
+[INFO] IDM integration API                                                [jar]
+[INFO] IDM integration implementation                                     [jar]
+[INFO] IDM Integration Java Client                                        [jar]
+[INFO] IDM Integration Web Service                                        [jar]
+[INFO] bo-integration                                                     [pom]
+[INFO] bo-api                                                             [jar]
+[INFO] bo-impl                                                            [jar]
+[INFO] bo-client                                                          [jar]
+[INFO] bo-ws                                                              [jar]
+[INFO] Authorization Service Java Client                                  [jar]
+[INFO] Authorization Service Server Implementation                        [jar]
+[INFO] Authorization Service Web Service API                              [jar]
+[INFO] Encryption Service                                                 [pom]
+[INFO] Encryption Service API                                             [jar]
+[INFO] Encryption Service Common                                          [jar]
+[INFO] EMS Web Service API                                                [jar]
+[INFO] lms-common                                                         [jar]
+[INFO] lms-impl                                                           [jar]
+[INFO] lms-client                                                         [jar]
+[INFO] lms-ws                                                             [jar]
+[INFO] Business Rules                                                     [pom]
+[INFO] Workflow Engine Java SPI                                           [jar]
+[INFO] notification filter api                                            [jar]
+[INFO] Entity Stakeholders Service                                        [pom]
+[INFO] Entity Stakeholders API                                            [jar]
+[INFO] Push Service                                                       [pom]
+[INFO] Push Service API                                                   [jar]
+[INFO] Collaboration Service Implementation                               [jar]
+[INFO] Resource Management Java Driver API                                [jar]
+[INFO] Resource Management Server Implementation                          [jar]
+[INFO] Routing Definition                                                 [pom]
+[INFO] Routing Definition API                                             [jar]
+[INFO] Routing Definition Impl                                            [jar]
+[INFO] BusinessCalendar                                                   [pom]
+[INFO] business-calendar Java API                                         [jar]
+[INFO] business-calendar Implementation                                   [jar]
+[INFO] Offline-Job-Scheduler                                              [jar]
+[INFO] Service Level Management DAO                                       [jar]
+[INFO] Resource Management Utilities                                      [jar]
+[INFO] Worker Test Utilities                                              [jar]
+[INFO] Groovy-Tools                                                       [jar]
+[INFO] MaaS runtime                                                       [pom]
+[INFO] Deployer Templates                                                 [jar]
+[INFO] Worker Service Common Implementation                               [jar]
+[INFO] Worker Service Client                                              [jar]
+[INFO] Worker Service Implementation                                      [jar]
+[INFO] Service Level Management Implementation                            [jar]
+[INFO] content-upgrade-framework                                          [jar]
+[INFO] REST Executor                                                      [pom]
+[INFO] Rest Executor Service Api                                          [jar]
+[INFO] OPB Agent                                                          [pom]
+[INFO] OPB Platform Shared                                                [pom]
+[INFO] OPB Platform Shared API                                            [jar]
+[INFO] OPB Executor                                                       [pom]
+[INFO] OPB Executor API                                                   [jar]
+[INFO] OPB Service                                                        [pom]
+[INFO] OPB Shared                                                         [jar]
+[INFO] OPB Controller                                                     [pom]
+[INFO] OPB Controller API                                                 [jar]
+[INFO] OPB Domain Sample                                                  [pom]
+[INFO] OPB Domain Sample Impl                                             [jar]
+[INFO] OPB Executor Impl                                                  [jar]
+[INFO] OPB lightweight HttpClient                                         [jar]
+[INFO] Rest Executor Domain                                               [jar]
+[INFO] Tasks and Approvals Engine                                         [pom]
+[INFO] Tasks and Approvals Engine API                                     [jar]
+[INFO] Tagging Service                                                    [pom]
+[INFO] Tagging API                                                        [jar]
+[INFO] Binder Data Source Common                                          [jar]
+[INFO] Id Mapping                                                         [pom]
+[INFO] Id Mapping API                                                     [jar]
+[INFO] Workflow Engine Java Common Code                                   [jar]
+[INFO] Feature Template Engine                                            [pom]
+[INFO] Feature Template API                                               [jar]
+[INFO] Feature Template Engine API                                        [jar]
+[INFO] Tasks and Approvals Engine Implementation                          [jar]
+[INFO] Rest Executor Java Client                                          [jar]
+[INFO] OPB Service Api                                                    [jar]
+[INFO] OPB Data Transfer utilities                                        [jar]
+[INFO] Rest Executor Service Implementation                               [jar]
+[INFO] ChatOps                                                            [pom]
+[INFO] ChatOps API                                                        [jar]
+[INFO] OPB Data Sync Service                                              [pom]
+[INFO] opb-data-sync-common                                               [jar]
+[INFO] Id Mapping implementation                                          [jar]
+[INFO] Data Sync Service                                                  [pom]
+[INFO] Data Sync Service API                                              [jar]
+[INFO] Mapping Engine                                                     [pom]
+[INFO] Mapping Service API                                                [jar]
+[INFO] ChatOps Implementation                                             [jar]
+[INFO] OO Integration                                                     [pom]
+[INFO] OO Integration API                                                 [jar]
+[INFO] OO Integration Domain                                              [jar]
+[INFO] OO Integration Client API                                          [jar]
+[INFO] OO Integration Service Implementation                              [jar]
+[INFO] Charge Back Rule Engine                                            [pom]
+[INFO] chargeback-api                                                     [jar]
+[INFO] chargeback-impl                                                    [jar]
+[INFO] Identification Service                                             [pom]
+[INFO] Identification API                                                 [jar]
+[INFO] Enrichment Engine                                                  [pom]
+[INFO] Enrichment API                                                     [jar]
+[INFO] Binder Data Source Implementation                                  [jar]
+[INFO] Enrichment Implementation                                          [jar]
+[INFO] Binder Implementation                                              [jar]
+[INFO] Entity Stakeholders Implementation                                 [jar]
+[INFO] Feature Template Sample Api                                        [jar]
+[INFO] Feature Template Engine Impl                                       [jar]
+[INFO] Smart Ticket                                                       [pom]
+[INFO] Smart Ticket Service API                                           [jar]
+[INFO] Notification Processing Rules API                                  [jar]
+[INFO] Email Service                                                      [pom]
+[INFO] Email Service Java API                                             [jar]
+[INFO] Mobile Push Notification                                           [pom]
+[INFO] Mobile Push Notification Api                                       [jar]
+[INFO] Notification Service Implementation                                [jar]
+[INFO] Time Periods Implementation                                        [jar]
+[INFO] Time Periods Client                                                [jar]
+[INFO] Content Analytics                                                  [pom]
+[INFO] Content Analytics API                                              [jar]
+[INFO] analytics-data-model                                               [pom]
+[INFO] analytics-data-model-api                                           [jar]
+[INFO] analytics-dao                                                      [jar]
+[INFO] analytics-data-model-impl                                          [jar]
+[INFO] Content Analytics Implementation                                   [jar]
+[INFO] Case Exchange                                                      [pom]
+[INFO] Case Exchange API                                                  [jar]
+[INFO] Case Exchange Implementation                                       [jar]
+[INFO] Price Engine                                                       [pom]
+[INFO] Price API                                                          [jar]
+[INFO] Project Portfolio Optimization                                     [pom]
+[INFO] Project Portfolio Optimization API                                 [jar]
+[INFO] Notification Java Client                                           [jar]
+[INFO] Surveys Impl API                                                   [jar]
+[INFO] MSP Implementation                                                 [jar]
+[INFO] Aggregation                                                        [pom]
+[INFO] Aggregation API                                                    [jar]
+[INFO] UserWorkScheduleService Impl                                       [jar]
+[INFO] saw-authentication                                                 [pom]
+[INFO] saw-authentication-api                                             [jar]
+[INFO] Workflow Engine Implementation                                     [jar]
+[INFO] Workflow Engine Web Service                                        [jar]
+[INFO] Resource Management Web Service API                                [jar]
+[INFO] Archive                                                            [pom]
+[INFO] Archive Implementation                                             [jar]
+[INFO] Search Common Classes                                              [jar]
+[INFO] Collaboration Java Client                                          [jar]
+[INFO] Tenant Management Java Client                                      [jar]
+[INFO] Search Implementation                                              [jar]
+[INFO] OPB Data Sync Service Api                                          [jar]
+[INFO] OPB Service Internal Api                                           [jar]
+[INFO] OPB Service Client                                                 [jar]
+[INFO] OPB Service Impl                                                   [jar]
+[INFO] Notification Processing Rules Impl                                 [jar]
+[INFO] Notification Web Service API                                       [jar]
+[INFO] Notification filter impl                                           [jar]
+[INFO] OPB Service WS                                                     [jar]
+[INFO] OPB Data Sync Service Impl                                         [jar]
+[INFO] OPB Data Sync Service Client                                       [jar]
+[INFO] OPB Data Sync Service WS                                           [jar]
+[INFO] opb-data-sync-agent                                                [jar]
+[INFO] Email Service Implementation                                       [jar]
+[INFO] Email Service Java Client                                          [jar]
+[INFO] Email Service WebService                                           [jar]
+[INFO] Platform Service Lookup                                            [jar]
+[INFO] Binder Web Service API                                             [jar]
+[INFO] Logger Service                                                     [jar]
+[INFO] Export Engine                                                      [pom]
+[INFO] Export Java API                                                    [jar]
+[INFO] Export Implementation                                              [jar]
+[INFO] Search Web Service API                                             [jar]
+[INFO] Search Java Client                                                 [jar]
+[INFO] Surveys Web Service API                                            [jar]
+[INFO] Surveys client API                                                 [jar]
+[INFO] Collaboration Web Service API                                      [jar]
+[INFO] Rest Executor Web Service API                                      [jar]
+[INFO] Import Engine                                                      [pom]
+[INFO] Import Java API                                                    [jar]
+[INFO] Import Implementation                                              [jar]
+[INFO] Import Web Client API                                              [jar]
+[INFO] Import Web Service API                                             [jar]
+[INFO] Mapping Implementation                                             [jar]
+[INFO] Mapping Web Service API                                            [jar]
+[INFO] Mapping Client API                                                 [jar]
+[INFO] File Repository Client                                             [jar]
+[INFO] File Repository Web Service API                                    [jar]
+[INFO] Package Manager Core                                               [jar]
+[INFO] Package Manager Validator                                          [jar]
+[INFO] Package Manager Validator CLI                                      [jar]
+[INFO] file-repository-content                                 [package-bundle]
+[INFO] Personalization Server Implementation                              [jar]
+[INFO] Personalization Web Service API                                    [jar]
+[INFO] Personalization Java Client                                        [jar]
+[INFO] Entity Stakeholders Java Client                                    [jar]
+[INFO] Entity Stakeholders Web Service                                    [jar]
+[INFO] Voting                                                             [pom]
+[INFO] Voting Java API                                                    [jar]
+[INFO] Voting Java Client                                                 [jar]
+[INFO] Voting Service Implementation                                      [jar]
+[INFO] Voting Web Service API                                             [jar]
+[INFO] Tasks and Approvals Java Client                                    [jar]
+[INFO] Tasks and Approvals Engine Web Service API                         [jar]
+[INFO] business-calendar Java Client                                      [jar]
+[INFO] business-calendar Java Web Service API                             [jar]
+[INFO] Service Level Management Client                                    [jar]
+[INFO] Service Level Management WS                                        [jar]
+[INFO] Feature Flags Web Service API                                      [jar]
+[INFO] Feature Flags Impl                                                 [jar]
+[INFO] Feature Flags Client                                               [jar]
+[INFO] Push Service Client                                                [jar]
+[INFO] Push Service Implementation                                        [jar]
+[INFO] Push Web Service API                                               [jar]
+[INFO] UMS Server Implementation                                          [jar]
+[INFO] UMS Web Service API                                                [jar]
+[INFO] UMS Java Client                                                    [jar]
+[INFO] Tagging Client                                                     [jar]
+[INFO] Tagging Implementation                                             [jar]
+[INFO] Tagging Web Service API                                            [jar]
+[INFO] Tenant Management Server Implementation                            [jar]
+[INFO] Tenant Management Web Service API                                  [jar]
+[INFO] Tenant Management Move Tools                                       [pom]
+[INFO] Tenant Management Web Service API                                  [jar]
+[INFO] Tenant Management Clone Java Client                                [jar]
+[INFO] Tenant Management Clone Model API                                  [jar]
+[INFO] Tenant Management Clone Framework                                  [jar]
+[INFO] Tenant Management Clone Implementation                             [jar]
+[INFO] Tenant Management Clone Model Implementation                       [jar]
+[INFO] MaaS package manager mock module                                   [jar]
+[INFO] Platform Configuration Service Implementation                      [jar]
+[INFO] Platform Configuration Java Client                                 [jar]
+[INFO] Platform Configuration Web Service API                             [jar]
+[INFO] Audit Java Client                                                  [jar]
+[INFO] Audit Implementation                                               [jar]
+[INFO] Audit Java Web Service API                                         [jar]
+[INFO] Metering                                                           [pom]
+[INFO] Metering Java API                                                  [jar]
+[INFO] Metering Service Implementation                                    [jar]
+[INFO] Metering Java Client                                               [jar]
+[INFO] Metering Web Service API                                           [jar]
+[INFO] Package Manager Server Implementation                              [jar]
+[INFO] Package Manager Web Service API                                    [jar]
+[INFO] Package Manager Java Client                                        [jar]
+[INFO] scheduler-common                                                   [jar]
+[INFO] scheduler-impl                                                     [jar]
+[INFO] scheduler-ws                                                       [jar]
+[INFO] scheduler-runner                                                   [jar]
+[INFO] scheduler-upgrader                                                 [jar]
+[INFO] Analytics Impl                                                     [jar]
+[INFO] Analytics Web Services                                             [jar]
+[INFO] Authentication-endpoint Service                                    [pom]
+[INFO] Authentication-endpoint API                                        [jar]
+[INFO] Authentication-endpoint Client                                     [jar]
+[INFO] EMS Package Manager integration                                    [pom]
+[INFO] EMS Package Management Java API                                    [jar]
+[INFO] EMS Package Management Server Implementation                       [jar]
+[INFO] EMS Package Management Web Service API                             [jar]
+[INFO] EMS Package Management Java Client                                 [jar]
+[INFO] Favorites                                                          [pom]
+[INFO] Favorites service API                                              [jar]
+[INFO] Favorites implementation                                           [jar]
+[INFO] Favorites Web Service API                                          [jar]
+[INFO] Favorites Client                                                   [jar]
+[INFO] Report Framework Web Service API                                   [jar]
+[INFO] Quota Management                                                   [pom]
+[INFO] Quota Management API                                               [jar]
+[INFO] Report Framework Impl                                              [jar]
+[INFO] report-templates-impl                                              [jar]
+[INFO] Quota Management Client                                            [jar]
+[INFO] Quota Management Impl                                              [jar]
+[INFO] Report Framework Upgrade                                           [jar]
+[INFO] Feature Template Engine Client                                     [jar]
+[INFO] Feature Template Engine WS                                         [jar]
+[INFO] Feature Template Impl                                              [jar]
+[INFO] Feature Template Sample Impl                                       [jar]
+[INFO] Quota Management Web Service API                                   [jar]
+[INFO] RMS Package Manager integration                                    [pom]
+[INFO] RMS Package Management Java API                                    [jar]
+[INFO] RMS Package Management Server Implementation                       [jar]
+[INFO] RMS Package Management Web Service API                             [jar]
+[INFO] RMS Package Management Java Client                                 [jar]
+[INFO] menu                                                               [pom]
+[INFO] menu-api                                                           [jar]
+[INFO] Dev2Prod Server Implementation                                     [jar]
+[INFO] Dev2Prod Web Service API                                           [jar]
+[INFO] Dev2Prod Java Client                                               [jar]
+[INFO] Text Detection Implementation                                      [jar]
+[INFO] Text Detection Client                                              [jar]
+[INFO] Text Detection WS                                                  [jar]
+[INFO] Localization Service Client                                        [jar]
+[INFO] Localization Service Cache Utils                                   [jar]
+[INFO] Tenant Settings Service Implementation                             [jar]
+[INFO] Localization Service Impl                                          [jar]
+[INFO] Localization Service WS                                            [jar]
+[INFO] History Java Client                                                [jar]
+[INFO] Event Trace                                                        [pom]
+[INFO] Event Trace API                                                    [jar]
+[INFO] History Java Web Service API                                       [jar]
+[INFO] History Implementation                                             [jar]
+[INFO] content-upgrade-impl                                               [jar]
+[INFO] content-upgrade-reports                                            [jar]
+[INFO] content-upgrade-ws                                                 [jar]
+[INFO] Time Periods WS                                                    [jar]
+[INFO] UI Validation Web Service API                                      [jar]
+[INFO] OO Integration Web Service API                                     [jar]
+[INFO] Case Exchange Java Web Service API                                 [jar]
+[INFO] Content Analytics Client                                           [jar]
+[INFO] Content Analytics WS                                               [jar]
+[INFO] Forms Web Service API                                              [jar]
+[INFO] Enrichment Web Service API                                         [jar]
+[INFO] Enrichment client API                                              [jar]
+[INFO] suggestions Java Client                                            [jar]
+[INFO] suggestions Implementation                                         [jar]
+[INFO] suggestions Java Web Service API                                   [jar]
+[INFO] Tenant Settings Service Web Service API                            [jar]
+[INFO] Smart Ticket Client                                                [jar]
+[INFO] Smart Ticket Implementation                                        [jar]
+[INFO] Smart Ticket Web Service API                                       [jar]
+[INFO] Virtual Agent                                                      [pom]
+[INFO] Virtual Agent API                                                  [jar]
+[INFO] Virtual Agent Client                                               [jar]
+[INFO] Virtual Agent Implementation                                       [jar]
+[INFO] Virtual Agent Web Service API                                      [jar]
+[INFO] Aggregation Client                                                 [jar]
+[INFO] Aggregation Implementation                                         [jar]
+[INFO] Aggregation Web Service API                                        [jar]
+[INFO] Worker Web Service                                                 [jar]
+[INFO] Identification Implementation                                      [jar]
+[INFO] Identification Web Service API                                     [jar]
+[INFO] Identification client API                                          [jar]
+[INFO] Scalable Import Engine                                             [pom]
+[INFO] Scalable Import Java API                                           [jar]
+[INFO] Scalable Import Implementation                                     [jar]
+[INFO] Scalable Import Web Service API                                    [jar]
+[INFO] Scalable Import Web Client API                                     [jar]
+[INFO] offering aggregate                                                 [pom]
+[INFO] offering-aggregate-api                                             [jar]
+[INFO] Offering Aggregate Implementation                                  [jar]
+[INFO] Business Interchange Parent                                        [pom]
+[INFO] Business Interchange  - API                                        [jar]
+[INFO] Business Interchange - Implementation                              [jar]
+[INFO] Business Interchange  - Web Services                               [jar]
+[INFO] Business Interchange  - Client                                     [jar]
+[INFO] receiving assets                                                   [pom]
+[INFO] receiving-assets-api                                               [jar]
+[INFO] receiving-assets-impl                                              [jar]
+[INFO] receiving-assets-client                                            [jar]
+[INFO] receiving-assets-ws                                                [jar]
+[INFO] UCMDB Integration                                                  [pom]
+[INFO] ucmdb-browser-modeling-template                                    [jar]
+[INFO] UCMDB Integration Push Adapter                                     [jar]
+[INFO] OPB Loopback                                                       [pom]
+[INFO] OPB Loopback Mocks                                                 [jar]
+[INFO] UCMDB Integration Domain                                           [jar]
+[INFO] UCMDB Integration API                                              [jar]
+[INFO] UCMDB Integration Dao                                              [jar]
+[INFO] UCMDB Integration Implementation                                   [jar]
+[INFO] UCMDB Integration Web Service API                                  [jar]
+[INFO] UCMDB Integration Worker                                           [jar]
+[INFO] theme-settings-impl                                                [jar]
+[INFO] theme-settings-ws                                                  [jar]
+[INFO] Price Implement                                                    [jar]
+[INFO] Price Web Service API                                              [jar]
+[INFO] Price Client                                                       [jar]
+[INFO] platform-management-ws                                             [jar]
+[INFO] platform-management-impl                                           [jar]
+[INFO] Platform Management Service Client                                 [jar]
+[INFO] MSP Client                                                         [jar]
+[INFO] MSP Web Service API                                                [jar]
+[INFO] Encryption Service Implementation                                  [jar]
+[INFO] Encryption Service Client                                          [jar]
+[INFO] Encryption WEB Service API                                         [jar]
+[INFO] Common Settings                                                    [pom]
+[INFO] Common Settings Service API                                        [jar]
+[INFO] Common Settings Service Manager                                    [jar]
+[INFO] Common Settings Service Implementation                             [jar]
+[INFO] Common Settings Service Web Service API                            [jar]
+[INFO] Common Settings Service Client                                     [jar]
+[INFO] Satellite Management DAO                                           [jar]
+[INFO] Satellite Management Implementation                                [jar]
+[INFO] Satellite Management Client                                        [jar]
+[INFO] Satellite Management WS                                            [jar]
+[INFO] Software Asset Management                                          [pom]
+[INFO] Software Asset Management Api                                      [jar]
+[INFO] Software Asset Management Implementation                           [jar]
+[INFO] Software Asset Management Client                                   [jar]
+[INFO] Software Asset Management Web Service API                          [jar]
+[INFO] Data export Engine                                                 [pom]
+[INFO] Data Export Service API                                            [jar]
+[INFO] Data Export Service Web Service API                                [jar]
+[INFO] Data Export Service Implementation                                 [jar]
+[INFO] data-export-domain                                                 [jar]
+[INFO] Data Export Service Client                                         [jar]
+[INFO] data-export-ucmdb-adapter                                          [jar]
+[INFO] Project Portfolio Optimization Implement                           [jar]
+[INFO] Project Portfolio Optimization Web Service API                     [jar]
+[INFO] Project Portfolio Optimization Client                              [jar]
+[INFO] application-upgraders                                              [jar]
+[INFO] saw-authentication-impl                                            [jar]
+[INFO] saw-authentication-client                                          [jar]
+[INFO] saw-authentication-ws                                              [jar]
+[INFO] Mobile Push Notification Implementation                            [jar]
+[INFO] Mobile Push Notification WS                                        [jar]
+[INFO] Mobile Push Notification Client                                    [jar]
+[INFO] USerWorkScheduleService Client                                     [jar]
+[INFO] UserWorkScheduleService WS                                         [jar]
+[INFO] feature-management                                                 [pom]
+[INFO] Feature Management Service API                                     [jar]
+[INFO] Feature Management Service Common                                  [jar]
+[INFO] Feature Management Service Implementation                          [jar]
+[INFO] Feature Management Service Client                                  [jar]
+[INFO] Feature Management Service Web Service API                         [jar]
+[INFO] Expense Line                                                       [pom]
+[INFO] Expense Line API                                                   [jar]
+[INFO] Expense Line Implementation                                        [jar]
+[INFO] Expense Line Web Service                                           [jar]
+[INFO] User Options Service Client                                        [jar]
+[INFO] User Options Service Implementation                                [jar]
+[INFO] User Options Service Web Service API                               [jar]
+[INFO] Data Sync Service Client                                           [jar]
+[INFO] ess                                                                [pom]
+[INFO] ess-opb                                                            [pom]
+[INFO] saw-opb-ldap                                                       [jar]
+[INFO] Data Sync Service Implementation                                   [jar]
+[INFO] Data Sync Service Web Service API                                  [jar]
+[INFO] Id Mapping REST services                                           [jar]
+[INFO] Id Mapping Client                                                  [jar]
+[INFO] Event Trace Impl                                                   [jar]
+[INFO] Event Trace REST Services                                          [jar]
+[INFO] Event Trace Client                                                 [jar]
+[INFO] PPM Integration                                                    [pom]
+[INFO] PPM Integration API                                                [jar]
+[INFO] PPM Integration Implementation                                     [jar]
+[INFO] PPM Integration Rest APIs                                          [jar]
+[INFO] PPM Integration Domain                                             [jar]
+[INFO] chargeback-ws                                                      [jar]
+[INFO] ChatOps Bot                                                        [pom]
+[INFO] opb-signer                                                         [jar]
+[INFO] OPB Controller Impl                                                [jar]
+[INFO] ChatOps OPB Domain                                                 [jar]
+[INFO] ChatOps Rest APIs                                                  [jar]
+[INFO] Entity Page Service                                                [pom]
+[INFO] Entity Page API                                                    [jar]
+[INFO] Entity Page Client                                                 [jar]
+[INFO] Entity Page Impl                                                   [jar]
+[INFO] Entity Page Web Service                                            [jar]
+[INFO] idm-sync-integration                                               [pom]
+[INFO] idm-sync-integraton-api                                            [jar]
+[INFO] idm-sync-integration-impl                                          [jar]
+[INFO] idm-sync-integration-ws                                            [jar]
+[INFO] idm-sync-integration-domain                                        [jar]
+[INFO] kpi                                                                [pom]
+[INFO] kpi-api                                                            [jar]
+[INFO] kpi-impl                                                           [jar]
+[INFO] request-kpi                                                        [pom]
+[INFO] request-kpi-api                                                    [jar]
+[INFO] request-kpi-impl                                                   [jar]
+[INFO] menu-ws                                                            [jar]
+[INFO] menu-impl                                                          [jar]
+[INFO] menu-client                                                        [jar]
+[INFO] procurement                                                        [pom]
+[INFO] procurement-api                                                    [jar]
+[INFO] procurement-client                                                 [jar]
+[INFO] procurement-impl                                                   [jar]
+[INFO] procurement-ws                                                     [jar]
+[INFO] health-check                                                       [jar]
+[INFO] Platform WebApp                                                    [war]
+[INFO] Deployer Environments Definition files                             [jar]
+[INFO] Create Lookup                                                      [pom]
+[INFO] Service Lifecycle                                                  [jar]
+[INFO] Content Validation                                                 [pom]
+[INFO] Content Validation Utilities                                       [jar]
+[INFO] Content Validation Executor                                        [jar]
+[INFO] index                                                              [jar]
+[INFO] MaaS Gateway                                                       [war]
+[INFO] Deployers Aggregator                                               [pom]
+[INFO] New-Deployer                                                       [pom]
+[INFO] Automation Platform API                                            [pom]
+[INFO] Automation Platform Impl                                           [pom]
+[INFO] OPB Wrapper Tool                                                   [pom]
+[INFO] OPB UI Panel                                                       [jar]
+[INFO] OPB Installation                                                   [pom]
+[INFO] OPB Loopback Sample                                                [jar]
+[INFO] l10n-message                                                       [jar]
+[INFO] Mock Server                                                        [war]
+[INFO] operation-console                                                  [war]
+[INFO] SX                                                                 [pom]
+[INFO] SX Content Saw Case Exchange                                       [jar]
+[INFO] SX Content Saw R2F                                                 [jar]
+[INFO] SX Content Saw Test                                                [jar]
+[INFO] SX SX Adapter Saw                                                  [jar]
+[INFO] SX SX Itest Support                                                [jar]
+[INFO] SX SX Saw Itest                                                    [jar]
+[INFO] SX SX Adapter Saw Package                                          [jar]
+[INFO] automation                                                         [pom]
+[INFO] automation-framework                                               [jar]
+[INFO] automation-entities-framework                                      [pom]
+[INFO] Automation base generator                                          [jar]
+[INFO] Automation entities generator                                      [jar]
+[INFO] automation-constants                                               [jar]
+[INFO] automation-entities                                                [jar]
+[INFO] automation-entities-api                                            [jar]
+[INFO] automation-user-management-api                                     [jar]
+[INFO] automation-maas-services                                           [jar]
+[INFO] Automation builder generator                                       [jar]
+[INFO] automation-builders                                                [jar]
+[INFO] automation-maas-tools                                              [jar]
+[INFO] automation-entities-impl                                           [jar]
+[INFO] automation-maas-base-tests                                         [jar]
+[INFO] automation-opb-tests                                               [jar]
+[INFO] automation-package-bundles                                         [pom]
+[INFO] automation-tests                                                   [jar]
+[INFO] automation-run                                                     [pom]
+[INFO] automation-component-tests                                         [jar]
+[INFO] Platform UI                                                        [pom]
+[INFO] root                                                               [pom]
+[INFO] identifier-api                                                     [jar]
+[INFO] maas-selenium                                                      [pom]
+[INFO] maas-selenium-api                                                  [jar]
+[INFO] automation-common                                                  [jar]
+[INFO] test-event-bus                                                     [jar]
+[INFO] maas-selenium-impl                                                 [jar]
+[INFO] recorder                                                           [jar]
+[INFO] reporter                                                           [jar]
+[INFO] pages                                                              [pom]
+[INFO] pages-api                                                          [jar]
+[INFO] pages-impl                                                         [jar]
+[INFO] tests                                                              [jar]
+[INFO] automation-run-ui                                                  [pom]
+[INFO] ess-packager-tool                                                  [jar]
+[INFO] ess-entities                                                       [jar]
+[INFO] SAW Server                                                         [pom]
+[INFO] SAW Services                                                       [pom]
+[INFO] request                                                            [pom]
+[INFO] request-api                                                        [jar]
+[INFO] request-client                                                     [jar]
+[INFO] ess-ems-tools                                                      [jar]
+[INFO] ess-catalog                                                        [pom]
+[INFO] ess-catalog-api                                                    [jar]
+[INFO] ess-catalog-client                                                 [jar]
+[INFO] user-management                                                    [pom]
+[INFO] user-management-api                                                [jar]
+[INFO] user-management-client                                             [jar]
+[INFO] saw-opb                                                            [jar]
+[INFO] ess-search                                                         [pom]
+[INFO] ess-search-api                                                     [jar]
+[INFO] ess-search-client                                                  [jar]
+[INFO] automation                                                         [pom]
+[INFO] automation-common                                                  [jar]
+[INFO] automation-tests                                                   [pom]
+[INFO] client-tests                                                       [pom]
+[INFO] saw-pages                                                          [pom]
+[INFO] saw-pages-api                                                      [jar]
+[INFO] saw-pages-impl                                                     [jar]
+[INFO] change                                                             [pom]
+[INFO] change-api                                                         [jar]
+[INFO] backend                                                            [pom]
+[INFO] backend-api                                                        [jar]
+[INFO] backend-client                                                     [jar]
+[INFO] article                                                            [pom]
+[INFO] article-api                                                        [jar]
+[INFO] ess-theme-settings                                                 [pom]
+[INFO] ess-theme-settings-api                                             [jar]
+[INFO] SAW Runtime                                                        [pom]
+[INFO] ess-theme-content                                                  [jar]
+[INFO] sample-data-content                                                [jar]
+[INFO] ess-comments                                                       [pom]
+[INFO] ess-comments-api                                                   [jar]
+[INFO] ess-commons                                                        [jar]
+[INFO] ess-opb-email-integration                                          [jar]
+[INFO] email-integration                                                  [jar]
+[INFO] saw-client-tests                                                   [jar]
+[INFO] article-client                                                     [jar]
+[INFO] server-tests                                                       [jar]
+[INFO] automation-run                                                     [pom]
+[INFO] automation-run-ui                                                  [pom]
+[INFO] prod-tests                                                         [jar]
+[INFO] opb-ppm                                                            [jar]
+[INFO] opb-ppo                                                            [jar]
+[INFO] ess-opb-indexing                                                   [jar]
+[INFO] ESS OPB Installation                                               [pom]
+[INFO] saw-package-manager                                                [pom]
+[INFO] Parent pom for SAW operational data content                        [pom]
+[INFO] saw-ootb-package-bundle                                 [package-bundle]
+[INFO] sacm-ui-config-package-bundle                           [package-bundle]
+[INFO] Parent pom for SAW content packagers                               [pom]
+[INFO] Operational data for SAW                                           [pom]
+[INFO] Initial data for SAW                                               [pom]
+[INFO] Parent pom for SAW demo data content                               [pom]
+[INFO] Parent pom for SAW configuration data content                      [pom]
+[INFO] templates-package-bundle                                [package-bundle]
+[INFO] itsmax-unsaw                                                       [jar]
+[INFO] ldap-integration                                                   [jar]
+[INFO] ess-comments-impl                                                  [jar]
+[INFO] ess-webapp                                                         [war]
+[INFO] ess-theme-settings-client                                          [jar]
+[INFO] ess-comments-client                                                [jar]
+[INFO] change-client                                                      [jar]
+[INFO] nginx-conf                                                         [pom]
+[INFO]
+[INFO] -------------------------< com.hp.maas:parent >-------------------------
+[INFO] Building parent 1.0.0-9999-SNAPSHOT                              [1/869]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ parent ---
+[INFO] com.hp.maas:parent:pom:1.0.0-9999-SNAPSHOT
+[INFO]
+[INFO] ------------------< com.hp.maas:content-for-upgrade >-------------------
+[INFO] Building content-for-upgrade 1.0.0-9999-SNAPSHOT                 [2/869]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ content-for-upgrade ---
+[INFO] com.hp.maas:content-for-upgrade:pom:1.0.0-9999-SNAPSHOT
+[INFO]
+[INFO] --------------------------< com.hp.maas:paas >--------------------------
+[INFO] Building paas 1.0.0-9999-SNAPSHOT                                [3/869]
+[INFO] --------------------------------[ pom ]---------------------------------
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-war-plugin/2.3/maven-war-plugin-2.3.pom
+Downloaded from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-war-plugin/2.3/maven-war-plugin-2.3.pom (0 B at 0 B/s)
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-war-plugin/2.3/maven-war-plugin-2.3.jar
+Downloaded from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-war-plugin/2.3/maven-war-plugin-2.3.jar (0 B at 0 B/s)
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-source-plugin/2.2.1/maven-source-plugin-2.2.1.pom
+Downloaded from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-source-plugin/2.2.1/maven-source-plugin-2.2.1.pom (0 B at 0 B/s)
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-source-plugin/2.2.1/maven-source-plugin-2.2.1.jar
+Downloaded from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-source-plugin/2.2.1/maven-source-plugin-2.2.1.jar (0 B at 0 B/s)
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/cargo/cargo-maven2-plugin/1.3.3/cargo-maven2-plugin-1.3.3.pom
+Progress (1): 4.1/4.4 kB
+Progress (1): 4.4 kB
+
+Downloaded from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/cargo/cargo-maven2-plugin/1.3.3/cargo-maven2-plugin-1.3.3.pom (4.4 kB at 10 kB/s)
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/cargo/cargo-extensions-maven2/1.3.3/cargo-extensions-maven2-1.3.3.pom
+Progress (1): 1.4 kB
+
+Downloaded from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/cargo/cargo-extensions-maven2/1.3.3/cargo-extensions-maven2-1.3.3.pom (1.4 kB at 3.4 kB/s)
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/cargo/cargo-extensions/1.3.3/cargo-extensions-1.3.3.pom
+Progress (1): 2.9 kB
+
+Downloaded from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/cargo/cargo-extensions/1.3.3/cargo-extensions-1.3.3.pom (2.9 kB at 7.2 kB/s)
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/cargo/cargo-parent/4.12/cargo-parent-4.12.pom
+Progress (1): 2.3/17 kB
+Progress (1): 6.4/17 kB
+Progress (1): 11/17 kB
+Progress (1): 14/17 kB
+Progress (1): 17 kB
+
+Downloaded from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/cargo/cargo-parent/4.12/cargo-parent-4.12.pom (17 kB at 33 kB/s)
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/cargo/cargo-maven2-plugin/1.3.3/cargo-maven2-plugin-1.3.3.jar
+Progress (1): 4.1/108 kB
+Progress (1): 8.2/108 kB
+Progress (1): 12/108 kB
+Progress (1): 16/108 kB
+Progress (1): 20/108 kB
+Progress (1): 25/108 kB
+Progress (1): 28/108 kB
+Progress (1): 32/108 kB
+Progress (1): 36/108 kB
+Progress (1): 40/108 kB
+Progress (1): 44/108 kB
+Progress (1): 48/108 kB
+Progress (1): 52/108 kB
+Progress (1): 56/108 kB
+Progress (1): 60/108 kB
+Progress (1): 64/108 kB
+Progress (1): 68/108 kB
+Progress (1): 73/108 kB
+Progress (1): 77/108 kB
+Progress (1): 81/108 kB
+Progress (1): 85/108 kB
+Progress (1): 89/108 kB
+Progress (1): 93/108 kB
+Progress (1): 97/108 kB
+Progress (1): 101/108 kB
+Progress (1): 105/108 kB
+Progress (1): 108 kB
+
+Downloaded from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/codehaus/cargo/cargo-maven2-plugin/1.3.3/cargo-maven2-plugin-1.3.3.jar (108 kB at 207 kB/s)
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/com/google/code/maven-replacer-plugin/maven-replacer-plugin/1.4.1/maven-replacer-plugin-1.4.1.pom
+Progress (1): 4.1/5.3 kB
+Progress (1): 5.3 kB
+
+Downloaded from alimaven: http://maven.aliyun.com/nexus/content/groups/public/com/google/code/maven-replacer-plugin/maven-replacer-plugin/1.4.1/maven-replacer-plugin-1.4.1.pom (5.3 kB at 15 kB/s)
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/com/google/code/maven-replacer-plugin/maven-replacer-plugin/1.4.1/maven-replacer-plugin-1.4.1.jar
+Progress (1): 2.3/29 kB
+Progress (1): 6.4/29 kB
+Progress (1): 11/29 kB
+Progress (1): 15/29 kB
+Progress (1): 19/29 kB
+Progress (1): 23/29 kB
+Progress (1): 27/29 kB
+Progress (1): 29 kB
+
+Downloaded from alimaven: http://maven.aliyun.com/nexus/content/groups/public/com/google/code/maven-replacer-plugin/maven-replacer-plugin/1.4.1/maven-replacer-plugin-1.4.1.jar (29 kB at 83 kB/s)
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-surefire-plugin/$(org.apache.maven.plugins_maven-surefire-plugin_version)/maven-surefire-plugin-$(org.apache.maven.plugins_maven-surefire-plugin_version).pom
+[WARNING] The POM for org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) is missing, no dependency information available
+Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-surefire-plugin/$(org.apache.maven.plugins_maven-surefire-plugin_version)/maven-surefire-plugin-$(org.apache.maven.plugins_maven-surefire-plugin_version).jar
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version): Plugin org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version) or one of its dependencies could not be resolved: Could not find artifact org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) in alimaven (http://maven.aliyun.com/nexus/content/groups/public/)
+[INFO]
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ paas ---
+[INFO] com.hp.maas:paas:pom:1.0.0-9999-SNAPSHOT
+[INFO]
+[INFO] -------------------< com.hp.maas.platform:platform >--------------------
+[INFO] Building MaaS Platform 1.0.0-9999-SNAPSHOT                       [4/869]
+[INFO] --------------------------------[ pom ]---------------------------------
+[WARNING] The POM for org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version): Plugin org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version) or one of its dependencies could not be resolved: Failure to find org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) in http://maven.aliyun.com/nexus/content/groups/public/ was cached in the local repository, resolution will not be reattempted until the update interval of alimaven has elapsed or updates are forced
+[INFO]
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ platform ---
+[INFO] com.hp.maas.platform:platform:pom:1.0.0-9999-SNAPSHOT
+[INFO]
+[INFO] ----------------< com.hp.maas.platform.commons:commons >----------------
+[INFO] Building Commons 1.0.0-9999-SNAPSHOT                             [5/869]
+[INFO] --------------------------------[ pom ]---------------------------------
+[WARNING] The POM for org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version): Plugin org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version) or one of its dependencies could not be resolved: Failure to find org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) in http://maven.aliyun.com/nexus/content/groups/public/ was cached in the local repository, resolution will not be reattempted until the update interval of alimaven has elapsed or updates are forced
+[INFO]
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ commons ---
+[INFO] com.hp.maas.platform.commons:commons:pom:1.0.0-9999-SNAPSHOT
+[INFO]
+[INFO] -------------< com.hp.maas.platform.commons:localization >--------------
+[INFO] Building Localization 1.0.0-9999-SNAPSHOT                        [6/869]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version): Plugin org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version) or one of its dependencies could not be resolved: Failure to find org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) in http://maven.aliyun.com/nexus/content/groups/public/ was cached in the local repository, resolution will not be reattempted until the update interval of alimaven has elapsed or updates are forced
+[INFO]
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ localization ---
+[INFO] com.hp.maas.platform.commons:localization:jar:1.0.0-9999-SNAPSHOT
+[INFO] \- junit:junit:jar:4.12:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO]
+[INFO] -------------< com.hp.maas.platform.commons:lifecycle-api >-------------
+[INFO] Building Platform Lifecycle 1.0.0-9999-SNAPSHOT                  [7/869]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version): Plugin org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version) or one of its dependencies could not be resolved: Failure to find org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) in http://maven.aliyun.com/nexus/content/groups/public/ was cached in the local repository, resolution will not be reattempted until the update interval of alimaven has elapsed or updates are forced
+[INFO]
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ lifecycle-api ---
+[INFO] com.hp.maas.platform.commons:lifecycle-api:jar:1.0.0-9999-SNAPSHOT
+[INFO] +- com.google.guava:guava:jar:15.0:compile
+[INFO] +- javax.servlet:javax.servlet-api:jar:3.1.0:provided
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] +- junit:junit:jar:4.12:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- org.easymock:easymock:jar:3.2:test
+[INFO] |  +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |  \- org.objenesis:objenesis:jar:1.3:test
+[INFO] \- org.slf4j:slf4j-simple:jar:1.7.5:test
+[INFO]
+[INFO] -------------------< com.hp.maas.platform.core:core >-------------------
+[INFO] Building Core 1.0.0-9999-SNAPSHOT                                [8/869]
+[INFO] --------------------------------[ pom ]---------------------------------
+[WARNING] The POM for org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version): Plugin org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version) or one of its dependencies could not be resolved: Failure to find org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) in http://maven.aliyun.com/nexus/content/groups/public/ was cached in the local repository, resolution will not be reattempted until the update interval of alimaven has elapsed or updates are forced
+[INFO]
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ core ---
+[INFO] com.hp.maas.platform.core:core:pom:1.0.0-9999-SNAPSHOT
+[INFO]
+[INFO] --------------< com.hp.maas.platform.core:offline-server >--------------
+[INFO] Building Offline server utilities 1.0.0-9999-SNAPSHOT            [9/869]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version): Plugin org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version) or one of its dependencies could not be resolved: Failure to find org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) in http://maven.aliyun.com/nexus/content/groups/public/ was cached in the local repository, resolution will not be reattempted until the update interval of alimaven has elapsed or updates are forced
+[INFO]
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ offline-server ---
+[INFO] com.hp.maas.platform.core:offline-server:jar:1.0.0-9999-SNAPSHOT
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] \- junit:junit:jar:4.12:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO]
+[INFO] -------------< com.hp.maas.platform.commons:crypto-utils >--------------
+[INFO] Building Crypto Utils 1.0.0-9999-SNAPSHOT                       [10/869]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ crypto-utils ---
+[INFO] com.hp.maas.platform.commons:crypto-utils:jar:1.0.0-9999-SNAPSHOT
+[INFO] +- junit:junit:jar:4.12:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- org.easymock:easymock:jar:3.2:test
+[INFO] |  +- cglib:cglib-nodep:jar:2.2.2:test
+[INFO] |  \- org.objenesis:objenesis:jar:1.3:test
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.5:compile
+[INFO] \- org.slf4j:slf4j-simple:jar:1.7.5:test
+[INFO]
+[INFO] --------------< com.hp.maas.platform.commons:test-utils >---------------
+[INFO] Building Testing Utilities 1.0.0-9999-SNAPSHOT                  [11/869]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version): Plugin org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version) or one of its dependencies could not be resolved: Failure to find org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) in http://maven.aliyun.com/nexus/content/groups/public/ was cached in the local repository, resolution will not be reattempted until the update interval of alimaven has elapsed or updates are forced
+[INFO]
+[INFO] --- maven-dependency-plugin:2.10:tree (default-cli) @ test-utils ---
+[INFO] com.hp.maas.platform.commons:test-utils:jar:1.0.0-9999-SNAPSHOT
+[INFO] +- junit:junit:jar:4.12:compile
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- org.easymock:easymock:jar:3.2:compile
+[INFO] |  +- cglib:cglib-nodep:jar:2.2.2:compile
+[INFO] |  \- org.objenesis:objenesis:jar:1.3:compile
+[INFO] +- nl.jqno.equalsverifier:equalsverifier:jar:1.1.4:compile
+[INFO] \- org.springframework:spring-beans:jar:4.1.0.RELEASE:compile
+[INFO]    \- org.springframework:spring-core:jar:4.1.0.RELEASE:compile
+[INFO]       \- commons-logging:commons-logging:jar:1.1.3:compile
+[INFO]
+[INFO] ---------< com.hp.maas.platform.commons:configuration-reader >----------
+[INFO] Building Configuration reader 1.0.0-9999-SNAPSHOT               [12/869]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version): Plugin org.apache.maven.plugins:maven-surefire-plugin:$(org.apache.maven.plugins_maven-surefire-plugin_version) or one of its dependencies could not be resolved: Failure to find org.apache.maven.plugins:maven-surefire-plugin:jar:$(org.apache.maven.plugins_maven-surefire-plugin_version) in http://maven.aliyun.com/nexus/content/groups/public/ was cached in the local repository, resolution will not be reattempted until the update interval of alimaven has elapsed or updates are forced
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for parent 1.0.0-9999-SNAPSHOT:
+[INFO]
+[INFO] parent ............................................. SUCCESS [  0.540 s]
+[INFO] content-for-upgrade ................................ SUCCESS [  0.011 s]
+[INFO] paas ............................................... SUCCESS [  7.681 s]
+[INFO] MaaS Platform ...................................... SUCCESS [  0.020 s]
+[INFO] Commons ............................................ SUCCESS [  0.009 s]
+[INFO] Localization ....................................... SUCCESS [  0.014 s]
+[INFO] Platform Lifecycle ................................. SUCCESS [  0.033 s]
+[INFO] Core ............................................... SUCCESS [  0.008 s]
+[INFO] Offline server utilities ........................... SUCCESS [  0.010 s]
+[INFO] Crypto Utils ....................................... SUCCESS [  0.009 s]
+[INFO] Testing Utilities .................................. SUCCESS [  0.024 s]
+[INFO] Configuration reader ............................... FAILURE [  0.042 s]
+[INFO] Common Utils ....................................... SKIPPED
+[INFO] Version ............................................ SKIPPED
+[INFO] Platform SPIs ...................................... SKIPPED
+[INFO] JMX Utils .......................................... SKIPPED
+[INFO] application-context ................................ SKIPPED
+[INFO] circuit-breaker .................................... SKIPPED
+[INFO] circuit-breaker-simple ............................. SKIPPED
+[INFO] Context Management ................................. SKIPPED
+[INFO] Context Facade ..................................... SKIPPED
+[INFO] Exception handling ................................. SKIPPED
+[INFO] Context Test ....................................... SKIPPED
+[INFO] Logging Extensions ................................. SKIPPED
+[INFO] Logging Utils ...................................... SKIPPED
+[INFO] JMX Platform Extensions ............................ SKIPPED
+[INFO] Web Utils .......................................... SKIPPED
+[INFO] Security Utils ..................................... SKIPPED
+[INFO] Tenant Api ......................................... SKIPPED
+[INFO] Backend Mocks ...................................... SKIPPED
+[INFO] Common Query Parser ................................ SKIPPED
+[INFO] Base Module for all Query Languages ................ SKIPPED
+[INFO] Common grammar definitions for Query Languages ..... SKIPPED
+[INFO] Query Language Implementation for RMS .............. SKIPPED
+[INFO] Query Language Implementation for EMS .............. SKIPPED
+[INFO] Spring Support Common Utils ........................ SKIPPED
+[INFO] Logging Utils ...................................... SKIPPED
+[INFO] apache-httpclient-jmx .............................. SKIPPED
+[INFO] http-test-utils .................................... SKIPPED
+[INFO] Constants generation and consumption ............... SKIPPED
+[INFO] Common content generator ........................... SKIPPED
+[INFO] Content Rules Enforcer ............................. SKIPPED
+[INFO] package-bundle-builder ............................. SKIPPED
+[INFO] content ............................................ SKIPPED
+[INFO] Content Loader ..................................... SKIPPED
+[INFO] Services ........................................... SKIPPED
+[INFO] Common APIs ........................................ SKIPPED
+[INFO] System configuration ............................... SKIPPED
+[INFO] Authentication ..................................... SKIPPED
+[INFO] Authentication API ................................. SKIPPED
+[INFO] transaction-context ................................ SKIPPED
+[INFO] Framework HTTP client .............................. SKIPPED
+[INFO] Framework HTTP client core ......................... SKIPPED
+[INFO] Services Locator ................................... SKIPPED
+[INFO] Lookup Java API .................................... SKIPPED
+[INFO] Lookup test utils .................................. SKIPPED
+[INFO] Tenant Management .................................. SKIPPED
+[INFO] Tenant Management Server API ....................... SKIPPED
+[INFO] Messaging .......................................... SKIPPED
+[INFO] Messaging Api ...................................... SKIPPED
+[INFO] Messaging Common ................................... SKIPPED
+[INFO] Platform Thread Pool ............................... SKIPPED
+[INFO] Messaging Java Client .............................. SKIPPED
+[INFO] Authentication Test ................................ SKIPPED
+[INFO] metering ........................................... SKIPPED
+[INFO] metering-core ...................................... SKIPPED
+[INFO] Metadata ........................................... SKIPPED
+[INFO] Metadata Java API .................................. SKIPPED
+[INFO] Resource Management ................................ SKIPPED
+[INFO] Resource Management Java API ....................... SKIPPED
+[INFO] Resource Management Common Implementation .......... SKIPPED
+[INFO] Tenant Settings .................................... SKIPPED
+[INFO] Tenant Settings Service API ........................ SKIPPED
+[INFO] Dev2Prod ........................................... SKIPPED
+[INFO] Dev2Prod Java API .................................. SKIPPED
+[INFO] REST Framework ..................................... SKIPPED
+[INFO] Framework HTTP client test utils ................... SKIPPED
+[INFO] Resource Management Java Client .................... SKIPPED
+[INFO] Resource Management Templates ...................... SKIPPED
+[INFO] dql-sql-parser ..................................... SKIPPED
+[INFO] dql-sql-parser-api ................................. SKIPPED
+[INFO] Metadata Java Internal API ......................... SKIPPED
+[INFO] spring-circuit-breaker ............................. SKIPPED
+[INFO] Schema ............................................. SKIPPED
+[INFO] Schema Java API .................................... SKIPPED
+[INFO] Metadata Mock Implementation ....................... SKIPPED
+[INFO] Localization Service ............................... SKIPPED
+[INFO] Localization Service API ........................... SKIPPED
+[INFO] Data Access Layer .................................. SKIPPED
+[INFO] DAL API ............................................ SKIPPED
+[INFO] System configuration test extensions ............... SKIPPED
+[INFO] Audit .............................................. SKIPPED
+[INFO] Audit Java API ..................................... SKIPPED
+[INFO] XLS Utils .......................................... SKIPPED
+[INFO] User Options ....................................... SKIPPED
+[INFO] User Options Service API ........................... SKIPPED
+[INFO] Entity Management .................................. SKIPPED
+[INFO] EMS Java API ....................................... SKIPPED
+[INFO] File Repository Framework .......................... SKIPPED
+[INFO] File Repository Service API ........................ SKIPPED
+[INFO] Reference Identity ................................. SKIPPED
+[INFO] Package Manager .................................... SKIPPED
+[INFO] Package Manager API ................................ SKIPPED
+[INFO] JPA Data Source .................................... SKIPPED
+[INFO] Dev2Prod dry-run support utilities ................. SKIPPED
+[INFO] Schema Mock ........................................ SKIPPED
+[INFO] ID Gen API ......................................... SKIPPED
+[INFO] Users .............................................. SKIPPED
+[INFO] SaaS Integration ................................... SKIPPED
+[INFO] Saas Portal Java API ............................... SKIPPED
+[INFO] User Management Service ............................ SKIPPED
+[INFO] UMS Java API ....................................... SKIPPED
+[INFO] content-upgrade .................................... SKIPPED
+[INFO] content-upgrade-api ................................ SKIPPED
+[INFO] Resource Management Test Extensions ................ SKIPPED
+[INFO] rms ................................................ SKIPPED
+[INFO] Authorization Service .............................. SKIPPED
+[INFO] Authorization Service Java API ..................... SKIPPED
+[INFO] Analytics .......................................... SKIPPED
+[INFO] Analytics API ...................................... SKIPPED
+[INFO] Metadata Package Management Api .................... SKIPPED
+[INFO] Tenant Affinity .................................... SKIPPED
+[INFO] Tenant Affinity API ................................ SKIPPED
+[INFO] Tenant Affinity Impl ............................... SKIPPED
+[INFO] dql-sql-parser-impl ................................ SKIPPED
+[INFO] DAL Implementation ................................. SKIPPED
+[INFO] Dev2Prod dry-run support mock implementation ....... SKIPPED
+[INFO] Caching ............................................ SKIPPED
+[INFO] Caching API ........................................ SKIPPED
+[INFO] Metadata Implementation ............................ SKIPPED
+[INFO] Metadata constants generator ....................... SKIPPED
+[INFO] Metadata Constants ................................. SKIPPED
+[INFO] Binder ............................................. SKIPPED
+[INFO] Binder Data Source API ............................. SKIPPED
+[INFO] Debug Service ...................................... SKIPPED
+[INFO] Debug Java API ..................................... SKIPPED
+[INFO] Binder Java API .................................... SKIPPED
+[INFO] Feature Flags ...................................... SKIPPED
+[INFO] Feature Flags Service API .......................... SKIPPED
+[INFO] Collaboration ...................................... SKIPPED
+[INFO] Collaboration Java API ............................. SKIPPED
+[INFO] Notification ....................................... SKIPPED
+[INFO] Notification Java API .............................. SKIPPED
+[INFO] Time Periods ....................................... SKIPPED
+[INFO] Time Periods API ................................... SKIPPED
+[INFO] UserWorkScheduleService ............................ SKIPPED
+[INFO] UserWorkScheduleService Api ........................ SKIPPED
+[INFO] Personalization .................................... SKIPPED
+[INFO] Personalization Java API ........................... SKIPPED
+[INFO] query-filter ....................................... SKIPPED
+[INFO] Report Framework ................................... SKIPPED
+[INFO] Report Framework API ............................... SKIPPED
+[INFO] Report Framework Client ............................ SKIPPED
+[INFO] Surveys Service .................................... SKIPPED
+[INFO] Surveys API ........................................ SKIPPED
+[INFO] Search Service ..................................... SKIPPED
+[INFO] Search Java API .................................... SKIPPED
+[INFO] Suggestions ........................................ SKIPPED
+[INFO] suggestions Java API ............................... SKIPPED
+[INFO] Workflow Engine .................................... SKIPPED
+[INFO] Workflow Engine API ................................ SKIPPED
+[INFO] Workflow constants generator ....................... SKIPPED
+[INFO] Workflow Constants ................................. SKIPPED
+[INFO] System configuration spring ........................ SKIPPED
+[INFO] Platform Thread Pool Metering Integration .......... SKIPPED
+[INFO] Common Filters ..................................... SKIPPED
+[INFO] QOS Integration .................................... SKIPPED
+[INFO] Long executions .................................... SKIPPED
+[INFO] Tenant Management Common ........................... SKIPPED
+[INFO] ops-console ........................................ SKIPPED
+[INFO] System Health ...................................... SKIPPED
+[INFO] System Health Framework ............................ SKIPPED
+[INFO] System Health Rest ................................. SKIPPED
+[INFO] Authorization Utils ................................ SKIPPED
+[INFO] Context Implementation ............................. SKIPPED
+[INFO] Metadata Web Client API ............................ SKIPPED
+[INFO] Metadata Package Management Client ................. SKIPPED
+[INFO] Metadata Web Service API ........................... SKIPPED
+[INFO] License Management ................................. SKIPPED
+[INFO] lms-api ............................................ SKIPPED
+[INFO] Platform Configuration Service ..................... SKIPPED
+[INFO] Platform Configuration Service API ................. SKIPPED
+[INFO] Schema Implementation .............................. SKIPPED
+[INFO] ems-data-model ..................................... SKIPPED
+[INFO] ems-datamodel-api .................................. SKIPPED
+[INFO] ems-datamodel-impl ................................. SKIPPED
+[INFO] ID Gen Implementation .............................. SKIPPED
+[INFO] fwhttpclient-metering-integration .................. SKIPPED
+[INFO] platform-management ................................ SKIPPED
+[INFO] Platform Management Service API .................... SKIPPED
+[INFO] Maas Filter ........................................ SKIPPED
+[INFO] Messaging Queues Files ............................. SKIPPED
+[INFO] Scheduler .......................................... SKIPPED
+[INFO] scheduler-api ...................................... SKIPPED
+[INFO] Messaging Implementation ........................... SKIPPED
+[INFO] Messaging Test ..................................... SKIPPED
+[INFO] Saas Portal Implementation ......................... SKIPPED
+[INFO] Saas Portal Java Client ............................ SKIPPED
+[INFO] Saas Portal Web Service ............................ SKIPPED
+[INFO] Authentication Impl ................................ SKIPPED
+[INFO] Caching Test ....................................... SKIPPED
+[INFO] Caching Implementation ............................. SKIPPED
+[INFO] Caching benchmark .................................. SKIPPED
+[INFO] Caching Utilities .................................. SKIPPED
+[INFO] Ems Data Parsing Common Module ..................... SKIPPED
+[INFO] Monitoring and Metering Framework .................. SKIPPED
+[INFO] Monitoring and Metering Framework Model ............ SKIPPED
+[INFO] Monitoring and Metering Framework Core ............. SKIPPED
+[INFO] Monitoring and Metering Framework Configuration .... SKIPPED
+[INFO] Monitoring and Metering Framework Client ........... SKIPPED
+[INFO] Java Management Extensions MBeans for logging ...... SKIPPED
+[INFO] Computation Unit ................................... SKIPPED
+[INFO] report-templates-api ............................... SKIPPED
+[INFO] in-memory-cache .................................... SKIPPED
+[INFO] in-memory-cache-api ................................ SKIPPED
+[INFO] in-memory-cache-impl ............................... SKIPPED
+[INFO] Tenant Settings Service Common ..................... SKIPPED
+[INFO] Tenant Management Cache ............................ SKIPPED
+[INFO] Tenant Settings Service Client ..................... SKIPPED
+[INFO] content-upgrade-model-api .......................... SKIPPED
+[INFO] content-upgrade-model-impl ......................... SKIPPED
+[INFO] scheduler-client ................................... SKIPPED
+[INFO] History ............................................ SKIPPED
+[INFO] History Java API ................................... SKIPPED
+[INFO] Multi Service Provider ............................. SKIPPED
+[INFO] MSP API ............................................ SKIPPED
+[INFO] ems-mt ............................................. SKIPPED
+[INFO] EMS Implementation ................................. SKIPPED
+[INFO] EMS Client ......................................... SKIPPED
+[INFO] Analytics Client ................................... SKIPPED
+[INFO] Forms .............................................. SKIPPED
+[INFO] Forms Java API ..................................... SKIPPED
+[INFO] Binder Client ...................................... SKIPPED
+[INFO] report-template-utils .............................. SKIPPED
+[INFO] UI RMS Validation integration ...................... SKIPPED
+[INFO] UI Validation API .................................. SKIPPED
+[INFO] Forms Client ....................................... SKIPPED
+[INFO] Forms Implementation ............................... SKIPPED
+[INFO] Theme settings ..................................... SKIPPED
+[INFO] theme-settings-api ................................. SKIPPED
+[INFO] Upgrade Extensions ................................. SKIPPED
+[INFO] UpgradeResourcesCommonEngine ....................... SKIPPED
+[INFO] Rms Resources Extensions ........................... SKIPPED
+[INFO] Rms Resources Common ............................... SKIPPED
+[INFO] UI Validation Implementation ....................... SKIPPED
+[INFO] Rms Resources Upgrader ............................. SKIPPED
+[INFO] Rms Resources Validator ............................ SKIPPED
+[INFO] ThreadDumps ........................................ SKIPPED
+[INFO] metering-management ................................ SKIPPED
+[INFO] Worker Service ..................................... SKIPPED
+[INFO] Worker Service API ................................. SKIPPED
+[INFO] Text Detection Service ............................. SKIPPED
+[INFO] Text Detection Java API ............................ SKIPPED
+[INFO] Service Level Management ........................... SKIPPED
+[INFO] Service Level Management API ....................... SKIPPED
+[INFO] Satellite Management ............................... SKIPPED
+[INFO] Satellite Management API ........................... SKIPPED
+[INFO] metering-integration ............................... SKIPPED
+[INFO] resource-usage ..................................... SKIPPED
+[INFO] Catalog ............................................ SKIPPED
+[INFO] Catalog API ........................................ SKIPPED
+[INFO] Workflow Engine Java Client ........................ SKIPPED
+[INFO] Catalog Implementation ............................. SKIPPED
+[INFO] Default Image Utils ................................ SKIPPED
+[INFO] Tenant Management Server Clone API ................. SKIPPED
+[INFO] File Repository Service Implementation ............. SKIPPED
+[INFO] Default Image Upgrader ............................. SKIPPED
+[INFO] Debug Implementation ............................... SKIPPED
+[INFO] Debug Web Services ................................. SKIPPED
+[INFO] System-Health-Commands-Platform .................... SKIPPED
+[INFO] IDM Integration .................................... SKIPPED
+[INFO] IDM integration API ................................ SKIPPED
+[INFO] IDM integration implementation ..................... SKIPPED
+[INFO] IDM Integration Java Client ........................ SKIPPED
+[INFO] IDM Integration Web Service ........................ SKIPPED
+[INFO] bo-integration ..................................... SKIPPED
+[INFO] bo-api ............................................. SKIPPED
+[INFO] bo-impl ............................................ SKIPPED
+[INFO] bo-client .......................................... SKIPPED
+[INFO] bo-ws .............................................. SKIPPED
+[INFO] Authorization Service Java Client .................. SKIPPED
+[INFO] Authorization Service Server Implementation ........ SKIPPED
+[INFO] Authorization Service Web Service API .............. SKIPPED
+[INFO] Encryption Service ................................. SKIPPED
+[INFO] Encryption Service API ............................. SKIPPED
+[INFO] Encryption Service Common .......................... SKIPPED
+[INFO] EMS Web Service API ................................ SKIPPED
+[INFO] lms-common ......................................... SKIPPED
+[INFO] lms-impl ........................................... SKIPPED
+[INFO] lms-client ......................................... SKIPPED
+[INFO] lms-ws ............................................. SKIPPED
+[INFO] Business Rules ..................................... SKIPPED
+[INFO] Workflow Engine Java SPI ........................... SKIPPED
+[INFO] notification filter api ............................ SKIPPED
+[INFO] Entity Stakeholders Service ........................ SKIPPED
+[INFO] Entity Stakeholders API ............................ SKIPPED
+[INFO] Push Service ....................................... SKIPPED
+[INFO] Push Service API ................................... SKIPPED
+[INFO] Collaboration Service Implementation ............... SKIPPED
+[INFO] Resource Management Java Driver API ................ SKIPPED
+[INFO] Resource Management Server Implementation .......... SKIPPED
+[INFO] Routing Definition ................................. SKIPPED
+[INFO] Routing Definition API ............................. SKIPPED
+[INFO] Routing Definition Impl ............................ SKIPPED
+[INFO] BusinessCalendar ................................... SKIPPED
+[INFO] business-calendar Java API ......................... SKIPPED
+[INFO] business-calendar Implementation ................... SKIPPED
+[INFO] Offline-Job-Scheduler .............................. SKIPPED
+[INFO] Service Level Management DAO ....................... SKIPPED
+[INFO] Resource Management Utilities ...................... SKIPPED
+[INFO] Worker Test Utilities .............................. SKIPPED
+[INFO] Groovy-Tools ....................................... SKIPPED
+[INFO] MaaS runtime ....................................... SKIPPED
+[INFO] Deployer Templates ................................. SKIPPED
+[INFO] Worker Service Common Implementation ............... SKIPPED
+[INFO] Worker Service Client .............................. SKIPPED
+[INFO] Worker Service Implementation ...................... SKIPPED
+[INFO] Service Level Management Implementation ............ SKIPPED
+[INFO] content-upgrade-framework .......................... SKIPPED
+[INFO] REST Executor ...................................... SKIPPED
+[INFO] Rest Executor Service Api .......................... SKIPPED
+[INFO] OPB Agent .......................................... SKIPPED
+[INFO] OPB Platform Shared ................................ SKIPPED
+[INFO] OPB Platform Shared API ............................ SKIPPED
+[INFO] OPB Executor ....................................... SKIPPED
+[INFO] OPB Executor API ................................... SKIPPED
+[INFO] OPB Service ........................................ SKIPPED
+[INFO] OPB Shared ......................................... SKIPPED
+[INFO] OPB Controller ..................................... SKIPPED
+[INFO] OPB Controller API ................................. SKIPPED
+[INFO] OPB Domain Sample .................................. SKIPPED
+[INFO] OPB Domain Sample Impl ............................. SKIPPED
+[INFO] OPB Executor Impl .................................. SKIPPED
+[INFO] OPB lightweight HttpClient ......................... SKIPPED
+[INFO] Rest Executor Domain ............................... SKIPPED
+[INFO] Tasks and Approvals Engine ......................... SKIPPED
+[INFO] Tasks and Approvals Engine API ..................... SKIPPED
+[INFO] Tagging Service .................................... SKIPPED
+[INFO] Tagging API ........................................ SKIPPED
+[INFO] Binder Data Source Common .......................... SKIPPED
+[INFO] Id Mapping ......................................... SKIPPED
+[INFO] Id Mapping API ..................................... SKIPPED
+[INFO] Workflow Engine Java Common Code ................... SKIPPED
+[INFO] Feature Template Engine ............................ SKIPPED
+[INFO] Feature Template API ............................... SKIPPED
+[INFO] Feature Template Engine API ........................ SKIPPED
+[INFO] Tasks and Approvals Engine Implementation .......... SKIPPED
+[INFO] Rest Executor Java Client .......................... SKIPPED
+[INFO] OPB Service Api .................................... SKIPPED
+[INFO] OPB Data Transfer utilities ........................ SKIPPED
+[INFO] Rest Executor Service Implementation ............... SKIPPED
+[INFO] ChatOps ............................................ SKIPPED
+[INFO] ChatOps API ........................................ SKIPPED
+[INFO] OPB Data Sync Service .............................. SKIPPED
+[INFO] opb-data-sync-common ............................... SKIPPED
+[INFO] Id Mapping implementation .......................... SKIPPED
+[INFO] Data Sync Service .................................. SKIPPED
+[INFO] Data Sync Service API .............................. SKIPPED
+[INFO] Mapping Engine ..................................... SKIPPED
+[INFO] Mapping Service API ................................ SKIPPED
+[INFO] ChatOps Implementation ............................. SKIPPED
+[INFO] OO Integration ..................................... SKIPPED
+[INFO] OO Integration API ................................. SKIPPED
+[INFO] OO Integration Domain .............................. SKIPPED
+[INFO] OO Integration Client API .......................... SKIPPED
+[INFO] OO Integration Service Implementation .............. SKIPPED
+[INFO] Charge Back Rule Engine ............................ SKIPPED
+[INFO] chargeback-api ..................................... SKIPPED
+[INFO] chargeback-impl .................................... SKIPPED
+[INFO] Identification Service ............................. SKIPPED
+[INFO] Identification API ................................. SKIPPED
+[INFO] Enrichment Engine .................................. SKIPPED
+[INFO] Enrichment API ..................................... SKIPPED
+[INFO] Binder Data Source Implementation .................. SKIPPED
+[INFO] Enrichment Implementation .......................... SKIPPED
+[INFO] Binder Implementation .............................. SKIPPED
+[INFO] Entity Stakeholders Implementation ................. SKIPPED
+[INFO] Feature Template Sample Api ........................ SKIPPED
+[INFO] Feature Template Engine Impl ....................... SKIPPED
+[INFO] Smart Ticket ....................................... SKIPPED
+[INFO] Smart Ticket Service API ........................... SKIPPED
+[INFO] Notification Processing Rules API .................. SKIPPED
+[INFO] Email Service ...................................... SKIPPED
+[INFO] Email Service Java API ............................. SKIPPED
+[INFO] Mobile Push Notification ........................... SKIPPED
+[INFO] Mobile Push Notification Api ....................... SKIPPED
+[INFO] Notification Service Implementation ................ SKIPPED
+[INFO] Time Periods Implementation ........................ SKIPPED
+[INFO] Time Periods Client ................................ SKIPPED
+[INFO] Content Analytics .................................. SKIPPED
+[INFO] Content Analytics API .............................. SKIPPED
+[INFO] analytics-data-model ............................... SKIPPED
+[INFO] analytics-data-model-api ........................... SKIPPED
+[INFO] analytics-dao ...................................... SKIPPED
+[INFO] analytics-data-model-impl .......................... SKIPPED
+[INFO] Content Analytics Implementation ................... SKIPPED
+[INFO] Case Exchange ...................................... SKIPPED
+[INFO] Case Exchange API .................................. SKIPPED
+[INFO] Case Exchange Implementation ....................... SKIPPED
+[INFO] Price Engine ....................................... SKIPPED
+[INFO] Price API .......................................... SKIPPED
+[INFO] Project Portfolio Optimization ..................... SKIPPED
+[INFO] Project Portfolio Optimization API ................. SKIPPED
+[INFO] Notification Java Client ........................... SKIPPED
+[INFO] Surveys Impl API ................................... SKIPPED
+[INFO] MSP Implementation ................................. SKIPPED
+[INFO] Aggregation ........................................ SKIPPED
+[INFO] Aggregation API .................................... SKIPPED
+[INFO] UserWorkScheduleService Impl ....................... SKIPPED
+[INFO] saw-authentication ................................. SKIPPED
+[INFO] saw-authentication-api ............................. SKIPPED
+[INFO] Workflow Engine Implementation ..................... SKIPPED
+[INFO] Workflow Engine Web Service ........................ SKIPPED
+[INFO] Resource Management Web Service API ................ SKIPPED
+[INFO] Archive ............................................ SKIPPED
+[INFO] Archive Implementation ............................. SKIPPED
+[INFO] Search Common Classes .............................. SKIPPED
+[INFO] Collaboration Java Client .......................... SKIPPED
+[INFO] Tenant Management Java Client ...................... SKIPPED
+[INFO] Search Implementation .............................. SKIPPED
+[INFO] OPB Data Sync Service Api .......................... SKIPPED
+[INFO] OPB Service Internal Api ........................... SKIPPED
+[INFO] OPB Service Client ................................. SKIPPED
+[INFO] OPB Service Impl ................................... SKIPPED
+[INFO] Notification Processing Rules Impl ................. SKIPPED
+[INFO] Notification Web Service API ....................... SKIPPED
+[INFO] Notification filter impl ........................... SKIPPED
+[INFO] OPB Service WS ..................................... SKIPPED
+[INFO] OPB Data Sync Service Impl ......................... SKIPPED
+[INFO] OPB Data Sync Service Client ....................... SKIPPED
+[INFO] OPB Data Sync Service WS ........................... SKIPPED
+[INFO] opb-data-sync-agent ................................ SKIPPED
+[INFO] Email Service Implementation ....................... SKIPPED
+[INFO] Email Service Java Client .......................... SKIPPED
+[INFO] Email Service WebService ........................... SKIPPED
+[INFO] Platform Service Lookup ............................ SKIPPED
+[INFO] Binder Web Service API ............................. SKIPPED
+[INFO] Logger Service ..................................... SKIPPED
+[INFO] Export Engine ...................................... SKIPPED
+[INFO] Export Java API .................................... SKIPPED
+[INFO] Export Implementation .............................. SKIPPED
+[INFO] Search Web Service API ............................. SKIPPED
+[INFO] Search Java Client ................................. SKIPPED
+[INFO] Surveys Web Service API ............................ SKIPPED
+[INFO] Surveys client API ................................. SKIPPED
+[INFO] Collaboration Web Service API ...................... SKIPPED
+[INFO] Rest Executor Web Service API ...................... SKIPPED
+[INFO] Import Engine ...................................... SKIPPED
+[INFO] Import Java API .................................... SKIPPED
+[INFO] Import Implementation .............................. SKIPPED
+[INFO] Import Web Client API .............................. SKIPPED
+[INFO] Import Web Service API ............................. SKIPPED
+[INFO] Mapping Implementation ............................. SKIPPED
+[INFO] Mapping Web Service API ............................ SKIPPED
+[INFO] Mapping Client API ................................. SKIPPED
+[INFO] File Repository Client ............................. SKIPPED
+[INFO] File Repository Web Service API .................... SKIPPED
+[INFO] Package Manager Core ............................... SKIPPED
+[INFO] Package Manager Validator .......................... SKIPPED
+[INFO] Package Manager Validator CLI ...................... SKIPPED
+[INFO] file-repository-content ............................ SKIPPED
+[INFO] Personalization Server Implementation .............. SKIPPED
+[INFO] Personalization Web Service API .................... SKIPPED
+[INFO] Personalization Java Client ........................ SKIPPED
+[INFO] Entity Stakeholders Java Client .................... SKIPPED
+[INFO] Entity Stakeholders Web Service .................... SKIPPED
+[INFO] Voting ............................................. SKIPPED
+[INFO] Voting Java API .................................... SKIPPED
+[INFO] Voting Java Client ................................. SKIPPED
+[INFO] Voting Service Implementation ...................... SKIPPED
+[INFO] Voting Web Service API ............................. SKIPPED
+[INFO] Tasks and Approvals Java Client .................... SKIPPED
+[INFO] Tasks and Approvals Engine Web Service API ......... SKIPPED
+[INFO] business-calendar Java Client ...................... SKIPPED
+[INFO] business-calendar Java Web Service API ............. SKIPPED
+[INFO] Service Level Management Client .................... SKIPPED
+[INFO] Service Level Management WS ........................ SKIPPED
+[INFO] Feature Flags Web Service API ...................... SKIPPED
+[INFO] Feature Flags Impl ................................. SKIPPED
+[INFO] Feature Flags Client ............................... SKIPPED
+[INFO] Push Service Client ................................ SKIPPED
+[INFO] Push Service Implementation ........................ SKIPPED
+[INFO] Push Web Service API ............................... SKIPPED
+[INFO] UMS Server Implementation .......................... SKIPPED
+[INFO] UMS Web Service API ................................ SKIPPED
+[INFO] UMS Java Client .................................... SKIPPED
+[INFO] Tagging Client ..................................... SKIPPED
+[INFO] Tagging Implementation ............................. SKIPPED
+[INFO] Tagging Web Service API ............................ SKIPPED
+[INFO] Tenant Management Server Implementation ............ SKIPPED
+[INFO] Tenant Management Web Service API .................. SKIPPED
+[INFO] Tenant Management Move Tools ....................... SKIPPED
+[INFO] Tenant Management Web Service API .................. SKIPPED
+[INFO] Tenant Management Clone Java Client ................ SKIPPED
+[INFO] Tenant Management Clone Model API .................. SKIPPED
+[INFO] Tenant Management Clone Framework .................. SKIPPED
+[INFO] Tenant Management Clone Implementation ............. SKIPPED
+[INFO] Tenant Management Clone Model Implementation ....... SKIPPED
+[INFO] MaaS package manager mock module ................... SKIPPED
+[INFO] Platform Configuration Service Implementation ...... SKIPPED
+[INFO] Platform Configuration Java Client ................. SKIPPED
+[INFO] Platform Configuration Web Service API ............. SKIPPED
+[INFO] Audit Java Client .................................. SKIPPED
+[INFO] Audit Implementation ............................... SKIPPED
+[INFO] Audit Java Web Service API ......................... SKIPPED
+[INFO] Metering ........................................... SKIPPED
+[INFO] Metering Java API .................................. SKIPPED
+[INFO] Metering Service Implementation .................... SKIPPED
+[INFO] Metering Java Client ............................... SKIPPED
+[INFO] Metering Web Service API ........................... SKIPPED
+[INFO] Package Manager Server Implementation .............. SKIPPED
+[INFO] Package Manager Web Service API .................... SKIPPED
+[INFO] Package Manager Java Client ........................ SKIPPED
+[INFO] scheduler-common ................................... SKIPPED
+[INFO] scheduler-impl ..................................... SKIPPED
+[INFO] scheduler-ws ....................................... SKIPPED
+[INFO] scheduler-runner ................................... SKIPPED
+[INFO] scheduler-upgrader ................................. SKIPPED
+[INFO] Analytics Impl ..................................... SKIPPED
+[INFO] Analytics Web Services ............................. SKIPPED
+[INFO] Authentication-endpoint Service .................... SKIPPED
+[INFO] Authentication-endpoint API ........................ SKIPPED
+[INFO] Authentication-endpoint Client ..................... SKIPPED
+[INFO] EMS Package Manager integration .................... SKIPPED
+[INFO] EMS Package Management Java API .................... SKIPPED
+[INFO] EMS Package Management Server Implementation ....... SKIPPED
+[INFO] EMS Package Management Web Service API ............. SKIPPED
+[INFO] EMS Package Management Java Client ................. SKIPPED
+[INFO] Favorites .......................................... SKIPPED
+[INFO] Favorites service API .............................. SKIPPED
+[INFO] Favorites implementation ........................... SKIPPED
+[INFO] Favorites Web Service API .......................... SKIPPED
+[INFO] Favorites Client ................................... SKIPPED
+[INFO] Report Framework Web Service API ................... SKIPPED
+[INFO] Quota Management ................................... SKIPPED
+[INFO] Quota Management API ............................... SKIPPED
+[INFO] Report Framework Impl .............................. SKIPPED
+[INFO] report-templates-impl .............................. SKIPPED
+[INFO] Quota Management Client ............................ SKIPPED
+[INFO] Quota Management Impl .............................. SKIPPED
+[INFO] Report Framework Upgrade ........................... SKIPPED
+[INFO] Feature Template Engine Client ..................... SKIPPED
+[INFO] Feature Template Engine WS ......................... SKIPPED
+[INFO] Feature Template Impl .............................. SKIPPED
+[INFO] Feature Template Sample Impl ....................... SKIPPED
+[INFO] Quota Management Web Service API ................... SKIPPED
+[INFO] RMS Package Manager integration .................... SKIPPED
+[INFO] RMS Package Management Java API .................... SKIPPED
+[INFO] RMS Package Management Server Implementation ....... SKIPPED
+[INFO] RMS Package Management Web Service API ............. SKIPPED
+[INFO] RMS Package Management Java Client ................. SKIPPED
+[INFO] menu ............................................... SKIPPED
+[INFO] menu-api ........................................... SKIPPED
+[INFO] Dev2Prod Server Implementation ..................... SKIPPED
+[INFO] Dev2Prod Web Service API ........................... SKIPPED
+[INFO] Dev2Prod Java Client ............................... SKIPPED
+[INFO] Text Detection Implementation ...................... SKIPPED
+[INFO] Text Detection Client .............................. SKIPPED
+[INFO] Text Detection WS .................................. SKIPPED
+[INFO] Localization Service Client ........................ SKIPPED
+[INFO] Localization Service Cache Utils ................... SKIPPED
+[INFO] Tenant Settings Service Implementation ............. SKIPPED
+[INFO] Localization Service Impl .......................... SKIPPED
+[INFO] Localization Service WS ............................ SKIPPED
+[INFO] History Java Client ................................ SKIPPED
+[INFO] Event Trace ........................................ SKIPPED
+[INFO] Event Trace API .................................... SKIPPED
+[INFO] History Java Web Service API ....................... SKIPPED
+[INFO] History Implementation ............................. SKIPPED
+[INFO] content-upgrade-impl ............................... SKIPPED
+[INFO] content-upgrade-reports ............................ SKIPPED
+[INFO] content-upgrade-ws ................................. SKIPPED
+[INFO] Time Periods WS .................................... SKIPPED
+[INFO] UI Validation Web Service API ...................... SKIPPED
+[INFO] OO Integration Web Service API ..................... SKIPPED
+[INFO] Case Exchange Java Web Service API ................. SKIPPED
+[INFO] Content Analytics Client ........................... SKIPPED
+[INFO] Content Analytics WS ............................... SKIPPED
+[INFO] Forms Web Service API .............................. SKIPPED
+[INFO] Enrichment Web Service API ......................... SKIPPED
+[INFO] Enrichment client API .............................. SKIPPED
+[INFO] suggestions Java Client ............................ SKIPPED
+[INFO] suggestions Implementation ......................... SKIPPED
+[INFO] suggestions Java Web Service API ................... SKIPPED
+[INFO] Tenant Settings Service Web Service API ............ SKIPPED
+[INFO] Smart Ticket Client ................................ SKIPPED
+[INFO] Smart Ticket Implementation ........................ SKIPPED
+[INFO] Smart Ticket Web Service API ....................... SKIPPED
+[INFO] Virtual Agent ...................................... SKIPPED
+[INFO] Virtual Agent API .................................. SKIPPED
+[INFO] Virtual Agent Client ............................... SKIPPED
+[INFO] Virtual Agent Implementation ....................... SKIPPED
+[INFO] Virtual Agent Web Service API ...................... SKIPPED
+[INFO] Aggregation Client ................................. SKIPPED
+[INFO] Aggregation Implementation ......................... SKIPPED
+[INFO] Aggregation Web Service API ........................ SKIPPED
+[INFO] Worker Web Service ................................. SKIPPED
+[INFO] Identification Implementation ...................... SKIPPED
+[INFO] Identification Web Service API ..................... SKIPPED
+[INFO] Identification client API .......................... SKIPPED
+[INFO] Scalable Import Engine ............................. SKIPPED
+[INFO] Scalable Import Java API ........................... SKIPPED
+[INFO] Scalable Import Implementation ..................... SKIPPED
+[INFO] Scalable Import Web Service API .................... SKIPPED
+[INFO] Scalable Import Web Client API ..................... SKIPPED
+[INFO] offering aggregate ................................. SKIPPED
+[INFO] offering-aggregate-api ............................. SKIPPED
+[INFO] Offering Aggregate Implementation .................. SKIPPED
+[INFO] Business Interchange Parent ........................ SKIPPED
+[INFO] Business Interchange  - API ........................ SKIPPED
+[INFO] Business Interchange - Implementation .............. SKIPPED
+[INFO] Business Interchange  - Web Services ............... SKIPPED
+[INFO] Business Interchange  - Client ..................... SKIPPED
+[INFO] receiving assets ................................... SKIPPED
+[INFO] receiving-assets-api ............................... SKIPPED
+[INFO] receiving-assets-impl .............................. SKIPPED
+[INFO] receiving-assets-client ............................ SKIPPED
+[INFO] receiving-assets-ws ................................ SKIPPED
+[INFO] UCMDB Integration .................................. SKIPPED
+[INFO] ucmdb-browser-modeling-template .................... SKIPPED
+[INFO] UCMDB Integration Push Adapter ..................... SKIPPED
+[INFO] OPB Loopback ....................................... SKIPPED
+[INFO] OPB Loopback Mocks ................................. SKIPPED
+[INFO] UCMDB Integration Domain ........................... SKIPPED
+[INFO] UCMDB Integration API .............................. SKIPPED
+[INFO] UCMDB Integration Dao .............................. SKIPPED
+[INFO] UCMDB Integration Implementation ................... SKIPPED
+[INFO] UCMDB Integration Web Service API .................. SKIPPED
+[INFO] UCMDB Integration Worker ........................... SKIPPED
+[INFO] theme-settings-impl ................................ SKIPPED
+[INFO] theme-settings-ws .................................. SKIPPED
+[INFO] Price Implement .................................... SKIPPED
+[INFO] Price Web Service API .............................. SKIPPED
+[INFO] Price Client ....................................... SKIPPED
+[INFO] platform-management-ws ............................. SKIPPED
+[INFO] platform-management-impl ........................... SKIPPED
+[INFO] Platform Management Service Client ................. SKIPPED
+[INFO] MSP Client ......................................... SKIPPED
+[INFO] MSP Web Service API ................................ SKIPPED
+[INFO] Encryption Service Implementation .................. SKIPPED
+[INFO] Encryption Service Client .......................... SKIPPED
+[INFO] Encryption WEB Service API ......................... SKIPPED
+[INFO] Common Settings .................................... SKIPPED
+[INFO] Common Settings Service API ........................ SKIPPED
+[INFO] Common Settings Service Manager .................... SKIPPED
+[INFO] Common Settings Service Implementation ............. SKIPPED
+[INFO] Common Settings Service Web Service API ............ SKIPPED
+[INFO] Common Settings Service Client ..................... SKIPPED
+[INFO] Satellite Management DAO ........................... SKIPPED
+[INFO] Satellite Management Implementation ................ SKIPPED
+[INFO] Satellite Management Client ........................ SKIPPED
+[INFO] Satellite Management WS ............................ SKIPPED
+[INFO] Software Asset Management .......................... SKIPPED
+[INFO] Software Asset Management Api ...................... SKIPPED
+[INFO] Software Asset Management Implementation ........... SKIPPED
+[INFO] Software Asset Management Client ................... SKIPPED
+[INFO] Software Asset Management Web Service API .......... SKIPPED
+[INFO] Data export Engine ................................. SKIPPED
+[INFO] Data Export Service API ............................ SKIPPED
+[INFO] Data Export Service Web Service API ................ SKIPPED
+[INFO] Data Export Service Implementation ................. SKIPPED
+[INFO] data-export-domain ................................. SKIPPED
+[INFO] Data Export Service Client ......................... SKIPPED
+[INFO] data-export-ucmdb-adapter .......................... SKIPPED
+[INFO] Project Portfolio Optimization Implement ........... SKIPPED
+[INFO] Project Portfolio Optimization Web Service API ..... SKIPPED
+[INFO] Project Portfolio Optimization Client .............. SKIPPED
+[INFO] application-upgraders .............................. SKIPPED
+[INFO] saw-authentication-impl ............................ SKIPPED
+[INFO] saw-authentication-client .......................... SKIPPED
+[INFO] saw-authentication-ws .............................. SKIPPED
+[INFO] Mobile Push Notification Implementation ............ SKIPPED
+[INFO] Mobile Push Notification WS ........................ SKIPPED
+[INFO] Mobile Push Notification Client .................... SKIPPED
+[INFO] USerWorkScheduleService Client ..................... SKIPPED
+[INFO] UserWorkScheduleService WS ......................... SKIPPED
+[INFO] feature-management ................................. SKIPPED
+[INFO] Feature Management Service API ..................... SKIPPED
+[INFO] Feature Management Service Common .................. SKIPPED
+[INFO] Feature Management Service Implementation .......... SKIPPED
+[INFO] Feature Management Service Client .................. SKIPPED
+[INFO] Feature Management Service Web Service API ......... SKIPPED
+[INFO] Expense Line ....................................... SKIPPED
+[INFO] Expense Line API ................................... SKIPPED
+[INFO] Expense Line Implementation ........................ SKIPPED
+[INFO] Expense Line Web Service ........................... SKIPPED
+[INFO] User Options Service Client ........................ SKIPPED
+[INFO] User Options Service Implementation ................ SKIPPED
+[INFO] User Options Service Web Service API ............... SKIPPED
+[INFO] Data Sync Service Client ........................... SKIPPED
+[INFO] ess ................................................ SKIPPED
+[INFO] ess-opb ............................................ SKIPPED
+[INFO] saw-opb-ldap ....................................... SKIPPED
+[INFO] Data Sync Service Implementation ................... SKIPPED
+[INFO] Data Sync Service Web Service API .................. SKIPPED
+[INFO] Id Mapping REST services ........................... SKIPPED
+[INFO] Id Mapping Client .................................. SKIPPED
+[INFO] Event Trace Impl ................................... SKIPPED
+[INFO] Event Trace REST Services .......................... SKIPPED
+[INFO] Event Trace Client ................................. SKIPPED
+[INFO] PPM Integration .................................... SKIPPED
+[INFO] PPM Integration API ................................ SKIPPED
+[INFO] PPM Integration Implementation ..................... SKIPPED
+[INFO] PPM Integration Rest APIs .......................... SKIPPED
+[INFO] PPM Integration Domain ............................. SKIPPED
+[INFO] chargeback-ws ...................................... SKIPPED
+[INFO] ChatOps Bot ........................................ SKIPPED
+[INFO] opb-signer ......................................... SKIPPED
+[INFO] OPB Controller Impl ................................ SKIPPED
+[INFO] ChatOps OPB Domain ................................. SKIPPED
+[INFO] ChatOps Rest APIs .................................. SKIPPED
+[INFO] Entity Page Service ................................ SKIPPED
+[INFO] Entity Page API .................................... SKIPPED
+[INFO] Entity Page Client ................................. SKIPPED
+[INFO] Entity Page Impl ................................... SKIPPED
+[INFO] Entity Page Web Service ............................ SKIPPED
+[INFO] idm-sync-integration ............................... SKIPPED
+[INFO] idm-sync-integraton-api ............................ SKIPPED
+[INFO] idm-sync-integration-impl .......................... SKIPPED
+[INFO] idm-sync-integration-ws ............................ SKIPPED
+[INFO] idm-sync-integration-domain ........................ SKIPPED
+[INFO] kpi ................................................ SKIPPED
+[INFO] kpi-api ............................................ SKIPPED
+[INFO] kpi-impl ........................................... SKIPPED
+[INFO] request-kpi ........................................ SKIPPED
+[INFO] request-kpi-api .................................... SKIPPED
+[INFO] request-kpi-impl ................................... SKIPPED
+[INFO] menu-ws ............................................ SKIPPED
+[INFO] menu-impl .......................................... SKIPPED
+[INFO] menu-client ........................................ SKIPPED
+[INFO] procurement ........................................ SKIPPED
+[INFO] procurement-api .................................... SKIPPED
+[INFO] procurement-client ................................. SKIPPED
+[INFO] procurement-impl ................................... SKIPPED
+[INFO] procurement-ws ..................................... SKIPPED
+[INFO] health-check ....................................... SKIPPED
+[INFO] Platform WebApp .................................... SKIPPED
+[INFO] Deployer Environments Definition files ............. SKIPPED
+[INFO] Create Lookup ...................................... SKIPPED
+[INFO] Service Lifecycle .................................. SKIPPED
+[INFO] Content Validation ................................. SKIPPED
+[INFO] Content Validation Utilities ....................... SKIPPED
+[INFO] Content Validation Executor ........................ SKIPPED
+[INFO] index .............................................. SKIPPED
+[INFO] MaaS Gateway ....................................... SKIPPED
+[INFO] Deployers Aggregator ............................... SKIPPED
+[INFO] New-Deployer ....................................... SKIPPED
+[INFO] Automation Platform API ............................ SKIPPED
+[INFO] Automation Platform Impl ........................... SKIPPED
+[INFO] OPB Wrapper Tool ................................... SKIPPED
+[INFO] OPB UI Panel ....................................... SKIPPED
+[INFO] OPB Installation ................................... SKIPPED
+[INFO] OPB Loopback Sample ................................ SKIPPED
+[INFO] l10n-message ....................................... SKIPPED
+[INFO] Mock Server ........................................ SKIPPED
+[INFO] operation-console .................................. SKIPPED
+[INFO] SX ................................................. SKIPPED
+[INFO] SX Content Saw Case Exchange ....................... SKIPPED
+[INFO] SX Content Saw R2F ................................. SKIPPED
+[INFO] SX Content Saw Test ................................ SKIPPED
+[INFO] SX SX Adapter Saw .................................. SKIPPED
+[INFO] SX SX Itest Support ................................ SKIPPED
+[INFO] SX SX Saw Itest .................................... SKIPPED
+[INFO] SX SX Adapter Saw Package .......................... SKIPPED
+[INFO] automation ......................................... SKIPPED
+[INFO] automation-framework ............................... SKIPPED
+[INFO] automation-entities-framework ...................... SKIPPED
+[INFO] Automation base generator .......................... SKIPPED
+[INFO] Automation entities generator ...................... SKIPPED
+[INFO] automation-constants ............................... SKIPPED
+[INFO] automation-entities ................................ SKIPPED
+[INFO] automation-entities-api ............................ SKIPPED
+[INFO] automation-user-management-api ..................... SKIPPED
+[INFO] automation-maas-services ........................... SKIPPED
+[INFO] Automation builder generator ....................... SKIPPED
+[INFO] automation-builders ................................ SKIPPED
+[INFO] automation-maas-tools .............................. SKIPPED
+[INFO] automation-entities-impl ........................... SKIPPED
+[INFO] automation-maas-base-tests ......................... SKIPPED
+[INFO] automation-opb-tests ............................... SKIPPED
+[INFO] automation-package-bundles ......................... SKIPPED
+[INFO] automation-tests ................................... SKIPPED
+[INFO] automation-run ..................................... SKIPPED
+[INFO] automation-component-tests ......................... SKIPPED
+[INFO] Platform UI ........................................ SKIPPED
+[INFO] root ............................................... SKIPPED
+[INFO] identifier-api ..................................... SKIPPED
+[INFO] maas-selenium ...................................... SKIPPED
+[INFO] maas-selenium-api .................................. SKIPPED
+[INFO] automation-common .................................. SKIPPED
+[INFO] test-event-bus ..................................... SKIPPED
+[INFO] maas-selenium-impl ................................. SKIPPED
+[INFO] recorder ........................................... SKIPPED
+[INFO] reporter ........................................... SKIPPED
+[INFO] pages .............................................. SKIPPED
+[INFO] pages-api .......................................... SKIPPED
+[INFO] pages-impl ......................................... SKIPPED
+[INFO] tests .............................................. SKIPPED
+[INFO] automation-run-ui .................................. SKIPPED
+[INFO] ess-packager-tool .................................. SKIPPED
+[INFO] ess-entities ....................................... SKIPPED
+[INFO] SAW Server ......................................... SKIPPED
+[INFO] SAW Services ....................................... SKIPPED
+[INFO] request ............................................ SKIPPED
+[INFO] request-api ........................................ SKIPPED
+[INFO] request-client ..................................... SKIPPED
+[INFO] ess-ems-tools ...................................... SKIPPED
+[INFO] ess-catalog ........................................ SKIPPED
+[INFO] ess-catalog-api .................................... SKIPPED
+[INFO] ess-catalog-client ................................. SKIPPED
+[INFO] user-management .................................... SKIPPED
+[INFO] user-management-api ................................ SKIPPED
+[INFO] user-management-client ............................. SKIPPED
+[INFO] saw-opb ............................................ SKIPPED
+[INFO] ess-search ......................................... SKIPPED
+[INFO] ess-search-api ..................................... SKIPPED
+[INFO] ess-search-client .................................. SKIPPED
+[INFO] automation ......................................... SKIPPED
+[INFO] automation-common .................................. SKIPPED
+[INFO] automation-tests ................................... SKIPPED
+[INFO] client-tests ....................................... SKIPPED
+[INFO] saw-pages .......................................... SKIPPED
+[INFO] saw-pages-api ...................................... SKIPPED
+[INFO] saw-pages-impl ..................................... SKIPPED
+[INFO] change ............................................. SKIPPED
+[INFO] change-api ......................................... SKIPPED
+[INFO] backend ............................................ SKIPPED
+[INFO] backend-api ........................................ SKIPPED
+[INFO] backend-client ..................................... SKIPPED
+[INFO] article ............................................ SKIPPED
+[INFO] article-api ........................................ SKIPPED
+[INFO] ess-theme-settings ................................. SKIPPED
+[INFO] ess-theme-settings-api ............................. SKIPPED
+[INFO] SAW Runtime ........................................ SKIPPED
+[INFO] ess-theme-content .................................. SKIPPED
+[INFO] sample-data-content ................................ SKIPPED
+[INFO] ess-comments ....................................... SKIPPED
+[INFO] ess-comments-api ................................... SKIPPED
+[INFO] ess-commons ........................................ SKIPPED
+[INFO] ess-opb-email-integration .......................... SKIPPED
+[INFO] email-integration .................................. SKIPPED
+[INFO] saw-client-tests ................................... SKIPPED
+[INFO] article-client ..................................... SKIPPED
+[INFO] server-tests ....................................... SKIPPED
+[INFO] automation-run ..................................... SKIPPED
+[INFO] automation-run-ui .................................. SKIPPED
+[INFO] prod-tests ......................................... SKIPPED
+[INFO] opb-ppm ............................................ SKIPPED
+[INFO] opb-ppo ............................................ SKIPPED
+[INFO] ess-opb-indexing ................................... SKIPPED
+[INFO] ESS OPB Installation ............................... SKIPPED
+[INFO] saw-package-manager ................................ SKIPPED
+[INFO] Parent pom for SAW operational data content ........ SKIPPED
+[INFO] saw-ootb-package-bundle ............................ SKIPPED
+[INFO] sacm-ui-config-package-bundle ...................... SKIPPED
+[INFO] Parent pom for SAW content packagers ............... SKIPPED
+[INFO] Operational data for SAW ........................... SKIPPED
+[INFO] Initial data for SAW ............................... SKIPPED
+[INFO] Parent pom for SAW demo data content ............... SKIPPED
+[INFO] Parent pom for SAW configuration data content ...... SKIPPED
+[INFO] templates-package-bundle ........................... SKIPPED
+[INFO] itsmax-unsaw ....................................... SKIPPED
+[INFO] ldap-integration ................................... SKIPPED
+[INFO] ess-comments-impl .................................. SKIPPED
+[INFO] ess-webapp ......................................... SKIPPED
+[INFO] ess-theme-settings-client .......................... SKIPPED
+[INFO] ess-comments-client ................................ SKIPPED
+[INFO] change-client ...................................... SKIPPED
+[INFO] nginx-conf ......................................... SKIPPED
+

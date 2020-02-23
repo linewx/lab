@@ -112,4 +112,46 @@ public class ThreadPoolTest {
             return x;
         });
     }
+
+    static public class TxManager implements Runnable{
+        static ThreadLocal<Integer> count = new ThreadLocal<>();
+        static int count2 = 0;
+        private int count3 = 0;
+
+        public TxManager(int n) {
+            count.set(n);
+            count2 = n;
+            count3 = n;
+
+        }
+
+        @Override
+        public void run() {
+            count.set(this.count3);
+            count2 = this.count3;
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(String.format("thread count %d, count2 %d, count3 %d", count.get(), count2, count3));
+        }
+
+    }
+
+    @Test
+    public void testThreadLocal() {
+        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        for (int i=0; i<10; i++) {
+            executorService.submit(new TxManager(i));
+        }
+        executorService.shutdown();
+        try {
+            executorService.awaitTermination(30, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
