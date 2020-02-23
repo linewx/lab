@@ -1,5 +1,6 @@
 package com.zz.lab;
 
+import com.zz.lab.entity.Artifact;
 import com.zz.lab.entity.Person;
 import com.zz.lab.repo.PersonRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +19,32 @@ import java.util.List;
 public class TestGraph {
     @Autowired
     private PersonRepository personRepository;
+
+    private void addRelation() {
+
+    }
+
+    @Test
+    public void testArtifact() {
+        Artifact foo = Artifact.builder()
+                .groupId("com.zz.lab")
+                .artifactId("foo")
+                .build();
+
+        Artifact bar = Artifact.builder()
+                .groupId("com.zz.lab")
+                .artifactId("bar")
+                .build();
+
+        Artifact baz = Artifact.builder()
+                .groupId("com.zz.lab")
+                .artifactId("baz")
+                .build();
+
+
+
+
+    }
 
     @Test
     public void testGraph() {
