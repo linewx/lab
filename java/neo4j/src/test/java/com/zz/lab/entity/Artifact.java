@@ -1,4 +1,4 @@
-package com.zz.lab.pom;
+package com.zz.lab.entity;
 
 import lombok.Data;
 import lombok.ToString;

@@ -1,7 +1,7 @@
 package com.zz.lab;
 
 import com.zz.lab.entity.Person;
-import com.zz.lab.pom.Artifact;
+import com.zz.lab.entity.Artifact;
 import com.zz.lab.pom.PomParser;
 import com.zz.lab.repo.PersonRepository;
 import org.junit.Test;

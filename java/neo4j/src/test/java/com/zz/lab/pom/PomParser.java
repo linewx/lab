@@ -1,5 +1,6 @@
 package com.zz.lab.pom;
 
+import com.zz.lab.entity.Artifact;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
