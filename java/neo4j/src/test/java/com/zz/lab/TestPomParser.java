@@ -23,13 +23,22 @@ public class TestPomParser {
         String parentPom = "/Users/luganlin/git/itsma-x/pom.xml";
         String tenantPom = "/Users/luganlin/git/itsma-x/paas/platform/services/tenant-settings/tenant-settings-api/pom.xml";
 
-
+        System.out.println("--------- parent pom ----------");
         List<Artifact> parentDeps = new PomParser(parentPom).parseDependencies();
         System.out.println(parentDeps.size());
+        Artifact parentBasic = new PomParser(parentPom).parseBasic();
+        System.out.println(parentBasic);
 
 
+
+
+        System.out.println("--------- tenant pom ----------");
         List<Artifact> tenantDeps = new PomParser(tenantPom).parseDependencies();
         System.out.println(tenantDeps.size());
+        Artifact tenantBasic = new PomParser(tenantPom).parseBasic();
+        System.out.println(tenantBasic);
+
+
 
     }
 
