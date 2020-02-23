@@ -148,7 +148,7 @@
 [INFO] UserWorkScheduleService Api                                        [jar]
 [INFO] Personalization                                                    [pom]
 [INFO] Personalization Java API                                           [jar]
-[INFO] query-filter                                                       [jar]
+[INFO] query-groupPrefixFilter                                                       [jar]
 [INFO] Report Framework                                                   [pom]
 [INFO] Report Framework API                                               [jar]
 [INFO] Report Framework Client                                            [jar]
@@ -292,7 +292,7 @@
 [INFO] lms-ws                                                             [jar]
 [INFO] Business Rules                                                     [pom]
 [INFO] Workflow Engine Java SPI                                           [jar]
-[INFO] notification filter api                                            [jar]
+[INFO] notification groupPrefixFilter api                                            [jar]
 [INFO] Entity Stakeholders Service                                        [pom]
 [INFO] Entity Stakeholders API                                            [jar]
 [INFO] Push Service                                                       [pom]
@@ -425,7 +425,7 @@
 [INFO] OPB Service Impl                                                   [jar]
 [INFO] Notification Processing Rules Impl                                 [jar]
 [INFO] Notification Web Service API                                       [jar]
-[INFO] Notification filter impl                                           [jar]
+[INFO] Notification groupPrefixFilter impl                                           [jar]
 [INFO] OPB Service WS                                                     [jar]
 [INFO] OPB Data Sync Service Impl                                         [jar]
 [INFO] OPB Data Sync Service Client                                       [jar]
@@ -1226,7 +1226,7 @@ Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/o
 [INFO] UserWorkScheduleService Api ........................ SKIPPED
 [INFO] Personalization .................................... SKIPPED
 [INFO] Personalization Java API ........................... SKIPPED
-[INFO] query-filter ....................................... SKIPPED
+[INFO] query-groupPrefixFilter ....................................... SKIPPED
 [INFO] Report Framework ................................... SKIPPED
 [INFO] Report Framework API ............................... SKIPPED
 [INFO] Report Framework Client ............................ SKIPPED
@@ -1370,7 +1370,7 @@ Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/o
 [INFO] lms-ws ............................................. SKIPPED
 [INFO] Business Rules ..................................... SKIPPED
 [INFO] Workflow Engine Java SPI ........................... SKIPPED
-[INFO] notification filter api ............................ SKIPPED
+[INFO] notification groupPrefixFilter api ............................ SKIPPED
 [INFO] Entity Stakeholders Service ........................ SKIPPED
 [INFO] Entity Stakeholders API ............................ SKIPPED
 [INFO] Push Service ....................................... SKIPPED
@@ -1503,7 +1503,7 @@ Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/o
 [INFO] OPB Service Impl ................................... SKIPPED
 [INFO] Notification Processing Rules Impl ................. SKIPPED
 [INFO] Notification Web Service API ....................... SKIPPED
-[INFO] Notification filter impl ........................... SKIPPED
+[INFO] Notification groupPrefixFilter impl ........................... SKIPPED
 [INFO] OPB Service WS ..................................... SKIPPED
 [INFO] OPB Data Sync Service Impl ......................... SKIPPED
 [INFO] OPB Data Sync Service Client ....................... SKIPPED

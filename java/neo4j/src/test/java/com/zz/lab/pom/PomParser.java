@@ -17,6 +17,8 @@ import java.util.List;
 public class PomParser {
     private String path;
     private Document doc;
+    private String groupPrefixFilter = null;
+
 
     public PomParser(String path) {
         Document doc = null;
@@ -37,6 +39,11 @@ public class PomParser {
         this.doc = doc;
     }
 
+    public PomParser(String path, String groupPrefixFilter) {
+        this(path);
+        this.groupPrefixFilter = groupPrefixFilter;
+    }
+
     private Artifact parseDepNode(Node depNode) {
         Artifact dependency = new Artifact();
 
@@ -48,6 +55,9 @@ public class PomParser {
                 dependency.setArtifactId(oneNode.getTextContent());
             }
             if ("groupId".equals(name)) {
+                if (this.groupPrefixFilter != null && !oneNode.getTextContent().startsWith(this.groupPrefixFilter)) {
+                    return null;
+                }
                 dependency.setGroupId(oneNode.getTextContent());
             }
             if ("version".equals(name)) {
@@ -120,7 +130,9 @@ public class PomParser {
                     continue;
                 }
                 Artifact dependency = parseDepNode(deplist.item(i));
-                dependencyList.add(dependency);
+                if (dependency != null) {
+                    dependencyList.add(dependency);
+                }
             }
         }
 

@@ -42,6 +42,8 @@ public class TestPomParser {
 
     }
 
+
+
     @Test
     public void testGraph() {
         personRepository.deleteAll();
@@ -57,6 +59,7 @@ public class TestPomParser {
         Person person = personRepository.findByName("Greg");
 
         System.out.println(person);
+
     }
 
 }
