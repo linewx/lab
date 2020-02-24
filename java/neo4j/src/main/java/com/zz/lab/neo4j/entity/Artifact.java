@@ -7,10 +7,10 @@ import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 @Data
-@ToString
 @NodeEntity
 @Builder
 @NoArgsConstructor
@@ -19,6 +19,12 @@ public class Artifact {
     @Id
     @GeneratedValue
     private Long id;
+
+    @Override
+    public String toString() {
+        return this.groupId + ":" + this.artifactId;
+    }
+
     String groupId;
     String artifactId;
     String version;
@@ -37,4 +43,21 @@ public class Artifact {
 
         deps.add(artifact);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Artifact artifact = (Artifact) o;
+        return groupId.equals(artifact.groupId) &&
+                artifactId.equals(artifact.artifactId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(groupId, artifactId);
+    }
+
+
+
 }

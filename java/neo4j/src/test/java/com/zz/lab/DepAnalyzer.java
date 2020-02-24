@@ -7,6 +7,7 @@ import com.zz.lab.neo4j.repo.ArtifactRepository;
 import com.zz.lab.neo4j.repo.PersonRepository;
 import com.zz.lab.neo4j.parser.Finder;
 import com.zz.lab.neo4j.service.ArtifactService;
+import lombok.ToString;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
 import java.nio.file.*;
+import java.util.LinkedHashSet;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -23,21 +25,6 @@ public class DepAnalyzer {
 
     @Autowired
     private ArtifactService artifactService;
-
- /*   private void addRelation(Artifact foo, Artifact bar) {
-        Artifact theFoo = artifactRepository.findByArtifactIdAndGroupId(foo.getArtifactId(), foo.getGroupId());
-        if (theFoo == null) {
-            theFoo = artifactRepository.save(foo);
-        }
-
-        Artifact theBar = artifactRepository.findByArtifactIdAndGroupId(bar.getArtifactId(), bar.getGroupId());
-        if (theBar == null) {
-            theBar = artifactRepository.save(bar);
-        }
-
-        theFoo.depends(theBar);
-        artifactRepository.save(theFoo);
-    }*/
 
     @Test
     public void testWalker() {
@@ -49,6 +36,20 @@ public class DepAnalyzer {
         }
 
         System.out.println(finder.getFound());
+    }
+
+    @Test
+    public void testDfs() {
+        Artifact artifact = Artifact.builder()
+                .artifactId("tenant-settings-impl")
+                .groupId("com.hp.maas.platform.services.tenant-settings")
+                .build();
+
+        LinkedHashSet<Artifact> results = artifactService.bfs(artifact);
+        for (Artifact one: results) {
+            System.out.println(one);
+        }
+
     }
 
 

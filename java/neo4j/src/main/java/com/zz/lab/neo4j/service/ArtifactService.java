@@ -7,6 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayDeque;
+import java.util.LinkedHashSet;
+import java.util.Queue;
+import java.util.Set;
+
 @Service
 public class ArtifactService {
     @Autowired
@@ -32,7 +37,38 @@ public class ArtifactService {
         artifactRepository.deleteAll();
     }
 
+    public LinkedHashSet<Artifact> bfs(Artifact theNode) {
+        Artifact startNode = artifactRepository.findByArtifactIdAndGroupId(theNode.getArtifactId(), theNode.getGroupId());
 
+        LinkedHashSet<Artifact> visited = new LinkedHashSet<>();
+
+        Queue<Artifact> visitingQueue = new ArrayDeque<>();
+        visitingQueue.add(startNode);
+
+        while(visitingQueue.size() != 0) {
+            Artifact theArtifact = visitingQueue.poll();
+
+            if (visited.contains(theArtifact)) {
+                //visisted
+                continue;
+            }else {
+                // not visited
+                visited.add(theArtifact);
+                Set<Artifact> deps = theArtifact.getDeps();
+                if (deps != null) {
+                    for(Artifact artifact : deps) {
+                        if (!visited.contains(artifact)) {
+                            visitingQueue.add(artifactRepository.findByArtifactIdAndGroupId(artifact.getArtifactId(), artifact.getGroupId()));
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        return visited;
+    }
 
 
 }
