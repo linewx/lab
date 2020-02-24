@@ -1,4 +1,4 @@
-package com.zz.lab.entity;
+package com.zz.lab.neo4j.entity;
 
 import lombok.*;
 import org.neo4j.ogm.annotation.GeneratedValue;

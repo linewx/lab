@@ -1,10 +1,10 @@
 package com.zz.lab;
 
-import com.zz.lab.entity.Artifact;
-import com.zz.lab.pom.PomParser;
-import com.zz.lab.repo.ArtifactRepository;
-import com.zz.lab.repo.PersonRepository;
-import com.zz.lab.utils.Finder;
+import com.zz.lab.neo4j.entity.Artifact;
+import com.zz.lab.neo4j.parser.PomParser;
+import com.zz.lab.neo4j.repo.ArtifactRepository;
+import com.zz.lab.neo4j.repo.PersonRepository;
+import com.zz.lab.neo4j.parser.Finder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

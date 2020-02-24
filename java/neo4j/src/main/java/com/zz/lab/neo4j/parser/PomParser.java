@@ -1,6 +1,6 @@
-package com.zz.lab.pom;
+package com.zz.lab.neo4j.parser;
 
-import com.zz.lab.entity.Artifact;
+import com.zz.lab.neo4j.entity.Artifact;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -73,7 +73,39 @@ public class PomParser {
 
     public  Artifact parseBasic() {
         Artifact artifact = new Artifact();
+        Artifact parentArtifact = new Artifact();
         NodeList basicNodeList = this.doc.getDocumentElement().getChildNodes();
+        for (int index =0 ;index <  basicNodeList.getLength(); index++) {
+            Node theNode = basicNodeList.item(index);
+            String nodeName = theNode.getNodeName();
+            if ("artifactId".equals(nodeName)) {
+                artifact.setArtifactId(theNode.getTextContent());
+            }
+            if ("groupId".equals(nodeName)) {
+                artifact.setGroupId(theNode.getTextContent());
+            }
+            if ("version".equals(nodeName)) {
+                artifact.setVersion(theNode.getTextContent());
+            }
+            if ("packaging".equals(nodeName)) {
+                artifact.setPacking(theNode.getTextContent());
+            }
+            if ("parent".equals(nodeName)) {
+                parentArtifact = parseArtifact(theNode);
+            }
+        }
+
+        artifact.setSource(path);
+        if (artifact.getGroupId() == null) {
+            //inherit groupId from parent
+            artifact.setGroupId(parentArtifact.getGroupId());
+        }
+        return artifact;
+    }
+
+    public Artifact parseArtifact(Node baseNode) {
+        Artifact artifact = new Artifact();
+        NodeList basicNodeList = baseNode.getChildNodes();
         for (int index =0 ;index <  basicNodeList.getLength(); index++) {
             Node theNode = basicNodeList.item(index);
             String nodeName = theNode.getNodeName();
@@ -93,7 +125,6 @@ public class PomParser {
 
         artifact.setSource(path);
         return artifact;
-
     }
 
     public  List<Artifact> parseDependencies() {

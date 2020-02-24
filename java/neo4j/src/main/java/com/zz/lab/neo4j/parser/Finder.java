@@ -1,4 +1,4 @@
-package com.zz.lab.utils;
+package com.zz.lab.neo4j.parser;
 
 import java.io.IOException;
 import java.nio.file.FileVisitResult;

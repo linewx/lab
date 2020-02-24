@@ -1,4 +1,4 @@
-package com.zz.lab.entity;
+package com.zz.lab.neo4j.entity;
 
 import java.util.Collections;
 import java.util.HashSet;
