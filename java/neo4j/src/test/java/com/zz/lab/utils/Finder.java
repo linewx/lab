@@ -15,6 +15,7 @@ public class Finder implements FileVisitor<Path> {
         return found;
     }
 
+
     @Override
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
         return FileVisitResult.CONTINUE;
@@ -22,7 +23,7 @@ public class Finder implements FileVisitor<Path> {
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
-        if (file.endsWith("pom.xml")) {
+        if (file.endsWith("pom.xml") && !file.toString().contains("target") && !file.toString().contains("automation")) {
             found.add(file.toString());
         }
 

@@ -54,8 +54,8 @@ public class TestDirWalker {
 
     @Test
     public void testDepAnalyze() throws Exception{
-        //personRepository.deleteAll();
-        //artifactRepository.deleteAll();
+        personRepository.deleteAll();
+        artifactRepository.deleteAll();
         //identify a small group
         ///Users/luganlin/git/itsma-x/paas/platform/services/tenant-settings/
         String rootPath = "/Users/luganlin/git/itsma-x/paas";
@@ -72,12 +72,12 @@ public class TestDirWalker {
         for (String onePomFile : pomFiles) {
             PomParser pomParser = new PomParser(onePomFile, "com.hp");
 
-            Artifact basicArttifact = pomParser.parseBasic();
+            Artifact basicArtifact = pomParser.parseBasic();
 
             List<Artifact> deps = pomParser.parseDependencies();
 
             for (Artifact one: deps) {
-                addRelation(basicArttifact, one);
+                addRelation(basicArtifact, one);
             }
 
             //refine the data model for artifacts

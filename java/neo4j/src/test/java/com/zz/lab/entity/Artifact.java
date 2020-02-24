@@ -24,6 +24,7 @@ public class Artifact {
     String version;
     String scope;
     String packing;
+    String source;
 
     @Relationship(type = "deps")
     Set<Artifact> deps;

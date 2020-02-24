@@ -91,6 +91,7 @@ public class PomParser {
             }
         }
 
+        artifact.setSource(path);
         return artifact;
 
     }

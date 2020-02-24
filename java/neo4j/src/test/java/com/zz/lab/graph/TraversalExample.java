@@ -12,6 +12,7 @@ import org.neo4j.graphdb.RelationshipType;
 import org.neo4j.graphdb.Result;
 import org.neo4j.graphdb.Transaction;
 import org.neo4j.graphdb.factory.GraphDatabaseFactory;
+import org.neo4j.graphdb.factory.GraphDatabaseSettings;
 import org.neo4j.graphdb.traversal.Evaluators;
 import org.neo4j.graphdb.traversal.TraversalDescription;
 import org.neo4j.graphdb.traversal.Uniqueness;
@@ -28,6 +29,25 @@ public class TraversalExample
 
     public static void main( String[] args ) throws IOException
     {
+        GraphDatabaseSettings.BoltConnector bolt = GraphDatabaseSettings.boltConnector( "0" );
+
+        GraphDatabaseService database = new GraphDatabaseFactory()
+                .newEmbeddedDatabaseBuilder( databaseDirectory )
+                .setConfig( bolt.type, "BOLT" )
+                .setConfig( bolt.enabled, "true" )
+                .setConfig( bolt.address, "localhost:7687" )
+                .newGraphDatabase();
+
+//        FileUtils.deleteRecursively( databaseDirectory );
+//        GraphDatabaseService database = new GraphDatabaseFactory().newEmbeddedDatabase( databaseDirectory );
+        TraversalExample example = new TraversalExample( database );
+        Node joe = example.createData();
+        example.run( joe );
+        database.shutdown();
+    }
+
+
+    public void barExample() throws Exception{
         FileUtils.deleteRecursively( databaseDirectory );
         GraphDatabaseService database = new GraphDatabaseFactory().newEmbeddedDatabase( databaseDirectory );
         TraversalExample example = new TraversalExample( database );
@@ -35,6 +55,17 @@ public class TraversalExample
         example.run( joe );
         database.shutdown();
     }
+
+    public void fooExample() throws Exception{
+        FileUtils.deleteRecursively( databaseDirectory );
+        GraphDatabaseService database = new GraphDatabaseFactory().newEmbeddedDatabase( databaseDirectory );
+        TraversalExample example = new TraversalExample( database );
+        Node joe = example.createData();
+        example.run( joe );
+        database.shutdown();
+    }
+
+
 
     public TraversalExample( GraphDatabaseService db )
     {
