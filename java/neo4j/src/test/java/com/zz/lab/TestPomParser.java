@@ -1,5 +1,6 @@
 package com.zz.lab;
 
+import com.zz.lab.neo4j.DummyApplication;
 import com.zz.lab.neo4j.entity.Person;
 import com.zz.lab.neo4j.entity.Artifact;
 import com.zz.lab.neo4j.parser.PomParser;
@@ -13,10 +14,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = DummyApplication.class)
 public class TestPomParser {
-    @Autowired
-    private PersonRepository personRepository;
 
     @Test
     public void testParsePom() {
@@ -37,25 +36,6 @@ public class TestPomParser {
         Artifact tenantBasic = new PomParser(tenantPom).parseBasic();
         System.out.println(tenantBasic);
 
-
-    }
-
-
-    @Test
-    public void testGraph() {
-        personRepository.deleteAll();
-
-        Person greg = new Person("Greg");
-        Person roy = new Person("Roy");
-        Person craig = new Person("Craig");
-
-        personRepository.save(greg);
-        personRepository.save(roy);
-        personRepository.save(craig);
-
-        Person person = personRepository.findByName("Greg");
-
-        System.out.println(person);
 
     }
 

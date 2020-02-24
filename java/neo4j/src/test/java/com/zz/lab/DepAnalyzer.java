@@ -1,10 +1,12 @@
 package com.zz.lab;
 
+import com.zz.lab.neo4j.DummyApplication;
 import com.zz.lab.neo4j.entity.Artifact;
 import com.zz.lab.neo4j.parser.PomParser;
 import com.zz.lab.neo4j.repo.ArtifactRepository;
 import com.zz.lab.neo4j.repo.PersonRepository;
 import com.zz.lab.neo4j.parser.Finder;
+import com.zz.lab.neo4j.service.ArtifactService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,27 +18,13 @@ import java.nio.file.*;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
-public class TestDirWalker {
-    @Autowired
-    private PersonRepository personRepository;
+@SpringBootTest(classes = DummyApplication.class)
+public class DepAnalyzer {
 
     @Autowired
-    private ArtifactRepository artifactRepository;
+    private ArtifactService artifactService;
 
-
-    @Test
-    public void testWalker() {
-        Finder finder = new Finder();
-        try {
-            Files.walkFileTree(Paths.get("/Users/luganlin/git/itsma-x"), finder);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println(finder.getFound());
-    }
-    private void addRelation(Artifact foo, Artifact bar) {
+ /*   private void addRelation(Artifact foo, Artifact bar) {
         Artifact theFoo = artifactRepository.findByArtifactIdAndGroupId(foo.getArtifactId(), foo.getGroupId());
         if (theFoo == null) {
             theFoo = artifactRepository.save(foo);
@@ -49,13 +37,24 @@ public class TestDirWalker {
 
         theFoo.depends(theBar);
         artifactRepository.save(theFoo);
+    }*/
+
+    @Test
+    public void testWalker() {
+        Finder finder = new Finder();
+        try {
+            Files.walkFileTree(Paths.get("/Users/luganlin/git/itsma-x"), finder);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(finder.getFound());
     }
 
 
     @Test
     public void testDepAnalyze() throws Exception{
-        personRepository.deleteAll();
-        artifactRepository.deleteAll();
+        artifactService.deleteAll();
         //identify a small group
         ///Users/luganlin/git/itsma-x/paas/platform/services/tenant-settings/
         String rootPath = "/Users/luganlin/git/itsma-x/paas";
@@ -77,12 +76,13 @@ public class TestDirWalker {
             List<Artifact> deps = pomParser.parseDependencies();
 
             for (Artifact one: deps) {
-                addRelation(basicArtifact, one);
+                //refine the data model for artifacts
+
+                //add them all into neo4j
+                artifactService.addRelation(basicArtifact, one);
             }
 
-            //refine the data model for artifacts
 
-            //add them all into neo4j
 
         }
 

@@ -1,4 +1,4 @@
-package com.zz.lab;
+package com.zz.lab.neo4j;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.neo4j.repository.config.EnableNeo4jRepositories;
