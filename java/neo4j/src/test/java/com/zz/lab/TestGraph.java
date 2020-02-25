@@ -1,9 +1,7 @@
 package com.zz.lab;
 
 import com.zz.lab.neo4j.DummyApplication;
-import com.zz.lab.neo4j.entity.Artifact;
-import com.zz.lab.neo4j.entity.PathType;
-import com.zz.lab.neo4j.entity.Person;
+import com.zz.lab.neo4j.entity.*;
 import com.zz.lab.neo4j.repo.ArtifactRepository;
 import com.zz.lab.neo4j.repo.PersonRepository;
 import com.zz.lab.neo4j.service.ArtifactService;
@@ -109,6 +107,55 @@ public class TestGraph {
     public void testPathType() {
         Assert.assertEquals(PathType.valueOf("CHILD"), PathType.CHILD);
         Assert.assertEquals("CHILD", PathType.CHILD.toString());
+    }
+
+    @Test
+    public void testArtifactPathConverter() {
+
+        ArtifactMergePathConverter converter = new ArtifactMergePathConverter();
+
+        ArtifactPathNode artifactPathNode = ArtifactPathNode.builder()
+                .groupId("com.hp.platform.metadata")
+                .artifactId("metadata-impl")
+                .pathType(PathType.GROUP)
+                .build();
+
+        ArtifactPathNode artifactPathNode2 = ArtifactPathNode.builder()
+                .groupId("com.hp.platform.metadata")
+                .artifactId("metadata-api")
+                .pathType(PathType.PARENT)
+                .build();
+
+        ArtifactPathNode artifactPathNode3 = ArtifactPathNode.builder()
+                .groupId("com.hp.platform.tenant")
+                .artifactId("tenant-impl")
+                .pathType(PathType.PARENT)
+                .build();
+
+        ArtifactPathNode artifactPathNode4 = ArtifactPathNode.builder()
+                .groupId("com.hp.platform.tenant")
+                .artifactId("tenant-api")
+                .pathType(PathType.CHILD)
+                .build();
+
+        ArtifactPath artifactPath =  ArtifactPath.builder()
+                .path(Arrays.asList(artifactPathNode, artifactPathNode2))
+                .build();
+
+        ArtifactPath artifactPath2 =  ArtifactPath.builder()
+                .path(Arrays.asList(artifactPathNode3, artifactPathNode4))
+                .build();
+
+        List<ArtifactPath> paths = Arrays.asList(artifactPath, artifactPath2);
+
+        String pathString = converter.toGraphProperty(paths);
+        System.out.println("######### path string ####### ");
+        System.out.println(pathString);
+
+        List<ArtifactPath> artifactPaths = converter.toEntityAttribute(pathString);
+
+        System.out.println("########## artifact paths #######");
+        artifactPaths.forEach(x -> System.out.println(x.toString()));
 
     }
 }
