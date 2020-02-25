@@ -14,6 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -87,6 +88,12 @@ public class TestGraph {
         team.stream().forEach(person -> log.info(
                 "\t" + personRepository.findByName(person.getName()).toString()));
 
+    }
+
+    @Test
+    public void testCypher() {
+        Collection<Artifact> artifacts = artifactRepository.getAllArtifactByDeps(1, 0);
+        System.out.println(artifacts);
     }
 
 

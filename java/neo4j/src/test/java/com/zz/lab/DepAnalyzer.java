@@ -82,13 +82,7 @@ public class DepAnalyzer {
                 //add them all into neo4j
                 artifactService.addRelation(basicArtifact, one);
             }
-
-
-
         }
-
-
-
     }
 
 }
