@@ -52,6 +52,11 @@ public class TestGraph {
         artifactService.addRelation(foo, baz);
     }
 
+    @Test
+    public void testMergePath() {
+
+    }
+
 
     @Test
     public void testGraph() {
@@ -111,6 +116,11 @@ public class TestGraph {
 
     @Test
     public void testArtifactPathConverter() {
+        //clear test case
+        Collection<Artifact> artifacts =
+        artifactRepository.findAllByArtifactIdAndGroupId("foo", "com.example");
+
+        artifactRepository.deleteAll(artifacts);
 
         ArtifactMergePathConverter converter = new ArtifactMergePathConverter();
 
@@ -157,5 +167,24 @@ public class TestGraph {
         System.out.println("########## artifact paths #######");
         artifactPaths.forEach(x -> System.out.println(x.toString()));
 
+        Artifact oneArtifact = Artifact.builder()
+                .artifactId("foo")
+                .groupId("com.example")
+                .mergePaths(paths)
+                .build();
+
+        artifactRepository.save(oneArtifact);
+
+        Artifact twoArtifact = artifactRepository.findOneByArtifactIdAndGroupId("foo", "com.example");
+        Assert.assertEquals(twoArtifact.getMergePaths().size(), 2);
+
+
     }
+
+    //todo: not work as expected
+    /*@Test
+    public void testFindDepth() {
+        Artifact artifact = artifactRepository.findOneByArtifactIdAndGroupId("metadata-impl", "com.hp.maas.platform.core.metadata", 3);
+        System.out.println(artifact.getDeps());
+    }*/
 }

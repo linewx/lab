@@ -5,10 +5,9 @@ import org.neo4j.ogm.annotation.GeneratedValue;
 import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
+import org.neo4j.ogm.annotation.typeconversion.Convert;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Data
 @NodeEntity
@@ -32,6 +31,9 @@ public class Artifact {
     String scope;
     String packing;
     String source;
+
+    @Convert(ArtifactMergePathConverter.class)
+    List<ArtifactPath> mergePaths = new ArrayList<>();
 
     @Relationship(type = "deps")
     Set<Artifact> deps;

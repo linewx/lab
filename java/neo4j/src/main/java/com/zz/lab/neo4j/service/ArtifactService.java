@@ -19,12 +19,12 @@ public class ArtifactService {
 
     @Transactional
     public void addRelation(Artifact foo, Artifact bar) {
-        Artifact theFoo = artifactRepository.findByArtifactIdAndGroupId(foo.getArtifactId(), foo.getGroupId());
+        Artifact theFoo = artifactRepository.findOneByArtifactIdAndGroupId(foo.getArtifactId(), foo.getGroupId());
         if (theFoo == null) {
             theFoo = artifactRepository.save(foo);
         }
 
-        Artifact theBar = artifactRepository.findByArtifactIdAndGroupId(bar.getArtifactId(), bar.getGroupId());
+        Artifact theBar = artifactRepository.findOneByArtifactIdAndGroupId(bar.getArtifactId(), bar.getGroupId());
         if (theBar == null) {
             theBar = artifactRepository.save(bar);
         }
@@ -38,7 +38,7 @@ public class ArtifactService {
     }
 
     public LinkedHashSet<Artifact> bfs(Artifact theNode) {
-        Artifact startNode = artifactRepository.findByArtifactIdAndGroupId(theNode.getArtifactId(), theNode.getGroupId());
+        Artifact startNode = artifactRepository.findOneByArtifactIdAndGroupId(theNode.getArtifactId(), theNode.getGroupId());
 
         LinkedHashSet<Artifact> visited = new LinkedHashSet<>();
 
@@ -58,7 +58,7 @@ public class ArtifactService {
                 if (deps != null) {
                     for (Artifact artifact : deps) {
                         if (!visited.contains(artifact)) {
-                            visitingQueue.add(artifactRepository.findByArtifactIdAndGroupId(artifact.getArtifactId(), artifact.getGroupId()));
+                            visitingQueue.add(artifactRepository.findOneByArtifactIdAndGroupId(artifact.getArtifactId(), artifact.getGroupId()));
                         }
 
                     }
