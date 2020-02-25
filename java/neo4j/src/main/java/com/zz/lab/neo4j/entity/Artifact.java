@@ -25,6 +25,7 @@ public class Artifact {
         return this.groupId + ":" + this.artifactId;
     }
 
+
     String groupId;
     String artifactId;
     String version;

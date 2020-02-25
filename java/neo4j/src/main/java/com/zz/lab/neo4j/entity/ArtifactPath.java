@@ -25,7 +25,7 @@ public class ArtifactPath {
 
     @Override
     public String toString() {
-        return this.groupId + ":" + this.artifactId + ":" + this.pathType;
+        return this.groupId + ":" + this.artifactId + ":" + this.pathType.toString();
     }
 
     String groupId;
@@ -33,6 +33,19 @@ public class ArtifactPath {
     String version;
     String scope;
     String packing;
-    String pathType;
+    PathType pathType;
+
+    public static ArtifactPath fromString(String thePath) {
+        String[] theArtifact = thePath.split(":");
+        if (theArtifact.length != 3) {
+            throw new RuntimeException("parse ArtifactPath error " + thePath);
+        }else {
+            return ArtifactPath.builder()
+                    .groupId(theArtifact[0])
+                    .artifactId(theArtifact[1])
+                    .pathType(PathType.valueOf(theArtifact[2]))
+                    .build();
+        }
+    }
 
 }

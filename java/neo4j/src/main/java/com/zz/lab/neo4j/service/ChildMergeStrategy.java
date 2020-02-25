@@ -11,7 +11,12 @@ public class ChildMergeStrategy implements MergeStrategy{
 
     @Override
     public void merge() {
+        //merge into child
+        //get all the parents of the node
 
+        //link all the parents to childNode
+
+        //add node to childnode mergepath
     }
 
 
