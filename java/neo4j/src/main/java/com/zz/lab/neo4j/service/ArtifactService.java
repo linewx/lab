@@ -45,18 +45,18 @@ public class ArtifactService {
         Queue<Artifact> visitingQueue = new ArrayDeque<>();
         visitingQueue.add(startNode);
 
-        while(visitingQueue.size() != 0) {
+        while (visitingQueue.size() != 0) {
             Artifact theArtifact = visitingQueue.poll();
 
             if (visited.contains(theArtifact)) {
                 //visisted
                 continue;
-            }else {
+            } else {
                 // not visited
                 visited.add(theArtifact);
                 Set<Artifact> deps = theArtifact.getDeps();
                 if (deps != null) {
-                    for(Artifact artifact : deps) {
+                    for (Artifact artifact : deps) {
                         if (!visited.contains(artifact)) {
                             visitingQueue.add(artifactRepository.findByArtifactIdAndGroupId(artifact.getArtifactId(), artifact.getGroupId()));
                         }
@@ -69,6 +69,8 @@ public class ArtifactService {
 
         return visited;
     }
+
+
 
 
 }

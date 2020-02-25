@@ -2,11 +2,13 @@ package com.zz.lab;
 
 import com.zz.lab.neo4j.DummyApplication;
 import com.zz.lab.neo4j.entity.Artifact;
+import com.zz.lab.neo4j.entity.PathType;
 import com.zz.lab.neo4j.entity.Person;
 import com.zz.lab.neo4j.repo.ArtifactRepository;
 import com.zz.lab.neo4j.repo.PersonRepository;
 import com.zz.lab.neo4j.service.ArtifactService;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -91,16 +93,22 @@ public class TestGraph {
 
     @Test
     public void testCypher() {
-        Collection<Artifact> artifacts = artifactRepository.getAllArtifactByDeps(1, 0);
+        /*Collection<Artifact> artifacts = artifactRepository.getAllArtifactByDeps(1, 0);
         System.out.println(artifacts);
 
         Collection<Artifact> parent = artifactRepository.getAllParents("metadata-impl");
         System.out.println(parent);
 
         Collection<Artifact> children = artifactRepository.getChildren("metadata-impl");
-        System.out.println(children);
+        System.out.println(children);*/
 
+        System.out.println(artifactRepository.count());
     }
 
+    @Test
+    public void testPathType() {
+        Assert.assertEquals(PathType.valueOf("CHILD"), PathType.CHILD);
+        Assert.assertEquals("CHILD", PathType.CHILD.toString());
 
+    }
 }
