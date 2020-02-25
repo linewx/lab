@@ -1,14 +1,13 @@
 package com.zz.lab.neo4j.service;
 
 import com.zz.lab.neo4j.entity.Artifact;
+import com.zz.lab.neo4j.entity.PathType;
 import com.zz.lab.neo4j.repo.ArtifactRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 @Slf4j
@@ -16,6 +15,12 @@ public class ChildMergeStrategy implements MergeStrategy {
     private Artifact node;
     private Artifact childNode;
     private ArtifactRepository artifactRepository;
+
+    public ChildMergeStrategy(Artifact node, Artifact childNode, ArtifactRepository artifactRepository) {
+        this.node = node;
+        this.childNode = childNode;
+        this.artifactRepository = artifactRepository;
+    }
 
     //merge into child
     @Override
@@ -39,11 +44,15 @@ public class ChildMergeStrategy implements MergeStrategy {
         }
 
         //add node to childnode mergepath
+
+
         //add parent path
 
 
         //add ancestors
+        childNode.addPaths(node.makeMergePaths(PathType.CHILD));
 
+        artifactRepository.save(childNode);
     }
 
 

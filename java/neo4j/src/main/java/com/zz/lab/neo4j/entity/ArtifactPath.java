@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ArtifactPath {
+public class ArtifactPath implements Cloneable{
     private List<ArtifactPathNode> path = new ArrayList<>();
 
     @Override
@@ -28,5 +28,18 @@ public class ArtifactPath {
         List<ArtifactPathNode> path = parsedPath.stream().map(ArtifactPathNode::fromString).collect(Collectors.toList());
         return ArtifactPath.builder().path(path).build();
     }
+
+    public void addNode(ArtifactPathNode node) {
+         path.add(node);
+    }
+
+    @Override
+    public ArtifactPath clone() {
+        return ArtifactPath.builder()
+                .path(new ArrayList<>(path))
+                .build();
+    }
+
+
 
 }
