@@ -13,9 +13,8 @@ public class ArtifactMergePathConverter implements AttributeConverter<List<Artif
         if (mergePaths == null || mergePaths.isEmpty()) {
             return "";
         }
+        return String.join(",", mergePaths.stream().map(ArtifactPath::toString).collect(Collectors.toList()));
 
-        String graphMergePath = String.join(",", mergePaths.stream().map(ArtifactPath::toString).collect(Collectors.toList()));
-        return graphMergePath;
 
     }
 
@@ -24,12 +23,7 @@ public class ArtifactMergePathConverter implements AttributeConverter<List<Artif
         if (s == null || s.isEmpty()) {
             return new ArrayList<>();
         }
-
         List<String> paths = Arrays.asList(s.split(","));
-        if (paths == null || paths.isEmpty()) {
-            return new ArrayList<>();
-        }
-
         return paths.stream().map(ArtifactPath::fromString).collect(Collectors.toList());
     }
 }
