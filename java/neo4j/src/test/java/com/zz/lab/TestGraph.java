@@ -53,7 +53,6 @@ public class TestGraph {
     }
 
 
-
     @Test
     public void testGraph() {
         personRepository.deleteAll();
@@ -94,8 +93,14 @@ public class TestGraph {
     public void testCypher() {
         Collection<Artifact> artifacts = artifactRepository.getAllArtifactByDeps(1, 0);
         System.out.println(artifacts);
-    }
 
+        Collection<Artifact> parent = artifactRepository.getAllParents("metadata-impl");
+        System.out.println(parent);
+
+        Collection<Artifact> children = artifactRepository.getChildren("metadata-impl");
+        System.out.println(children);
+
+    }
 
 
 }
