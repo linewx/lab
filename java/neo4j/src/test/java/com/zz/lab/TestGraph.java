@@ -52,10 +52,7 @@ public class TestGraph {
         artifactService.addRelation(foo, baz);
     }
 
-    @Test
-    public void testMergePath() {
 
-    }
 
 
     @Test

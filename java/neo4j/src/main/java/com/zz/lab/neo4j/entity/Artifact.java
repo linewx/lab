@@ -68,7 +68,7 @@ public class Artifact {
     public List<ArtifactPath> makeMergePaths(PathType pathType) {
         List<ArtifactPath> paths = new ArrayList<>();
         ArtifactPath selfPath = this.makeSelfPath(pathType);
-        paths.add(selfPath);
+
         ArtifactPathNode artifactPathNode = this.makeSelfNode(pathType);
 
         // add own path
