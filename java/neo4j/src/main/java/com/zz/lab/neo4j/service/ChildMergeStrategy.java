@@ -7,24 +7,55 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
+@Service
 public class ChildMergeStrategy implements MergeStrategy {
-    private Artifact node;
-    private Artifact childNode;
+
+    @Autowired
     private ArtifactRepository artifactRepository;
+
+    @Override
+    public void merge() {
+        merge(null);
+    }
 
     //merge into child
     @Override
-    public void merge() {
+    public void merge(MergeFilter filter) {
+        Collection<Artifact> artifactsToMergeToChild = artifactRepository.getAllArtifactByDeps(1, 0);
+
+        if (filter != null) {
+            if (filter.getGroupId() != null) {
+                //do groupId filter
+                artifactsToMergeToChild = artifactsToMergeToChild.stream().filter(x -> x.getGroupId().equals(filter.getGroupId())).collect(Collectors.toList());
+            }
+
+            if (filter.getArtifactId() != null) {
+                //do groupId filter
+                artifactsToMergeToChild = artifactsToMergeToChild.stream().filter(x -> x.getArtifactId().equals(filter.getArtifactId())).collect(Collectors.toList());
+            }
+        }
+
+        for (Artifact artifact : artifactsToMergeToChild) {
+            //get the child
+            Collection<Artifact> children = artifactRepository.getChildren(artifact.getArtifactId(), artifact.getGroupId());
+            Artifact child = children.iterator().next();
+            log.info("start merge node " + artifact.toString() + " to" + child.toString());
+            doMerge(artifact, child);
+            log.info("end merge node " + artifact.toString() + " to" + child.toString());
+        }
+    }
+
+    public void doMerge(Artifact node, Artifact childNode) {
         //todo: to make sure parent & child have loaded deps
         if (CollectionUtils.isEmpty(node.getDeps())) {
             //populate deps

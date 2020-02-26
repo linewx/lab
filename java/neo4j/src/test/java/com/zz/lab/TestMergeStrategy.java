@@ -6,6 +6,7 @@ import com.zz.lab.neo4j.repo.ArtifactRepository;
 import com.zz.lab.neo4j.repo.PersonRepository;
 import com.zz.lab.neo4j.service.ArtifactService;
 import com.zz.lab.neo4j.service.ChildMergeStrategy;
+import com.zz.lab.neo4j.service.MergeFilter;
 import com.zz.lab.neo4j.service.MergeStrategy;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -29,6 +30,9 @@ public class TestMergeStrategy {
 
     @Autowired
     private ArtifactService artifactService;
+
+    @Autowired
+    private ChildMergeStrategy childMergeStrategy;
 
 
     @Test
@@ -68,29 +72,9 @@ public class TestMergeStrategy {
         artifactService.addRelation(example3, example4);
         artifactService.addRelation(example3, example5);
 
-        Collection<Artifact> nodesToMergeToChild = artifactRepository.getAllArtifactByDeps(1, 0);
-        List<Artifact> artifactsToMergeToChild = nodesToMergeToChild.stream().filter(x -> x.getGroupId().equals("com.zz.lab")).collect(Collectors.toList());
+        //apply child merge strategy
+        childMergeStrategy.merge(MergeFilter.builder().groupId("com.zz.lab").build());
 
-        Assert.assertEquals(artifactsToMergeToChild.size(), 2);
-        System.out.println(artifactsToMergeToChild.get(0).getArtifactId());
-        System.out.println(artifactsToMergeToChild.get(1).getArtifactId());
-
-        for (Artifact artifact : artifactsToMergeToChild) {
-            //get the child
-            Collection<Artifact> children = artifactRepository.getChildren(artifact.getArtifactId(), artifact.getGroupId());
-            Assert.assertEquals(children.size() , 1);
-            Artifact child = children.iterator().next();
-            log.info("start merge node " + artifact.toString() + " to" + child.toString());
-            MergeStrategy mergeStrategy = ChildMergeStrategy.builder()
-                    .node(artifact)
-                    .childNode(child)
-                    .artifactRepository(artifactRepository)
-                    .build();
-
-            mergeStrategy.merge();
-
-            log.info("end merge node " + artifact.toString() + " to" + child.toString());
-        }
         Assert.assertEquals(3, artifactRepository.findAllByGroupId("com.zz.lab").size());
 
         Artifact theExample3 = artifactRepository.findAllByArtifactId("example3").iterator().next();
@@ -101,9 +85,4 @@ public class TestMergeStrategy {
         log.info(mergePaths.get(1).toString());
 
     }
-
-
-
-
-
 }
