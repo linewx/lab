@@ -4,10 +4,7 @@ import com.zz.lab.neo4j.DummyApplication;
 import com.zz.lab.neo4j.entity.*;
 import com.zz.lab.neo4j.repo.ArtifactRepository;
 import com.zz.lab.neo4j.repo.PersonRepository;
-import com.zz.lab.neo4j.service.ArtifactService;
-import com.zz.lab.neo4j.service.ChildMergeStrategy;
-import com.zz.lab.neo4j.service.MergeFilter;
-import com.zz.lab.neo4j.service.MergeStrategy;
+import com.zz.lab.neo4j.service.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
@@ -33,6 +30,9 @@ public class TestMergeStrategy {
 
     @Autowired
     private ChildMergeStrategy childMergeStrategy;
+
+    @Autowired
+    private ParentMergeStrategy parentMergeStrategy;
 
 
     @Test
@@ -78,11 +78,25 @@ public class TestMergeStrategy {
         Assert.assertEquals(3, artifactRepository.findAllByGroupId("com.zz.lab").size());
 
         Artifact theExample3 = artifactRepository.findAllByArtifactId("example3").iterator().next();
+
         List<ArtifactPath> mergePaths = theExample3.getMergePaths();
 
         Assert.assertEquals(mergePaths.size(), 2);
         log.info(mergePaths.get(0).toString());
         log.info(mergePaths.get(1).toString());
+
+
+        parentMergeStrategy.merge(MergeFilter.builder().groupId("com.zz.lab").build());
+        Assert.assertEquals(1, artifactRepository.findAllByGroupId("com.zz.lab").size());
+
+        theExample3 = artifactRepository.findAllByArtifactId("example3").iterator().next();
+        mergePaths = theExample3.getMergePaths();
+
+        Assert.assertEquals(mergePaths.size(), 4);
+        log.info(mergePaths.get(0).toString());
+        log.info(mergePaths.get(1).toString());
+        log.info(mergePaths.get(2).toString());
+        log.info(mergePaths.get(3).toString());
 
     }
 }
