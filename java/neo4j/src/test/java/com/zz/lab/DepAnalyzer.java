@@ -7,6 +7,7 @@ import com.zz.lab.neo4j.repo.ArtifactRepository;
 import com.zz.lab.neo4j.repo.PersonRepository;
 import com.zz.lab.neo4j.parser.Finder;
 import com.zz.lab.neo4j.service.ArtifactService;
+import com.zz.lab.neo4j.service.MergeStrategy;
 import lombok.ToString;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,6 +26,9 @@ public class DepAnalyzer {
 
     @Autowired
     private ArtifactService artifactService;
+
+    @Autowired
+    private List<MergeStrategy> mergeStrategies;
 
     @Test
     public void testWalker() {
@@ -54,7 +58,7 @@ public class DepAnalyzer {
 
 
     @Test
-    public void testDepAnalyze() throws Exception{
+    public void initGraph() throws Exception{
         artifactService.deleteAll();
         //identify a small group
         ///Users/luganlin/git/itsma-x/paas/platform/services/tenant-settings/
@@ -83,6 +87,11 @@ public class DepAnalyzer {
                 artifactService.addRelation(basicArtifact, one);
             }
         }
+    }
+
+    @Test
+    public void applyMerge() {
+        mergeStrategies.forEach(MergeStrategy::merge);
     }
 
 }

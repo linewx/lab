@@ -48,6 +48,10 @@ public class ChildMergeStrategy implements MergeStrategy {
         for (Artifact artifact : artifactsToMergeToChild) {
             //get the child
             Collection<Artifact> children = artifactRepository.getChildren(artifact.getArtifactId(), artifact.getGroupId());
+            if (CollectionUtils.isEmpty(children)) {
+                log.warn("the target child node has been merged " + artifact.toString());
+                break;
+            }
             Artifact child = children.iterator().next();
             log.info("start merge node " + artifact.toString() + " to" + child.toString());
             doMerge(artifact, child);

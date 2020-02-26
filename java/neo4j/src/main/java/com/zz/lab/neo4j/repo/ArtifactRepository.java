@@ -20,7 +20,7 @@ public interface ArtifactRepository extends Neo4jRepository<Artifact, Long> {
     List<Artifact> findAllByArtifactId(String artifactd);
 
 
-    @Query("MATCH (a:Artifact) where size((a)-[:deps]->()) = {outDegree} or size((a)<-[:deps]-()) = {inDegree} RETURN a")
+    @Query("MATCH (a:Artifact) where size((a)-[:deps]->()) = {outDegree} and size((a)<-[:deps]-()) = {inDegree} RETURN a")
     Collection<Artifact> getAllArtifactByDeps(@Param("outDegree") Integer outDegree, @Param("inDegree") Integer inDegree);
 
    /* @Query("MATCH (a:Artifact {groupId: {group}}) where size((a)-[:deps]->()) = {outDegree} or size((a)<-[:deps]-()) = {inDegree} RETURN a")

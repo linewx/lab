@@ -45,11 +45,15 @@ public class ParentMergeStrategy implements MergeStrategy {
 
         for (Artifact artifact : artifactsToMergeToParent) {
             //get the child
-            Collection<Artifact> children = artifactRepository.getAllParents(artifact.getArtifactId(), artifact.getGroupId());
-            Artifact child = children.iterator().next();
-            log.info("start merge node " + artifact.toString() + " to" + child.toString());
-            doMerge(artifact, child);
-            log.info("end merge node " + artifact.toString() + " to" + child.toString());
+            Collection<Artifact> parents = artifactRepository.getAllParents(artifact.getArtifactId(), artifact.getGroupId());
+            if (CollectionUtils.isEmpty(parents)) {
+                log.warn("the target parent node has been merged:" + artifact.toString());
+                break;
+            }
+            Artifact parent = parents.iterator().next();
+            log.info("start merge node " + artifact.toString() + " to" + parent.toString());
+            doMerge(artifact, parent);
+            log.info("end merge node " + artifact.toString() + " to" + parent.toString());
         }
     }
 
