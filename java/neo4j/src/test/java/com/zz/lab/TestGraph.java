@@ -11,11 +11,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = DummyApplication.class)
@@ -93,14 +95,14 @@ public class TestGraph {
 
     @Test
     public void testCypher() {
-        /*Collection<Artifact> artifacts = artifactRepository.getAllArtifactByDeps(1, 0);
+        Collection<Artifact> artifacts = artifactRepository.getAllArtifactByDeps(1, 0);
         System.out.println(artifacts);
 
-        Collection<Artifact> parent = artifactRepository.getAllParents("metadata-impl");
+        Collection<Artifact> parent = artifactRepository.getAllParents("metadata-impl", "com.hp.maas.platform.core.metadata");
         System.out.println(parent);
 
-        Collection<Artifact> children = artifactRepository.getChildren("metadata-impl");
-        System.out.println(children);*/
+        Collection<Artifact> children = artifactRepository.getChildren("metadata-impl", "com.hp.maas.platform.core.metadata");
+        System.out.println(children);
 
         System.out.println(artifactRepository.count());
     }
@@ -178,10 +180,17 @@ public class TestGraph {
 
     }
 
-    //todo: not work as expected
-    /*@Test
+    @Test
+    public void testGroupByGroupId() {
+        List<Map<String, Integer>> results =  artifactRepository.findGroupByGroupId();
+        results.forEach(x -> {
+            System.out.println(x);
+        });
+    }
+
+    @Test
     public void testFindDepth() {
         Artifact artifact = artifactRepository.findOneByArtifactIdAndGroupId("metadata-impl", "com.hp.maas.platform.core.metadata", 3);
         System.out.println(artifact.getDeps());
-    }*/
+    }
 }

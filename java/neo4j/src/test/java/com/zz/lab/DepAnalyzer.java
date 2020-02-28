@@ -43,7 +43,7 @@ public class DepAnalyzer {
     }
 
     @Test
-    public void testDfs() {
+    public void bfs() {
         Artifact artifact = Artifact.builder()
                 .artifactId("tenant-settings-impl")
                 .groupId("com.hp.maas.platform.services.tenant-settings")
@@ -53,6 +53,7 @@ public class DepAnalyzer {
         for (Artifact one: results) {
             System.out.println(one);
         }
+        System.out.println(results.size());
 
     }
 
