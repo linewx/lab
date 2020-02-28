@@ -11,6 +11,7 @@ import org.springframework.util.CollectionUtils;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -28,36 +29,38 @@ public class GroupMergeStrategy implements MergeStrategy {
     //merge into parent
     @Override
     public void merge(MergeFilter filter) {
-        Collection<Artifact> artifactsToMergeToParent = artifactRepository.getAllArtifactByDeps(0, 1);
+        List<Map<String, Object>> results = artifactRepository.findGroupByGroupId();
 
         //do filter
         if (filter != null) {
-            if (filter.getGroupId() != null) {
-                //do groupId filter
-                artifactsToMergeToParent = artifactsToMergeToParent.stream().filter(x -> x.getGroupId().equals(filter.getGroupId())).collect(Collectors.toList());
-            }
+            results = results.stream().filter(x -> filter.getGroupId().equals(x.get("groupId"))).collect(Collectors.toList());
+        }
 
-            if (filter.getArtifactId() != null) {
-                //do groupId filter
-                artifactsToMergeToParent = artifactsToMergeToParent.stream().filter(x -> x.getArtifactId().equals(filter.getArtifactId())).collect(Collectors.toList());
+        if (!CollectionUtils.isEmpty(results)) {
+            for (Map<String, Object> one : results) {
+                String groupId = (String)one.get("groupId");
+                Long count = (Long)one.get("count");
+
+                Collection<Artifact> groupedArtifacts = artifactRepository.findAllByGroupId(groupId);
+
+                //create new group node
+                Artifact groupNode = Artifact.builder()
+                        .groupId(groupId)
+                        .artifactId("group")
+                        .build();
+
+
+                if (!CollectionUtils.isEmpty(groupedArtifacts)) {
+                    artifactRepository.save(groupNode);
+                    groupedArtifacts.forEach(x -> doMerge(x, groupNode));
+                }
             }
         }
 
-        for (Artifact artifact : artifactsToMergeToParent) {
-            //get the child
-            Collection<Artifact> parents = artifactRepository.getAllParents(artifact.getArtifactId(), artifact.getGroupId());
-            if (CollectionUtils.isEmpty(parents)) {
-                log.warn("the target parent node has been merged:" + artifact.toString());
-                break;
-            }
-            Artifact parent = parents.iterator().next();
-            log.info("start merge node " + artifact.toString() + " to" + parent.toString());
-            doMerge(artifact, parent);
-            log.info("end merge node " + artifact.toString() + " to" + parent.toString());
-        }
     }
 
     public void doMerge(Artifact node, Artifact groupNode) {
+        log.info("start merge node: " + node.getArtifactId() + " and " + groupNode.getArtifactId());
         //todo: to make sure parent & child have loaded deps
         if (CollectionUtils.isEmpty(node.getDeps())) {
             //populate deps

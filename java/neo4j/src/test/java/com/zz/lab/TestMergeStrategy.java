@@ -34,6 +34,9 @@ public class TestMergeStrategy {
     @Autowired
     private ParentMergeStrategy parentMergeStrategy;
 
+    @Autowired
+    private GroupMergeStrategy groupMergeStrategy;
+
 
     @Test
     public void testArtifact() {
@@ -97,6 +100,48 @@ public class TestMergeStrategy {
         log.info(mergePaths.get(1).toString());
         log.info(mergePaths.get(2).toString());
         log.info(mergePaths.get(3).toString());
+
+    }
+
+    @Test
+    public void testArtifact2() {
+        List<Artifact> artifacts = artifactRepository.findAllByGroupId("com.zz.lab");
+        artifactRepository.deleteAll(artifacts);
+
+        //test cases: example1/example2 -> example3 -> example4/example5
+
+        Artifact example1 = Artifact.builder()
+                .groupId("com.zz.lab")
+                .artifactId("example1")
+                .build();
+
+        Artifact example2 = Artifact.builder()
+                .groupId("com.zz.lab")
+                .artifactId("example2")
+                .build();
+
+        Artifact example3 = Artifact.builder()
+                .groupId("com.zz.lab")
+                .artifactId("example3")
+                .build();
+
+        Artifact example4 = Artifact.builder()
+                .groupId("com.zz.lab")
+                .artifactId("example4")
+                .build();
+
+        Artifact example5 = Artifact.builder()
+                .groupId("com.zz.lab")
+                .artifactId("example5")
+                .build();
+
+        artifactService.addRelation(example1, example3);
+        artifactService.addRelation(example2, example3);
+        artifactService.addRelation(example3, example4);
+        artifactService.addRelation(example3, example5);
+
+        groupMergeStrategy.merge(MergeFilter.builder().groupId("com.zz.lab").build());
+
 
     }
 }

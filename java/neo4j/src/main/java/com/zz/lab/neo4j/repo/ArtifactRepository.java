@@ -36,5 +36,5 @@ public interface ArtifactRepository extends Neo4jRepository<Artifact, Long> {
     Collection<Artifact> getChildren(@Param("artifactId") String artifactId, @Param("groupId") String groupId);
 
     @Query("match (n:Artifact) return n.groupId as groupId, count(n.groupId) as number")
-    List<Map<String, Integer>> findGroupByGroupId();
+    List<Map<String, Object>> findGroupByGroupId();
 }

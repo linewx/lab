@@ -182,7 +182,7 @@ public class TestGraph {
 
     @Test
     public void testGroupByGroupId() {
-        List<Map<String, Integer>> results =  artifactRepository.findGroupByGroupId();
+        List<Map<String, Object>> results =  artifactRepository.findGroupByGroupId();
         results.forEach(x -> {
             System.out.println(x);
         });
