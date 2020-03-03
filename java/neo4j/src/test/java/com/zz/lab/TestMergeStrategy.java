@@ -108,10 +108,12 @@ public class TestMergeStrategy {
         List<Artifact> artifacts = artifactRepository.findAllByGroupId("com.zz.lab");
         artifactRepository.deleteAll(artifacts);
 
+        artifacts = artifactRepository.findAllByGroupId("com.zz.platform");
+        artifactRepository.deleteAll(artifacts);
         //test cases: example1/example2 -> example3 -> example4/example5
 
         Artifact example1 = Artifact.builder()
-                .groupId("com.zz.lab")
+                .groupId("com.zz.platform")
                 .artifactId("example1")
                 .build();
 

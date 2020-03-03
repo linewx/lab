@@ -60,7 +60,7 @@ public class GroupMergeStrategy implements MergeStrategy {
     }
 
     public void doMerge(Artifact node, Artifact groupNode) {
-        log.info("start merge node: " + node.getArtifactId() + " and " + groupNode.getArtifactId());
+        log.info("start merge node: " + node.toString() + " and " + groupNode.toString());
         //todo: to make sure parent & child have loaded deps
         if (CollectionUtils.isEmpty(node.getDeps())) {
             //populate deps
@@ -73,15 +73,17 @@ public class GroupMergeStrategy implements MergeStrategy {
         //build relationship between all the parent of the node and the groupNode
         //1. find all the parents
         Collection<Artifact> parentNodes = artifactRepository.getAllParents(node.getArtifactId(), node.getGroupId());
-        //List<Artifact> parents = new ArrayList<>();
+        List<Artifact> parents = new ArrayList<>();
         if (!CollectionUtils.isEmpty(parentNodes)) {
             for (Artifact artifact: parentNodes) {
                 //populate parent node
                 artifact = artifactRepository.findOneByArtifactIdAndGroupId(artifact.getArtifactId(), artifact.getGroupId());
                 artifact.depends(groupNode);
+                parents.add(artifact);
             }
         }
-        artifactRepository.saveAll(parentNodes);
+//        artifactRepository.saveAll(parentNodes);
+        artifactRepository.saveAll(parents);
 
         //build relationship between all the child of the node and the groupNode
         Collection<Artifact> childNodes = artifactRepository.getChildren(node.getArtifactId(), node.getGroupId());
