@@ -2,13 +2,10 @@ package com.zz.lab;
 
 import com.zz.lab.neo4j.DummyApplication;
 import com.zz.lab.neo4j.entity.Artifact;
+import com.zz.lab.neo4j.parser.Finder;
 import com.zz.lab.neo4j.parser.PomParser;
 import com.zz.lab.neo4j.repo.ArtifactRepository;
-import com.zz.lab.neo4j.repo.PersonRepository;
-import com.zz.lab.neo4j.parser.Finder;
-import com.zz.lab.neo4j.service.ArtifactService;
-import com.zz.lab.neo4j.service.MergeStrategy;
-import lombok.ToString;
+import com.zz.lab.neo4j.service.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +13,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.LinkedHashSet;
 import java.util.List;
 
@@ -28,7 +26,19 @@ public class DepAnalyzer {
     private ArtifactService artifactService;
 
     @Autowired
+    private ArtifactRepository artifactRepository;
+
+    @Autowired
     private List<MergeStrategy> mergeStrategies;
+
+    @Autowired
+    private ChildMergeStrategy childMergeStrategy;
+
+    @Autowired
+    private ParentMergeStrategy parentMergeStrategy;
+
+    @Autowired
+    private GroupMergeStrategy groupMergeStrategy;
 
     @Test
     public void testWalker() {
@@ -45,7 +55,7 @@ public class DepAnalyzer {
     @Test
     public void bfs() {
         Artifact artifact = Artifact.builder()
-                .artifactId("tenant-settings-impl")
+                .artifactId("group")
                 .groupId("com.hp.maas.platform.services.tenant-settings")
                 .build();
 
@@ -90,9 +100,44 @@ public class DepAnalyzer {
         }
     }
 
+
+
     @Test
     public void applyMerge() {
         mergeStrategies.forEach(MergeStrategy::merge);
     }
 
+    @Test
+    public void applyChildMerge() {
+        childMergeStrategy.merge();
+    }
+
+    @Test
+    public void applyParentMerge() {
+        parentMergeStrategy.merge();
+    }
+
+    @Test
+    public void applyGroupMerge() {
+        groupMergeStrategy.merge();
+    }
+
+    @Test
+    public void reviseArtifacts() {
+        //make platform webapp out of runtime group
+        Artifact artifact = artifactRepository.findOneByArtifactIdAndGroupId("platform-webapp", "com.hp.maas.platform.runtime");
+        artifact.setGroupId("com.hp.maas.platform.runtime.platform-webapp.revised");
+        artifactRepository.save(artifact);
+
+        artifact = artifactRepository.findOneByArtifactIdAndGroupId("new-deployer", "com.hp.maas.platform.runtime");
+        artifact.setGroupId("com.hp.maas.platform.runtime.new-deployer.revised");
+        artifactRepository.save(artifact);
+    }
+
+    @Test
+    public void analyze() throws Exception{
+        initGraph();
+        reviseArtifacts();
+        applyMerge();
+    }
 }

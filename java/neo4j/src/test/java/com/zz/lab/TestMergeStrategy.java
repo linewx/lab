@@ -104,7 +104,7 @@ public class TestMergeStrategy {
     }
 
     @Test
-    public void testArtifact2() {
+    public void testGroupMerge() {
         List<Artifact> artifacts = artifactRepository.findAllByGroupId("com.zz.lab");
         artifactRepository.deleteAll(artifacts);
 
