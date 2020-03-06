@@ -140,4 +140,10 @@ public class DepAnalyzer {
         reviseArtifacts();
         applyMerge();
     }
+
+    @Test
+    public void debugIssues() throws Exception{
+        initGraph();
+
+    }
 }

@@ -56,12 +56,13 @@ public class ArtifactService {
 
         LinkedHashSet<Artifact> visited = new LinkedHashSet<>();
         LinkedHashMap<Artifact, List<Artifact>> visitedPath = new LinkedHashMap<>();
-
+        Map<Artifact, Artifact> parentCache = new HashMap<>();
 
 
         Queue<Artifact> visitingQueue = new ArrayDeque<>();
         visitingQueue.add(startNode);
         addPath(visitedPath, null, startNode);
+
 
         while (visitingQueue.size() != 0) {
             Artifact theArtifact = visitingQueue.poll();
@@ -72,14 +73,22 @@ public class ArtifactService {
             } else {
                 // not visited
                 visited.add(theArtifact);
+                ///add visited relationship
+                addPath(visitedPath, parentCache.get(theArtifact), theArtifact);
 
 
                 Set<Artifact> deps = theArtifact.getDeps();
                 if (deps != null) {
                     for (Artifact artifact : deps) {
+                        //update parent relationship
+                        if (!parentCache.containsKey(artifact)) {
+                            parentCache.put(artifact, theArtifact);
+                        }
+
                         if (!visited.contains(artifact)) {
                             visitingQueue.add(artifactRepository.findOneByArtifactIdAndGroupId(artifact.getArtifactId(), artifact.getGroupId()));
-                            addPath(visitedPath, theArtifact, artifact);
+
+
                         }
                     }
                 }
