@@ -18,7 +18,7 @@ import java.util.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Artifact {
+public class RawArtifact {
     @Id
     @GeneratedValue
     private Long id;
@@ -40,9 +40,9 @@ public class Artifact {
     List<ArtifactPath> mergePaths = new ArrayList<>();
 
     @Relationship(type = "deps")
-    Set<Artifact> deps;
+    Set<RawArtifact> deps;
 
-    public void depends(Artifact artifact) {
+    public void depends(RawArtifact artifact) {
 
         if (deps == null) {
             deps = new HashSet<>();
@@ -111,7 +111,7 @@ public class Artifact {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Artifact artifact = (Artifact) o;
+        RawArtifact artifact = (RawArtifact) o;
         return groupId.equals(artifact.groupId) &&
                 artifactId.equals(artifact.artifactId);
     }
@@ -120,6 +120,7 @@ public class Artifact {
     public int hashCode() {
         return Objects.hash(groupId, artifactId);
     }
+
 
 
 }
