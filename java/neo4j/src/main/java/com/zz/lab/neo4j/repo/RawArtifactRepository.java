@@ -42,7 +42,7 @@ public interface RawArtifactRepository extends Neo4jRepository<RawArtifact, Long
     @Query("match (n:RawArtifact) return n.groupId as groupId, count(n.groupId) as number")
     List<Map<String, Object>> findGroupByGroupId();
 
-    @Query("MATCH (a:RawArtifact)  RETURN a, size((a)-[:deps]->()) as outdegree, size((a)<-[:deps]-()) as indegree")
-    Collection<RawArtifact> findAllDeps();
+    @Query("MATCH (a:RawArtifact)  RETURN a as artifact, size((a)-[:deps]->()) as outdegree, size((a)<-[:deps]-()) as indegree")
+    List<Map<String, Object>> findAllDeps();
 
 }

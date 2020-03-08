@@ -6,6 +6,7 @@ import com.zz.lab.neo4j.parser.Finder;
 import com.zz.lab.neo4j.parser.PomParser;
 import com.zz.lab.neo4j.repo.RawArtifactRepository;
 import com.zz.lab.neo4j.service.RawArtifactService;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.BeanUtils;
@@ -19,6 +20,7 @@ import java.util.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = DummyApplication.class)
+@Slf4j
 public class RawDepAnalyzer {
 
     @Autowired
@@ -141,11 +143,76 @@ public class RawDepAnalyzer {
             System.out.println(suffix + ":" + results.get(suffix).size());
         }
 
+        System.out.println("others:" + results.get("others").size());
 
+        results.get("others").forEach(x -> System.out.println(x.toString()));
     }
 
+    @Test
+    public void analyzeDegree() {
+       List<Map<String, Object>> results = artifactRepository.findAllDeps();
+
+       results.forEach(x -> {
+           RawArtifact rawArtifact = (RawArtifact)x.get("artifact");
+           Long indegree = (Long)x.get("indegree");
+           Long outdegree = (Long)x.get("outdegree");
+
+           //System.out.println("artifact: " +  rawArtifact.toString() + ",indegree: " + indegree + ",outdegree: " + outdegree);
+           System.out.println(rawArtifact.toString() + " " + indegree + " " + outdegree + " "+ guessType(rawArtifact.getArtifactId()));
+       });
+    }
+
+    private String guessType(String artifactId) {
+        List<String> suffixes = Arrays.asList("api", "ws", "impl", "client");
+        for (String suffix: suffixes) {
+            if (artifactId.endsWith(suffix)) {
+                return suffix;
+            }
+        }
+        return "others";
+    }
+
+    @Test
+    public void findAllDeps() {
+        String moduleName = "common_utils";
+
+        List<String> suffixes = Arrays.asList("api", "ws", "impl", "client");
+        for (String suffix : suffixes) {
+            analyzeOneModule(moduleName + "-" + suffix);
+        }
+
+        analyzeOneModule(moduleName);
+    }
+
+    private void analyzeOneModule(String artifactId) {
+
+        try {
+            System.out.println("###### start analyze the module " + artifactId + " ######");
+
+            RawArtifact artifact = artifactRepository.findOneByArtifactId(artifactId);
+
+            // parents
+            System.out.println("\n*** list all parents for the module " + artifactId + " ***");
+            Collection<RawArtifact> parents = artifactRepository.getAllParents(artifact.getArtifactId(), artifact.getGroupId());
+            for (RawArtifact parent : parents) {
+                System.out.println(parent.toString());
+            }
 
 
+            //children
+            System.out.println("\n*** list all children for the module " + artifactId + " ***");
+            Collection<RawArtifact> children = artifactRepository.getChildren(artifact.getArtifactId(), artifact.getGroupId());
+            for (RawArtifact child : children) {
+                System.out.println(child.toString());
+            }
 
+            System.out.println("###### end analyze the module " + artifactId + " ######\n\n\n\n\n");
+
+
+        } catch (Exception e) {
+            log.warn("!!! the artifact " + artifactId + " not found");
+        }
+    }
 
 }
+
